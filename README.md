@@ -1,12 +1,10 @@
 # Kiwi Lingo: How to Speak Like a Local New Zealander
 
-Welcome to Kiwi Lingo- my third milestone (Data Centric) project at Code Institute.
+Welcome to Kiwi Lingo- my third milestone (Data Centric) project at Code Institute. You can view the live project (here)
 
-Kiwi Lingo is an app intended to be used as a reference guide to commonly used words and phrases spoken by New Zealanders.
+Kiwi Lingo is an app intended to be used as a reference guide of commonly used words and phrases spoken by New Zealanders. 
 
 (AmIResponsive Image here)
-
-(View the live project here)
 
 ## Contents
 
@@ -62,9 +60,14 @@ Kiwi Lingo would be typically used for:
 - Visitors currently in New Zealand struggling to understand the locals
 - Visitors or locals looking to brush up on their slang or use as a reference guide to teach others
 - New Zealanders that would like to add their own words or phrases to help visitors to NZ
-- People that have visited NZ that would like to keep a log of phrases/words/slang encountered on their visit
+- People that have visited NZ that would like to keep a log of phrases/words/slang encountered on their visit and retain for future visits to NZ
 
-Visitors to the site will be able to sign up for an account so they can easily add any words or phrases to the dictionary that might be missing. They can also search for words or phrases in the search tool bar.
+Visitors to the site will be able to sign up for an account so they can easily add (CREATE) any words or phrases to the dictionary that might be missing. Upon registering, users will be able to edit (UPDATE) their additions and also be able to remove (DELETE) what they have added themselves. They can also view/search (READ) for words or phrases in the search tool bar.
+
+A favourable outcome behind creating this site would be:
+- With additions by new and existing users, it would allow growth to the site
+- An opportunity for the site owner to encourage the user to book excursions/holidays highlighted in the links throughout the site
+
 
 ### User Stories
 
