@@ -141,7 +141,8 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
-
+- [MaterializeCSS](https://materializecss.com/)
+    - I found using MaterializeCSS throughout the Mini Project easy to use and so adapted this into this project for the CRUD mechanisms and database access functionality
 
 ## Testing
 
