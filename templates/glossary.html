@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiwi Lingo</title>
-</head>
+<h2>I'm extending the base template woo!</h2>
 
-<body>
+{% for word in words %}
+{{ word.category_name}}<br>
+{{ word.word }}<br>
+{{ word.definition }}<br>
+{{ word.phrase_example }}<br>
+{{ word.thumbs_up }}<br>
+{{ word.thumbs_down }}
 
-    {% for word in words %}
-    {{ word.category_name}}<br>
-    {{ word.definition }}<br>
-    {{ word.phrase_example }}<br>
-    {{ word.thumbs_up }}<br>
-    {{ word.thumbs_down }}
+{% endfor %}
 
-
-    {% endfor %}
-</body>
-
-</html>
+{% endblock %}
