@@ -1,3 +1,44 @@
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+
+img {
+    height: 65px;
+    width: 60px;
+}
+
+nav .brand-logo {
+    font-size: 3rem;
+}
+
+.brand-logo {
+    font-family: 'Luckiest Guy', cursive;
+    margin-left: 5px;
+}
+
+.page-footer {
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background: rgb(149, 163, 182);
+}
+
+.hero-image {
+    background-image: url('../images/heroimg2.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+/* sticky footer css from MAterialize
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}*/
