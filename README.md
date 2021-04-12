@@ -1,6 +1,4 @@
-# Kiwi Lingo: How to Speak Like a Local New Zealander
-
-Welcome to Kiwi Lingo- my third milestone (Data Centric) project at Code Institute. You can view the live project (here)
+# Kiwi Lingo: Your Guide to New Zealand Words & Phrases!
 
 Kiwi Lingo is an app intended to be used as a reference guide of commonly used words and phrases spoken by New Zealanders. 
 

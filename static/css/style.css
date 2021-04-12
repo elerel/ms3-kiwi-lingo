@@ -11,6 +11,10 @@ nav .brand-logo {
     font-size: 3rem;
 }
 
+nav.nav-extended .nav-wrapper {
+    min-height: 80px;
+}
+
 .brand-logo {
     font-family: 'Luckiest Guy', cursive;
     margin-left: 5px;
