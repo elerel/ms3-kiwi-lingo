@@ -36,12 +36,12 @@
             </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('get_words') }}">Home</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Glossary</a></li>
                 <li><a href="#">Log Out</a></li>
                 <li><a href="#">Log In</a></li>
-                <li><a href="#">Sign Up</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
             </ul>
         </div>
     </nav>
@@ -50,14 +50,14 @@
     <!--Mobile Navbar-->
     <ul class="sidenav" id="mobile-demo">
         <li>
-            <h4 class="center-align grey-text text-darken-4"></h4>Kiwi Lingo
+            <h4 class="mobile-brand-logo">Kiwi Lingo</h4>
         </li>
-        <li><a href="#">Home</a></li>
+        <li><a href="{{ url_for('get_words') }}">Home</a></li>
         <li><a href="#">Profile</a></li>
         <li><a href="#">Glossary</a></li>
         <li><a href="#">Log Out</a></li>
         <li><a href="#">Log In</a></li>
-        <li><a href="#">Sign Up</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
     </ul>
 
     <!--Hero Image Section
@@ -88,8 +88,7 @@
                     <a href="https://www.instagram.com" target="_blank" class="footer-link"><i
                             class="fab fa-instagram"></i></a>
                     <h5>Contact Us:</h5>
-                    <a href="mailto:chattertonkirsty@gmail.com?subject=How Till Spake Norn Irish Feedback"
-                        class="footer-link">
+                    <a href="mailto:elcranley@gmail.com?subject=Kiwi Lingo Website" class="footer-link">
                         <i class="fas fa-envelope"></i>
                         kiwilingo@gmail.com
                     </a>
