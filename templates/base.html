@@ -26,112 +26,61 @@
 
     <title>Kiwi Lingo</title>
 </head>
-<header>
-    <!--Top Navbar-->
-    <!--<div class="navbar-fixed">-->
-    <nav class="nav-extended text-shadow black">
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Kiwi Lingo
-                <img src="{{ url_for('static', filename='images/nzicon1.png') }}" class="navbar-icon" alt="nz icon">
-            </a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('get_words') }}">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Glossary</a></li>
-                <li><a href="#">Log Out</a></li>
-                <li><a href="#">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!--</div>-->
-
-    <!--Mobile Navbar-->
-    <ul class="sidenav" id="mobile-demo">
-        <li>
-            <h4 class="mobile-brand-logo">Kiwi Lingo</h4>
-        </li>
-        <li><a href="{{ url_for('get_words') }}">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Glossary</a></li>
-        <li><a href="#">Log Out</a></li>
-        <li><a href="#">Log In</a></li>
-        <li><a href="{{ url_for('register') }}">Register</a></li>
-    </ul>
-
-    <!--Hero Image Section
-    <section>
-        <div class="hero-image">
-        </div>
-    </section>-->
-</header>
 
 <body>
-
-    {% block content %}
-    {% endblock %}
-
-
-    <!-- Footer -->
-    <footer class="page-footer">
-        <div class="container center-align">
-            <div class="row">
-
-                <!-- Social Links -->
-                <div class="col s12 m6">
-                    <h5>Follow Us:</h5>
-                    <a href="https://www.facebook.com/" target="_blank" class="footer-link"><i
-                            class="fab fa-facebook"></i></a>
-                    <a href="https://www.twitter.com/" target="_blank" class="footer-link"><i
-                            class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" class="footer-link"><i
-                            class="fab fa-instagram"></i></a>
-                    <h5>Contact Us:</h5>
-                    <a href="mailto:elcranley@gmail.com?subject=Kiwi Lingo Website" class="footer-link">
-                        <i class="fas fa-envelope"></i>
-                        kiwilingo@gmail.com
-                    </a>
-                </div>
-
-                <!-- Other Links -->
-                <div class="col s12 m6">
-                    <h5>Plan Your Visit to New Zealand:</h5>
-                    <ul>
-                        <li>
-                            <a href="https://www.newzealand.com/int/travel-guide/" target="_blank" class="footer-link">
-                                100% New Zealand
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://nzpocketguide.com/10-queenstown-travel-tips-for-first-timers/"
-                                target="_blank" class="footer-link">
-                                NZ Pocket Guide
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://covid19.govt.nz/travel-and-the-border/travel-to-new-zealand/"
-                                target="_blank" class="footer-link">
-                                New Zealand and COVID-19
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lonelyplanet.com/new-zealand" target="_blank" class="footer-link">
-                                Lonely Planet - New Zealand
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <header>
+        <!--Top Navbar-->
+        <!--<div class="navbar-fixed">-->
+        <nav class="nav-extended text-shadow black">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('get_words') }}" class="brand-logo">Kiwi Lingo
+                    <img src="{{ url_for('static', filename='images/nzicon1.png') }}" class="navbar-icon" alt="nz icon">
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('get_words') }}">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Glossary</a></li>
+                    <li><a href="#">Log Out</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
+        <!--</div>-->
 
-        <!-- Footer Copyright -->
-        <div class="footer-copyright">
-            <div class="container center-align">
-                <a href="https://github.com/elerel" target="_blank">2021 Developed by Eleanor Erel</a>
-            </div>
+        <!--Mobile Navbar-->
+        <ul class="sidenav" id="mobile-demo">
+            <li>
+                <h4 class="mobile-brand-logo">Kiwi Lingo</h4>
+            </li>
+            <li><a href="{{ url_for('get_words') }}">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Glossary</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <!--flash messages-->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
         </div>
-    </footer>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
