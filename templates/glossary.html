@@ -1,16 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for word in words %}
-{{ word.category_name}}<br>
-{{ word.word }}<br>
-{{ word.definition }}<br>
-{{ word.phrase_example }}<br>
-{{ word.thumbs_up }}<br>
-{{ word.thumbs_down }}
-
-{% endfor %}
-
 <ul class="collapsible popout">
     {% for word in words %}
     <li>
@@ -20,6 +10,8 @@
         <div class="collapsible-body orange lighten-4">
             <strong>{{ word.category_name}}</strong>
             <p>{{ word.definition }}</p>
+            <p>{{ word.phrase_example }}</p>
+            <p><em>by: {{ word.created_by }}</em></p>
             {% if word.thumbs_up == "on" %}
             <i class="fas fa-thumbs-up text-lighten-2 tooltipped" data-position="bottom" data-tooltip="Yeah, Bro!"></i>
             <i class="fas fa-thumbs-down text-lighten-2 tooltipped" data-position="bottom" data-tooltip="Nah, Bro!"></i>

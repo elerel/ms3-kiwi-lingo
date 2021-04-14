@@ -106,8 +106,24 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_word")
+@app.route("/add_word", methods=["GET", "POST"])
 def add_word():
+    if request.method == "POST":
+        thumbs_up = "on" if request.form.get("thumbs_up") else "off"
+        thumbs_down = "on" if request.form.get("thumbs_down") else "off"
+        word = {
+            "category_name": request.form.get("category_name"),
+            "word": request.form.get("word"),
+            "definition": request.form.get("definition"),
+            "phrase_example": request.form.get("phrase_example"),
+            "created_by": session["user"],
+            "thumbs_up": thumbs_up,
+            "thumbs_down": thumbs_down
+        }
+        mongo.db.words.insert_one(word)
+        flash("Shot for adding your word, mate!")
+        return redirect(url_for("get_words"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_word.html", categories=categories)
 
