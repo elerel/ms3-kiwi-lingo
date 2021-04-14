@@ -3,6 +3,7 @@ $(document).ready(function () {
         edge: "right"
     });
     $('.collapsible').collapsible();
+    $('.tooltipped').tooltip();
 
     // Code snippet (to confirm pw's match) from Stackoverflow https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page/21727518    
     $('#password, #confirm_password').on('keyup', function () {
