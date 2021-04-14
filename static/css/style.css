@@ -40,7 +40,8 @@ nav.nav-extended .nav-wrapper {
 
 
 /*Register Page*/
-.register-page {
+.register-page,
+.login-page {
     background-color: orange;
 }
 
