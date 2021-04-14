@@ -12,22 +12,21 @@
 {% endfor %}
 
 <ul class="collapsible popout">
+    {% for word in words %}
     <li>
-        <div class="collapsible-header white-text orange darken-1 text-shadow"><i class="fas fa-caret-down"></i>First
+        <div class="collapsible-header white-text orange darken-1 text-shadow"><i class="fas fa-caret-down"></i>
+            <strong>{{ word.word }}</strong>
         </div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span>
+        <div class="collapsible-body orange lighten-4">
+            <strong>{{ word.category_name}}</strong>
+            <p>{{ word.definition }}</p>
+            {% if word.thumbs_up == "on" %}
+            <i class="fas fa-thumbs-up text-lighten-2 tooltipped" data-position="bottom" data-tooltip="Yeah, Bro!"></i>
+            <i class="fas fa-thumbs-down text-lighten-2 tooltipped" data-position="bottom" data-tooltip="Nah, Bro!"></i>
+            {% endif %}
         </div>
     </li>
-    <li>
-        <div class="collapsible-header white-text orange darken-1 text-shadow"><i class="fas fa-caret-down"></i>Second
-        </div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-        <div class="collapsible-header white-text orange darken-1 text-shadow"><i class="fas fa-caret-down"></i>Third
-        </div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+    {% endfor %}
 </ul>
 
 {% endblock %}
