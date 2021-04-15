@@ -25,6 +25,12 @@ def get_words():
     return render_template("glossary.html", words=words)
 
 
+@app.route("/")
+@app.route("/home")
+def home():
+    return render_template("index.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == 'POST':
