@@ -19,22 +19,21 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/home")
+def home():
+    return render_template("index.html")
+
+
 @app.route("/get_words")
 def get_words():
     words = list(mongo.db.words.find())
     return render_template("glossary.html", words=words)
 
 
-@app.route("/")
-@app.route("/home")
-def home():
-    return render_template("index.html")
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == 'POST':
-        #check if username already exists in db
+        # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username")})
         password = request.form.get("password")
