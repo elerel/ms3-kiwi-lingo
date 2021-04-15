@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Nothing+You+Could+Do&display=swap');
 
 
 body {
@@ -24,7 +25,7 @@ nav.nav-extended .nav-wrapper {
 
 .brand-logo {
     font-family: 'Luckiest Guy', cursive;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 #mobile-demo {
@@ -74,20 +75,7 @@ nav.nav-extended .nav-wrapper {
     background-size: 100% 100%;
 }
 
-/* sticky footer css from MAterialize
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}*/
-
-
-
-/* Index Page */
+/* Index Page 
 .background-img {
     background-image: url(/static/images/heroimg2.jpg);
     height: 70vh;
@@ -95,7 +83,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+}*/
 
 .welcome-title {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -110,13 +98,14 @@ main {
 
 /* Welcome Title styling- from https://codepen.io/bennettfeely/pen/lgybC/*/
 .welcome-text>span {
+    font-family: 'Caveat', cursive;
     color: #fff;
     font-size: 3rem;
     font-style: italic;
     letter-spacing: 3px;
     display: inline-block;
     text-shadow: 0 0 0 whitesmoke;
-    animation: smoky 7s 5s both;
+    animation: smoky 5s 3s both;
 }
 
 span:nth-child(even) {
@@ -161,6 +150,29 @@ span:nth-child(even) {
 }
 
 .btn {
-    background-color: black;
+    background-color: orange;
+    font-family: 'Luckiest guy';
     border-radius: 8px;
+    letter-spacing: 2px;
+}
+
+/* experimenting stuff to delete */
+#video-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    align-content: center;
+    position: relative;
+}
+
+#overlay {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
