@@ -110,7 +110,6 @@ main {
 
 /* Welcome Title styling- from https://codepen.io/bennettfeely/pen/lgybC/*/
 .welcome-text>span {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #fff;
     font-size: 3rem;
     font-style: italic;
@@ -157,5 +156,11 @@ span:nth-child(even) {
 }
 
 .join-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5rem;
+}
+
+.btn {
+    background-color: black;
+    border-radius: 8px;
 }
