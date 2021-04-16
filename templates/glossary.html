@@ -15,9 +15,9 @@
             </div>
         </div>
         <div class="collapsible-body orange lighten-4">
-            <strong>{{ word.category_name}}</strong>
-            <p>{{ word.definition }}</p>
-            <p>{{ word.phrase_example }}</p>
+            <strong><em>Category: </em>{{ word.category_name}}</strong>
+            <p><em>Definition: </em>{{ word.definition }}</p>
+            <p><em>Example: </em>{{ word.phrase_example }}</p>
             <p><em>by: {{ word.created_by }}</em></p>
             {% if word.thumbs_up == "on" %}
             <i class="fas fa-thumbs-up text-lighten-2 tooltipped" data-position="bottom" data-tooltip="Yeah, Bro!"></i>
