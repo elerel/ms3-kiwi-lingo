@@ -1,39 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="video-container">
-    <video id="nz-bg" autoplay loop muted playsinline>
-        <source src="static/video/milford.mp4" type="video/mp4">
-    </video>
-    <div id="overlay">
-        <p class=" welcome-text">
-            <span>A</span><span>o</span><span>t</span><span>e</span><span>o</span><span>r</span><span>o</span><span>a:</span><span>
-                "L</span><span>a</span><span>n</span><span>d
-            </span>&nbsp;<span> O</span><span>f </span>&nbsp;<span>
-                T</span><span>h</span><span>e</span>
-            &nbsp;<span> L</span><span>o</span><span>n</span><span>g </span>&nbsp;<span>
-                W</span><span>h</span><span>i</span><span>t</span><span>e </span>&nbsp;
-            <span> C</span><span>l</span><span>o</span><span>u</span><span>d"</span>
-        </p>
-    </div>
-
-    <!--<h3 class="welcome-title">
-        Aotearoa
+<div class="background-img">
+    <h3 class="welcome-title">
+        Aotearoa:
     </h3>
-    <p class="welcome-text center-align">
+    <p class="welcome-text left-align">
         <span>"L</span><span>a</span><span>n</span><span>d </span>&nbsp;<span> O</span><span>f </span>&nbsp;<span>
             T</span><span>h</span><span>e</span>
         &nbsp;<span> L</span><span>o</span><span>n</span><span>g </span>&nbsp;<span>
             W</span><span>h</span><span>i</span><span>t</span><span>e </span>&nbsp;
         <span> C</span><span>l</span><span>o</span><span>u</span><span>d"</span>
     </p>
-    <div class="container join-text white-text">
-        <div class="row center-align white-text">
-            <p>Welcome to Kiwi Lingo: The Ultimate Online Guide to Kiwi Phrases and Words </p>
-            <p>Join Today to Add Your Word or Phrase!</p>
-            <a href="{{ url_for('register') }}" class="btn waves-effect waves-light z-depth-0">Sign Up!</a>
+    <div class="join-text white-text">
+        <div class="left-align white-text">
+            <p>Welcome to Kiwi Lingo!<br>Your Ultimate Online Guide to Kiwi Phrases and Words<br>Join Today to Add Your
+                Word or Phrase!</p>
+            <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light z-depth-0">Go To Glossary!</a>
         </div>
     </div>
-</div-->
+    <div class="img-description">
+        <h5>Aoraki/Mount Cook</h5>
+        <p>Lake Pukaki, South Island</p>
+    </div>
+</div>
 </div>
 
 {% endblock %}
