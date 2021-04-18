@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="black-text text-darken-4 center-align">Edit Word</h3>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('edit_word', word_id=word._id) }}">
+        <!-- category selection -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix black-text text-darken-4"></i>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in categories %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_name">Word Category</label>
+            </div>
+        </div>
+        <!--word-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix black-text text-darken-4"></i>
+                <input id="word" name="word" minlength="3" maxlength="50" type="text" class="validate" required>
+                <label for="word">Word</label>
+            </div>
+        </div>
+        <!-- definition -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix black-text text-darken-4"></i>
+                <textarea id="definition" name="definition" minlength="3" maxlength="200"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="definition">Definition</label>
+            </div>
+        </div>
+        <!-- example where used -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-comment prefix black-text text-darken-4"></i>
+                <textarea id="phrase_example" name="phrase_example" minlength="5" maxlength="200"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="phrase_example">Example</label>
+            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large orange darken-1 text-shadow">
+                    Edit Word <i class="fas fa-edit right"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

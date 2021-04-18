@@ -133,6 +133,12 @@ def add_word():
     return render_template("add_word.html", categories=categories)
 
 
+@app.route("/edit_word/<word_id>", methods=["GET", "POST"])
+def edit_word(word_id):
+    word = mongo.db.words.find_one({"_id": ObjectId(word_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_word.html", word=word, categories=categories)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
     port=int(os.environ.get("PORT")),
