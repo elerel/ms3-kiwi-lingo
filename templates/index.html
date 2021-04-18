@@ -2,7 +2,7 @@
 {% block content %}
 <div class="background-img">
     <h3 class="welcome-title">
-        "Aotearoa" : New Zealand
+        "Aotearoa": New Zealand
     </h3>
     <p class="welcome-text left-align">
         <span>"L</span><span>a</span><span>n</span><span>d </span>&nbsp;<span> O</span><span>f </span>&nbsp;<span>
@@ -13,9 +13,11 @@
     </p>
     <div class="join-text white-text">
         <div class="left-align white-text">
-            <p>Welcome to Kiwi Lingo!<br>Your Ultimate Online Guide to Kiwi Phrases and Words<br>Join Today to Add Your
+            <p>Kia Ora & Welcome to Kiwi Lingo!<br>Your Ultimate Online Guide to Kiwi Phrases and Words<br>Join
+                Today to Add Your
                 Word or Phrase!</p>
-            <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light z-depth-0">Go To Glossary!</a>
+            <a href="{{ url_for('register') }}" class="btn waves-effect waves-light z-depth-0">Register Now</a>
+            <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light z-depth-0">Go To Glossary</a>
         </div>
     </div>
     <div class="img-description">
@@ -28,16 +30,17 @@
     <h2>What's Kiwi Lingo?</h2>
     <div class="description">
         <p>
-            Every been in an awkward conversation with a Kiwi and you didn't know what the heck they were on about?
+            Ever been in an awkward conversation with a Kiwi (New Zealander) and you didn't know what the heck they were
+            on about?
         </p>
         <p>
-            Maybe you have just returned from Middle Earth and collected some choice words you want to store
+            Maybe you have just returned from Middle Earth and collected some choice words you want to store...
         </p>
         <p>
             Let our handy guide, Kiwi Lingo, be your go-to guide for everything spoken in New Zealand!
         </p>
     </div>
-    <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light z-depth-0">Our Guide</a>
+    <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light z-depth-0">See Guide</a>
 </div>
 
 
@@ -45,7 +48,8 @@
     <h2>About Kiwi Lingo</h2>
     <div class="description">
         <p>
-            Every been in an awkward conversation with a Kiwi and you didn't know what the heck they were on about?
+            Ever been in an awkward conversation with a Kiwi (New Zealander) and you didn't know what the heck they
+            were on about?
         </p>
         <p>
             Maybe you have just returned from the mother-land and have some choice words you would like to keep
