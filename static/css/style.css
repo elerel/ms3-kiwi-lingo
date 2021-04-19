@@ -181,3 +181,9 @@ span:nth-child(even) {
 .glossary-btn {
     text-align: right;
 }
+
+/* Modal styling  */
+.modal-close,
+.modal-footer {
+    text-align: center !important;
+}
