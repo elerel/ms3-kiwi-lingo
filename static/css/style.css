@@ -155,7 +155,9 @@ span:nth-child(even) {
     margin-left: 10px;
 }
 
-.btn {
+/* Button Styling */
+.btn,
+.btn-large {
     background-color: orange;
     font-family: 'Luckiest guy';
     border-radius: 8px;
@@ -169,6 +171,7 @@ span:nth-child(even) {
 .btn-small {
     margin: 5px;
 }
+
 
 .collapsible-header .col strong {
     margin: 5px;

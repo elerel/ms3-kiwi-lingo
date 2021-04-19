@@ -187,6 +187,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 - The photos used in this site were obtained from ...
 
 - [PXFuel](https://www.pxfuel.com/en/free-photo-ofpyp)
+- [SeekLogo](https://seeklogo.com/vector-logo/195319/new-zealand-rugby-union-fern)- for use of Fern logo
 
 
 ### Acknowledgements

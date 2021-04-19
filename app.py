@@ -135,6 +135,23 @@ def add_word():
 
 @app.route("/edit_word/<word_id>", methods=["GET", "POST"])
 def edit_word(word_id):
+    
+    if request.method == "POST":
+        thumbs_up = "on" if request.form.get("thumbs_up") else "off"
+        thumbs_down = "on" if request.form.get("thumbs_down") else "off"
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "word": request.form.get("word"),
+            "definition": request.form.get("definition"),
+            "phrase_example": request.form.get("phrase_example"),
+            "created_by": session["user"],
+            "thumbs_up": thumbs_up,
+            "thumbs_down": thumbs_down
+        }
+        mongo.db.words.update({"_id": ObjectId(word_id)}, submit)
+        flash("Your Word Has Been Updated!")
+        return redirect(url_for("get_words"))
+
     word = mongo.db.words.find_one({"_id": ObjectId(word_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_word.html", word=word, categories=categories)
