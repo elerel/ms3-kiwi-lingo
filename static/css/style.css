@@ -173,7 +173,7 @@ span:nth-child(even) {
 .join-text {
     font-family: 'Raleway', sans-serif;
     font-size: 1.8rem;
-    margin: 40px 0 0 10px;
+    margin: 40px 0 0 20px;
 }
 
 /* Button Styling */
@@ -214,6 +214,7 @@ span:nth-child(even) {
     nav .brand-logo {
         font-size: 1.8rem;
         margin-left: 0px;
+        display: inline-block !important;
     }
 
     .welcome-title {
@@ -224,7 +225,14 @@ span:nth-child(even) {
         font-size: 2rem;
     }
 
+    .join-text {
+        margin-top: 40px;
+        font-size: 1.4rem;
+    }
+
     @media only screen and (max-width: 375px) {
         .welcome-title {
             font-size: 3rem;
         }
+    }
+}
