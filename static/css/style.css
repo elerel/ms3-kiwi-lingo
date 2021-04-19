@@ -27,9 +27,13 @@ nav.nav-extended .nav-wrapper {
 
 }
 
+nav ul {
+    margin-right: 20px;
+}
+
 .brand-logo {
     font-family: 'Luckiest Guy', cursive;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 #mobile-demo {
@@ -157,7 +161,7 @@ span:nth-child(even) {
 .join-text {
     font-family: 'Raleway', sans-serif;
     font-size: 1.8rem;
-    margin-left: 10px;
+    margin: 80px 0 0 10px;
 }
 
 /* Button Styling */
