@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap') @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Nothing+You+Could+Do&display=swap');
 
-
+/*
 body {
-    font-family: 'Luckiest Guy', cursive;
-}
+    font-family: 'Montserrat', cursive;
+}*/
 
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -65,8 +64,6 @@ nav ul {
     padding-top: 10px;
 }
 
-
-
 .page-footer {
     padding: 10px 10px 0px 10px;
     bottom: 0;
@@ -87,13 +84,20 @@ nav ul {
 }
 
 .welcome-title {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 4rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 5rem;
     text-transform: uppercase;
+    letter-spacing: 2px;
     margin: 0px 20px;
     padding-top: 40px;
     color: #fff;
     text-shadow: 0 2px 10px rgb(0 0 0 / 40%);
+}
+
+.new-zealand {
+    text-transform: uppercase;
+    margin: 0px 20px;
+    letter-spacing: 8px;
 }
 
 .img-description {
@@ -108,7 +112,15 @@ nav ul {
     width: 100%;
 }
 
+.about-kiwi {
+    font-family: 'Luckiest Guy', sans-serif;
+}
 
+.description {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
 
 /* Welcome Title styling- from https://codepen.io/bennettfeely/pen/lgybC/*/
 .welcome-text>span {
@@ -119,7 +131,7 @@ nav ul {
     letter-spacing: 3px;
     display: inline-block;
     text-shadow: 0 0 0 whitesmoke;
-    animation: smoky 5s 3s both;
+    animation: smoky 8s 4s both;
 }
 
 span:nth-child(even) {
@@ -161,7 +173,7 @@ span:nth-child(even) {
 .join-text {
     font-family: 'Raleway', sans-serif;
     font-size: 1.8rem;
-    margin: 80px 0 0 10px;
+    margin: 40px 0 0 10px;
 }
 
 /* Button Styling */
@@ -191,12 +203,28 @@ span:nth-child(even) {
     text-align: right;
 }
 
-.guide-btn {
-    margin: -15px 0 0 20px;
-}
-
 /* Modal styling  */
 .modal-close,
 .modal-footer {
     text-align: center !important;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 475px) {
+    nav .brand-logo {
+        font-size: 1.8rem;
+        margin-left: 0px;
+    }
+
+    .welcome-title {
+        font-size: 4rem;
+    }
+
+    .welcome-text>span {
+        font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 375px) {
+        .welcome-title {
+            font-size: 3rem;
+        }

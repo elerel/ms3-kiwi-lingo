@@ -18,10 +18,10 @@
             </div>
         </div>
         <div class="collapsible-body orange lighten-4">
-            <strong><em>Category: </em>{{ word.category_name}}</strong>
-            <p><em>Definition: </em>{{ word.definition }}</p>
-            <p><em>Example: </em>{{ word.phrase_example }}</p>
-            <p><em>by: {{ word.created_by }}</em></p>
+            <strong><em>Category: </em></strong>{{ word.category_name}}
+            <p><strong><em>Definition: </em></strong>{{ word.definition }}</p>
+            <p><strong><em>Example: </em></strong>{{ word.phrase_example }}</p>
+            <p><strong><em>by: {{ word.created_by }}</em></strong></p>
             {% if word.thumbs_up == "on" %}
             <i class="fas fa-thumbs-up text-lighten-2 tooltipped" data-position="bottom" data-tooltip="Yeah, Bro!"></i>
             <i class="fas fa-thumbs-down text-lighten-2 tooltipped" data-position="bottom" data-tooltip="Nah, Bro!"></i>
