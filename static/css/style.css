@@ -191,6 +191,10 @@ span:nth-child(even) {
     text-align: right;
 }
 
+.guide-btn {
+    margin: -15px 0 0 20px;
+}
+
 /* Modal styling  */
 .modal-close,
 .modal-footer {
