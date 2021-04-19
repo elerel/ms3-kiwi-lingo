@@ -134,8 +134,7 @@ def add_word():
 
 
 @app.route("/edit_word/<word_id>", methods=["GET", "POST"])
-def edit_word(word_id):
-    
+def edit_word(word_id):   
     if request.method == "POST":
         thumbs_up = "on" if request.form.get("thumbs_up") else "off"
         thumbs_down = "on" if request.form.get("thumbs_down") else "off"
@@ -155,6 +154,15 @@ def edit_word(word_id):
     word = mongo.db.words.find_one({"_id": ObjectId(word_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_word.html", word=word, categories=categories)
+
+
+@app.route("/delete_word/<word_id>")
+def delete_word(word_id):
+    mongo.db.words.delete_one({"_id": ObjectId(word_id)})
+    flash("Word Successfully Deleted")
+    return redirect(url_for("get_words"))
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
