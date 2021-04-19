@@ -12,7 +12,7 @@ body {
 }
 
 img {
-    height: 65px;
+    height: 40px;
     width: 60px;
 }
 
@@ -100,6 +100,8 @@ nav.nav-extended .nav-wrapper {
     color: #fff;
     width: 100%;
 }
+
+
 
 /* Welcome Title styling- from https://codepen.io/bennettfeely/pen/lgybC/*/
 .welcome-text>span {
