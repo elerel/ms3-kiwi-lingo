@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 class="black-text center-align">Glossary</h3>
+
 <ul class="collapsible popout">
     {% for word in words %}
     <li>
@@ -40,13 +42,13 @@
         <!-- Buttons -->
         <div class="row modal-footer">
             <!-- Cancel Button -->
-            <a href="#!" class="btn delete modal-close waves-effect waves-light z-depth-0">
+            <a href="#!" class="btn delete modal-close waves-effect waves-light red z-depth-0">
                 <i class="fas fa-times"></i>
                 Cancel
             </a>
             <!-- Delete Button -->
             <a href="{{ url_for('delete_word', word_id=word._id) }}"
-                class="btn delete waves-effect waves-light z-depth-0">
+                class="btn delete waves-effect waves-light green z-depth-0">
                 <i class="fas fa-trash-alt"></i>
                 Delete
             </a>
