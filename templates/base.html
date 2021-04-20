@@ -43,7 +43,9 @@
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('get_words') }}">Glossary</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href='#'>Categories</a></li>
+                    {% if session.user == "elerel" %}
+                    <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                    {% endif %}
                     <li><a href="{{ url_for('add_word') }}">Add Word</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
@@ -64,7 +66,9 @@
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('get_words') }}">Glossary</a></li>
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-            <li><a href='#'>Categories</a></li>
+            {% if session.user == "elerel" %}
+            <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+            {% endif %}
             <li><a href="{{ url_for('add_word') }}">Add Word</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
@@ -80,7 +84,7 @@
         {% if messages %}
         {% for message in messages %}
         <div class="row flashes">
-            <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+            <h4 class="orange lighten-4 center-align">{{ message }}</h4>
         </div>
         {% endfor %}
         {% endif %}
