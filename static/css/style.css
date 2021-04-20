@@ -231,8 +231,22 @@ span:nth-child(even) {
     }
 
     @media only screen and (max-width: 375px) {
+
         .welcome-title {
             font-size: 3rem;
+        }
+
+        .join-text {
+            font-size: 1rem;
+        }
+
+        .guide-btn {
+            margin-left: 40px;
+
+        }
+
+        .about-kiwi h2 {
+            font-size: 2rem;
         }
     }
 }
