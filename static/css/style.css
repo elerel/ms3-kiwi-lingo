@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap') @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Nothing+You+Could+Do&display=swap');
 
-/*
-body {
-    font-family: 'Montserrat', cursive;
-}*/
-
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -190,13 +185,18 @@ span:nth-child(even) {
 }
 
 .btn-small {
-    margin: 5px;
+    margin: 5px 0 0 30px;
 }
 
 
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;
+}
+
+
+.collapsible-header {
+    line-height: 2rem;
 }
 
 .glossary-btn {
@@ -249,4 +249,17 @@ span:nth-child(even) {
             font-size: 2rem;
         }
     }
+}
+
+/* Like and Dislike Buttons*/
+#count {
+    margin: 0px 15px 0px;
+}
+
+.fa-thumbs-up {
+    color: green;
+}
+
+.fa-thumbs-down {
+    color: red;
 }

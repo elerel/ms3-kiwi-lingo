@@ -114,16 +114,14 @@ def logout():
 @app.route("/add_word", methods=["GET", "POST"])
 def add_word():
     if request.method == "POST":
-        thumbs_up = "on" if request.form.get("thumbs_up") else "off"
-        thumbs_down = "on" if request.form.get("thumbs_down") else "off"
         word = {
             "category_name": request.form.get("category_name"),
             "word": request.form.get("word"),
             "definition": request.form.get("definition"),
             "phrase_example": request.form.get("phrase_example"),
             "created_by": session["user"],
-            "thumbs_up": thumbs_up,
-            "thumbs_down": thumbs_down
+            "thumbs_up": 0,
+            "thumbs_down": 0
         }
         mongo.db.words.insert_one(word)
         flash("Shot for adding your word, mate!")
@@ -136,16 +134,14 @@ def add_word():
 @app.route("/edit_word/<word_id>", methods=["GET", "POST"])
 def edit_word(word_id):   
     if request.method == "POST":
-        thumbs_up = "on" if request.form.get("thumbs_up") else "off"
-        thumbs_down = "on" if request.form.get("thumbs_down") else "off"
         submit = {
             "category_name": request.form.get("category_name"),
             "word": request.form.get("word"),
             "definition": request.form.get("definition"),
             "phrase_example": request.form.get("phrase_example"),
             "created_by": session["user"],
-            "thumbs_up": thumbs_up,
-            "thumbs_down": thumbs_down
+            "thumbs_up": 0,
+            "thumbs_down": 0
         }
         mongo.db.words.update({"_id": ObjectId(word_id)}, submit)
         flash("Your Word Has Been Updated!")
@@ -167,6 +163,22 @@ def delete_word(word_id):
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
+
+
+@app.route("/thumbs_up/<word_id>", methods=["GET", "POST"])
+def thumbs_up(word_id):
+    word = mongo.db.words.find_one_and_update(
+        # code credit to line below to stackoverflow, refer to readme file.
+        {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_up": 1}})
+    return redirect(url_for("get_words", word=word))
+
+
+@app.route("/thumbs_down/<word_id>", methods=["GET", "POST"])
+def thumbs_down(word_id):
+    word = mongo.db.words.find_one_and_update(
+        # code credit to line below to stackoverflow, refer to readme file.
+        {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_down": 1}})
+    return redirect(url_for("get_words", word=word))
 
 
 if __name__ == "__main__":

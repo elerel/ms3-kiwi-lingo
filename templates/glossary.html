@@ -7,11 +7,7 @@
     {% for word in words %}
     <li>
         <div class="collapsible-header white-text orange darken-1 text-shadow">
-
             <i class="fas fa-caret-down"></i><strong>{{ word.word }}</strong>
-
-
-
             {% if session.user == word.created_by %}
             <a href="{{ url_for('delete_word', word_id=word._id) }}" data-target="{{ word._id }}"
                 class="btn-small modal-trigger right-align green accent-4">Delete</a>
@@ -25,11 +21,18 @@
             <p><strong><em>Definition: </em></strong>{{ word.definition }}</p>
             <p><strong><em>Example: </em></strong>{{ word.phrase_example }}</p>
             <p><strong><em>by: {{ word.created_by }}</em></strong></p>
-            <!--{% if word.thumbs_up == "on" %}-->
-            <i class="fas fa-thumbs-up text-lighten-2 tooltipped" data-position="bottom" data-tooltip="Yeah, Bro!"></i>
-            <i class="fas fa-thumbs-down text-lighten-2 tooltipped" data-position="bottom" data-tooltip="Nah, Bro!"></i>
-            <!--{% endif %}-->
-        </div>
+            <!--Likes & Dislikes- code snippet taken from fellow student Karen Yuen and modified-->
+            <div class="col s12 m4 valign-wrapper" id="thumbsup">
+                <a href="{{ url_for('thumbs_up', word_id=word._id)}}" class="secondary content thumbs_up tooltipped"
+                    data-position="top" data-tooltip="Yeah, bro!">
+                    <i class="fas fa-thumbs-up tooltipped" id="like-thumb" alt="thumbs up"></i></a>
+                <span id="count">{{ word.thumbs_up }}</span>
+                <!--dislike-->
+                <a href="{{ url_for('thumbs_down', word_id=word._id)}}" class="secondary content thumbs_down tooltipped"
+                    data-position="top" data-tooltip="Nah, bro!">
+                    <i class="fas fa-thumbs-down tooltipped" id="dislike-thumb" alt="thumbs down"></i></a>
+                <span id="count">{{ word.thumbs_down }}</span>
+            </div>
         </div>
     </li>
 
