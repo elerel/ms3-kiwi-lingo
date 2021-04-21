@@ -1,8 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap') @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Nothing+You+Could+Do&display=swap');
 
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-family: 'Luckiest Guy', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 img {
