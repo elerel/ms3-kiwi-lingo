@@ -2,7 +2,27 @@
 {% block content %}
 
 <h3 class="black-text center-align">Glossary</h3>
+<div class="container">
+    <div class="row card-panel grey lighten-5">
+        <form action="{{ url_for('search' )}}" method="POST" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix light-blue-text text-darken-3"></i>
+                    <input type="text" name="query" id="query" class="validate" required>
+                    <label for="query">Search</label>
+                </div>
+                <div class="col s12 m4">
+                    <button type="submit" class="light-blue darken-1 btn text-shadow">
+                        <i class="fas fa-search left"></i>Search
+                    </button>
+                    <a href="{{ url_for('get_words' )}}" class="red btn text-shadow">Reset</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
+{% if words|length > 0 %}
 <ul class="collapsible popout">
     {% for word in words %}
     <li>
@@ -61,5 +81,8 @@
 
     {% endfor %}
 </ul>
+{% else %}
+<h3 class="orange-text center-align">No Results Found</h3>
+{% endif %}
 
 {% endblock %}
