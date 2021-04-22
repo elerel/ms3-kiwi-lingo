@@ -115,10 +115,12 @@ def logout():
 
 @app.route("/add_word", methods=["GET", "POST"])
 def add_word():
-    if request.method == "POST":
+    if "user" in session:
 
-        existing_word = mongo.db.words.find_one(
-            {"word": request.form.get("word")})
+        if request.method == "POST":
+
+            existing_word = mongo.db.words.find_one(
+                {"word": request.form.get("word")})
 
         if existing_word:
             flash("Yeah, nah bro- that word is already added")
@@ -139,6 +141,7 @@ def add_word():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_word.html", categories=categories)
+
 
 # edit word functionality
 @app.route("/edit_word/<word_id>", methods=["GET", "POST"])
@@ -212,7 +215,7 @@ def delete_category(category_id):
 @app.route("/thumbs_up/<word_id>", methods=["GET", "POST"])
 def thumbs_up(word_id):
     word = mongo.db.words.find_one_and_update(
-        # code credit to line below to stackoverflow, refer to readme file.
+        # code credit to stackoverflow
         {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_up": 1}})
     return redirect(url_for("get_words", word=word))
 
@@ -220,7 +223,7 @@ def thumbs_up(word_id):
 @app.route("/thumbs_down/<word_id>", methods=["GET", "POST"])
 def thumbs_down(word_id):
     word = mongo.db.words.find_one_and_update(
-        # code credit to line below to stackoverflow, refer to readme file.
+        # code credit to stackoverflow
         {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_down": 1}})
     return redirect(url_for("get_words", word=word))
 
