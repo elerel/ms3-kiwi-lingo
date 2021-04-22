@@ -14,4 +14,80 @@
         </div>
     </div>
 
+    <!--Words added by user-->
+    <div class="container">
+        <h3 class="center-align">Words Added By You:</h3>
+        {% if words|length > 0 %}
+        <ul class="collapsible popout">
+            {% for word in words %}
+            {% if session["user"] == word.created_by %}
+            <li>
+                <div class="collapsible-header white-text orange darken-1 text-shadow">
+                    <i class="fas fa-caret-down"></i><strong>{{ word.word }}</strong>
+                    <a href="{{ url_for('delete_word', word_id=word._id) }}" data-target="{{ word._id }}"
+                        class="btn-small modal-trigger right-align green accent-4">Delete</a>
+                    <a href="{{ url_for('edit_word', word_id=word._id) }}"
+                        class="btn-small light-blue right-align lighten-1">Edit</a>
+                </div>
+                <div class="collapsible-body orange lighten-4">
+                    <strong><em>Category: </em></strong>{{ word.category_name}}
+                    <p><strong><em>Definition: </em></strong>{{ word.definition }}</p>
+                    <p><strong><em>Example: </em></strong>{{ word.phrase_example }}</p>
+                    <p><strong><em>by: {{ word.created_by }}</em></strong></p>
+                    <!--Likes & Dislikes- code snippet taken from fellow student Karen Yuen and modified-->
+                    <div class="col s12 m4 valign-wrapper" id="thumbsup">
+                        <a href="{{ url_for('thumbs_up', word_id=word._id)}}"
+                            class="secondary content thumbs_up tooltipped" data-position="top"
+                            data-tooltip="Yeah, bro!">
+                            <i class="fas fa-thumbs-up" id="like-thumb" alt="thumbs up"></i></a>
+                        <span id="count">{{ word.thumbs_up }}</span>
+                        <!--dislike-->
+                        <a href="{{ url_for('thumbs_down', word_id=word._id)}}"
+                            class="secondary content thumbs_down tooltipped" data-position="top"
+                            data-tooltip="Nah, bro!">
+                            <i class="fas fa-thumbs-down" id="dislike-thumb" alt="thumbs down"></i></a>
+                        <span id="count">{{ word.thumbs_down }}</span>
+                    </div>
+                </div>
+            </li>
+
+
+            <!-- Delete Confirmation Modal -->
+            <!-- Code from a slack thread in #data-centric-dev -->
+            <div id="{{ word._id }}" class="modal center-align">
+                <!-- Modal Content -->
+                <div class="modal-content center-align">
+                    <h4>Are you sure you want to delete "{{ word.word }}" from Kiwi Lingo?</h4>
+                </div>
+                <!-- Buttons -->
+                <div class="row modal-footer">
+                    <!-- Cancel Button -->
+                    <a href="#!" class="btn delete modal-close waves-effect waves-light red z-depth-0">
+                        <i class="fas fa-times"></i>
+                        Cancel
+                    </a>
+                    <!-- Delete Button -->
+                    <a href="{{ url_for('delete_word', word_id=word._id) }}"
+                        class="btn delete waves-effect waves-light green z-depth-0">
+                        <i class="fas fa-trash-alt"></i>
+                        Delete
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+
+
+    <!--User to add word/phrase-->
+    <div class="sign-up container center-align">
+        <h3>Keen to add a word or phrase, {{ username }}?</h3>
+        <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light red"> <i class="fas fa-plus"></i>
+            Add
+            Word/Phrase!</a>
+    </div>
+
     {% endblock %}

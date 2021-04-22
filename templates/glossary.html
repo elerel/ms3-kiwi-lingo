@@ -3,11 +3,11 @@
 
 <h3 class="black-text center-align">Glossary</h3>
 <div class="container">
-    <div class="row card-panel grey lighten-5">
+    <div class="row card-panel orange lighten-3">
         <form action="{{ url_for('search' )}}" method="POST" class="col s12">
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix light-blue-text text-darken-3"></i>
+                    <i class="fas fa-search prefix blue-text text-darken-3"></i>
                     <input type="text" name="query" id="query" class="validate" required>
                     <label for="query">Search</label>
                 </div>
@@ -23,66 +23,73 @@
 </div>
 
 {% if words|length > 0 %}
-<ul class="collapsible popout">
-    {% for word in words %}
-    <li>
-        <div class="collapsible-header white-text orange darken-1 text-shadow">
-            <i class="fas fa-caret-down"></i><strong>{{ word.word }}</strong>
-            {% if session.user == word.created_by %}
-            <a href="{{ url_for('delete_word', word_id=word._id) }}" data-target="{{ word._id }}"
-                class="btn-small modal-trigger right-align green accent-4">Delete</a>
-            <a href="{{ url_for('edit_word', word_id=word._id) }}"
-                class="btn-small light-blue right-align lighten-1">Edit</a>
-            {% endif %}
+<div class="container">
+    <ul class="collapsible popout">
+        {% for word in words %}
+        <li>
+            <div class="collapsible-header white-text orange darken-1 text-shadow">
+                <i class="fas fa-caret-down"></i><strong>{{ word.word }}</strong>
+                {% if session.user == word.created_by %}
+                <a href="{{ url_for('delete_word', word_id=word._id) }}" data-target="{{ word._id }}"
+                    class="btn-small modal-trigger right-align green accent-4">Delete</a>
+                <a href="{{ url_for('edit_word', word_id=word._id) }}"
+                    class="btn-small light-blue right-align lighten-1">Edit</a>
+                {% endif %}
 
-        </div>
-        <div class="collapsible-body orange lighten-4">
-            <strong><em>Category: </em></strong>{{ word.category_name}}
-            <p><strong><em>Definition: </em></strong>{{ word.definition }}</p>
-            <p><strong><em>Example: </em></strong>{{ word.phrase_example }}</p>
-            <p><strong><em>by: {{ word.created_by }}</em></strong></p>
-            <!--Likes & Dislikes- code snippet taken from fellow student Karen Yuen and modified-->
-            <div class="col s12 m4 valign-wrapper" id="thumbsup">
-                <a href="{{ url_for('thumbs_up', word_id=word._id)}}" class="secondary content thumbs_up tooltipped"
-                    data-position="top" data-tooltip="Yeah, bro!">
-                    <i class="fas fa-thumbs-up tooltipped" id="like-thumb" alt="thumbs up"></i></a>
-                <span id="count">{{ word.thumbs_up }}</span>
-                <!--dislike-->
-                <a href="{{ url_for('thumbs_down', word_id=word._id)}}" class="secondary content thumbs_down tooltipped"
-                    data-position="top" data-tooltip="Nah, bro!">
-                    <i class="fas fa-thumbs-down tooltipped" id="dislike-thumb" alt="thumbs down"></i></a>
-                <span id="count">{{ word.thumbs_down }}</span>
+            </div>
+            <div class="collapsible-body orange lighten-4">
+                <strong><em>Category: </em></strong>{{ word.category_name}}
+                <p><strong><em>Definition: </em></strong>{{ word.definition }}</p>
+                <p><strong><em>Example: </em></strong>{{ word.phrase_example }}</p>
+                <p><strong><em>by: {{ word.created_by }}</em></strong></p>
+                <!--Likes & Dislikes- code snippet taken from fellow student Karen Yuen and modified-->
+                <div class="col s12 m4 valign-wrapper" id="thumbsup">
+                    <a href="{{ url_for('thumbs_up', word_id=word._id)}}" class="secondary content thumbs_up tooltipped"
+                        data-position="top" data-tooltip="Yeah, bro!">
+                        <i class="fas fa-thumbs-up" id="like-thumb" alt="thumbs up"></i></a>
+                    <span id="count">{{ word.thumbs_up }}</span>
+                    <!--dislike-->
+                    <a href="{{ url_for('thumbs_down', word_id=word._id)}}"
+                        class="secondary content thumbs_down tooltipped" data-position="top" data-tooltip="Nah, bro!">
+                        <i class="fas fa-thumbs-down" id="dislike-thumb" alt="thumbs down"></i></a>
+                    <span id="count">{{ word.thumbs_down }}</span>
+                </div>
+            </div>
+        </li>
+
+        <!-- Delete Confirmation Modal -->
+        <!-- Code from a slack thread in #data-centric-dev -->
+        <div id="{{ word._id }}" class="modal center-align">
+            <!-- Modal Content -->
+            <div class="modal-content center-align">
+                <h4>Are you sure you want to delete "{{ word.word }}" from Kiwi Lingo?</h4>
+            </div>
+            <!-- Buttons -->
+            <div class="row modal-footer">
+                <!-- Cancel Button -->
+                <a href="#!" class="btn delete modal-close waves-effect waves-light red z-depth-0">
+                    <i class="fas fa-times"></i>
+                    Cancel
+                </a>
+                <!-- Delete Button -->
+                <a href="{{ url_for('delete_word', word_id=word._id) }}"
+                    class="btn delete waves-effect waves-light green z-depth-0">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                </a>
             </div>
         </div>
-    </li>
 
-    <!-- Delete Confirmation Modal -->
-    <!-- Code from a slack thread in #data-centric-dev -->
-    <div id="{{ word._id }}" class="modal center-align">
-        <!-- Modal Content -->
-        <div class="modal-content center-align">
-            <h4>Are you sure you want to delete "{{ word.word }}" from Kiwi Lingo?</h4>
-        </div>
-        <!-- Buttons -->
-        <div class="row modal-footer">
-            <!-- Cancel Button -->
-            <a href="#!" class="btn delete modal-close waves-effect waves-light red z-depth-0">
-                <i class="fas fa-times"></i>
-                Cancel
-            </a>
-            <!-- Delete Button -->
-            <a href="{{ url_for('delete_word', word_id=word._id) }}"
-                class="btn delete waves-effect waves-light green z-depth-0">
-                <i class="fas fa-trash-alt"></i>
-                Delete
-            </a>
-        </div>
-    </div>
-
-    {% endfor %}
-</ul>
-{% else %}
-<h3 class="orange-text center-align">No Results Found</h3>
-{% endif %}
-
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h3 class="red-text bold center-align">No Results Found!</h3>
+    {% endif %}
+</div>
+<div class="sign-up container center-align">
+    <h3>Keen to add a word or phrase?</h3>
+    <p>Log In or Sign Up Now!</p>
+    <a href="{{ url_for('login') }}" class="btn waves-effect waves-light green">Log In</a>
+    <a href="{{ url_for('register') }}" class="btn waves-effect waves-light red">Sign Up</a>
+</div>
 {% endblock %}

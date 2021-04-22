@@ -278,3 +278,8 @@ span:nth-child(even) {
 .fa-thumbs-down {
     color: red;
 }
+
+/*Glossary Page*/
+.sign-up {
+    margin-bottom: 30px;
+}
