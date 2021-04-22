@@ -63,7 +63,6 @@ def register():
             session["user"] = request.form.get("username")
             flash("Ripper! You've created your profile page!")
             return redirect(url_for("profile", username=session["user"]))
-            return render_template("register.html")
 
         flash("Yeah, nah mate. Passwords do not match.")
 
@@ -105,11 +104,6 @@ def profile(username):
         {"username": session["user"]})["username"]
     return render_template("profile.html", username=username)
 
-    if session["user"]:
-        return render_template("profile.html", username=username)
-
-    return redirect(url_for("login"))
-
 
 @app.route("/logout")
 def logout():
@@ -138,7 +132,7 @@ def add_word():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_word.html", categories=categories)
 
-
+# edit word functionality
 @app.route("/edit_word/<word_id>", methods=["GET", "POST"])
 def edit_word(word_id):   
     if request.method == "POST":
