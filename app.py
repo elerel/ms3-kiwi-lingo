@@ -80,10 +80,10 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username")
-                    flash("Kia Ora, {}".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
+                session["user"] = request.form.get("username")
+                flash("Kia Ora, {}!".format(
+                    request.form.get("username")))
+                return redirect(url_for(
                         "profile", username=session["user"]))    
 
             else:
@@ -116,9 +116,17 @@ def logout():
 @app.route("/add_word", methods=["GET", "POST"])
 def add_word():
     if request.method == "POST":
+
+        existing_word = mongo.db.words.find_one(
+            {"word": request.form.get("word")})
+
+        if existing_word:
+            flash("Yeah, nah bro- that word is already added")
+            return redirect(url_for("add_word"))
+
         word = {
             "category_name": request.form.get("category_name"),
-            "word": request.form.get("word"),
+            "word": request.form.get("word").capitalize(),
             "definition": request.form.get("definition"),
             "phrase_example": request.form.get("phrase_example"),
             "created_by": session["user"],
@@ -134,11 +142,11 @@ def add_word():
 
 # edit word functionality
 @app.route("/edit_word/<word_id>", methods=["GET", "POST"])
-def edit_word(word_id):   
+def edit_word(word_id):
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name"),
-            "word": request.form.get("word"),
+            "word": request.form.get("word").capitalize(),
             "definition": request.form.get("definition"),
             "phrase_example": request.form.get("phrase_example"),
             "created_by": session["user"],
@@ -219,5 +227,5 @@ def thumbs_down(word_id):
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-    port=int(os.environ.get("PORT")),
-    debug=True)
+            port=int(os.environ.get("PORT")),
+            debug=True)
