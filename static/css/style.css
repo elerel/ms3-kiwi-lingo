@@ -62,9 +62,14 @@ nav ul {
 
 /*Register Page*/
 .register-page,
-.login-page {
-    background-color: orange;
+.login-page,
+.add-word-pg,
+.edit-word-page,
+.manage-categories-page,
+.glossary-pg {
+    background-color: #ffcc80;
     height: 100vh;
+    padding-top: 20px;
 }
 
 .register-title {

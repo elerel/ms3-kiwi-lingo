@@ -2,8 +2,6 @@
 {% block content %}
 
 <div class="profile-page">
-
-
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
@@ -13,14 +11,11 @@
             </div>
         </div>
     </div>
-
     <!--Words added by user-->
     <div class="container">
         <h3 class="center-align">Words Added By You:</h3>
-        {% if words|length > 0 %}
+        {% for word in words if session.user|capitalize == word.created_by|capitalize %}
         <ul class="collapsible popout">
-            {% for word in words %}
-            {% if session["user"] == word.created_by %}
             <li>
                 <div class="collapsible-header white-text orange darken-1 text-shadow">
                     <i class="fas fa-caret-down"></i><strong>{{ word.word }}</strong>
@@ -50,8 +45,6 @@
                     </div>
                 </div>
             </li>
-
-
             <!-- Delete Confirmation Modal -->
             <!-- Code from a slack thread in #data-centric-dev -->
             <div id="{{ word._id }}" class="modal center-align">
@@ -74,11 +67,13 @@
                     </a>
                 </div>
             </div>
-            {% endif %}
-            {% endfor %}
         </ul>
-        {% endif %}
+        {% endfor %}
     </div>
+
+
+
+
 
 
 
