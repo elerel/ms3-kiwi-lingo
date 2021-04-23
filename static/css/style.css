@@ -14,7 +14,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: linear-gradient(rgb(10, 9, 9), rgb(255, 255, 255));
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(255, 255, 255));
 }
 
 
@@ -61,7 +61,6 @@ nav ul {
     color: #fff !important;
 }
 
-
 /*Register Page*/
 .register-page,
 .login-page,
@@ -69,7 +68,6 @@ nav ul {
 .edit-word-page,
 .manage-categories-page,
 .glossary-pg {
-
     height: 100vh;
     padding-top: 20px;
 }
@@ -193,6 +191,15 @@ span:nth-child(even) {
     margin: 40px 0 0 20px;
 }
 
+.icon-flipped {
+    padding-left: 3px;
+    padding-right: 3px;
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+}
+
 /* Button Styling */
 .btn,
 .btn-large {
@@ -306,4 +313,18 @@ span:nth-child(even) {
 .card-panel,
 .modal {
     border-radius: 20px;
+}
+
+/* contact us page */
+.form-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+form .card {
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 10px 100px;
+    justify-content: center;
 }
