@@ -3,8 +3,8 @@
 
 <div class="profile-page">
     <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
+        <div class="col s12 m4 offset-m4">
+            <div class="card-panel profile">
                 <h3 class="center-align back-text">
                     {{ username }}'s Profile
                 </h3>
@@ -13,9 +13,11 @@
     </div>
     <!--Words added by user-->
     <div class="container">
-        <h3 class="center-align">Words Added By You:</h3>
+        <h4 class="white-text center-align">Choice Words You've Added:</h4>
         {% for word in words if session.user|capitalize == word.created_by|capitalize %}
+
         <ul class="collapsible popout">
+
             <li>
                 <div class="collapsible-header white-text orange darken-1 text-shadow">
                     <i class="fas fa-caret-down"></i><strong>{{ word.word }}</strong>
@@ -67,22 +69,29 @@
                     </a>
                 </div>
             </div>
+            {% else %}
+            <div class="no-words card valign-wrapper">
+                <h3>
+                    You haven't added any words, owl!
+
+                </h3>
+            </div>
+            {% endfor %}
         </ul>
-        {% endfor %}
     </div>
+</div>
 
 
 
 
 
 
+<!--User to add word/phrase-->
+<div class="sign-up container white-text center-align">
+    <h3>Keen to add a word or phrase, {{ username }}?</h3>
+    <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light red"> <i class="fas fa-plus"></i>
+        Add
+        Word/Phrase!</a>
+</div>
 
-    <!--User to add word/phrase-->
-    <div class="sign-up container center-align">
-        <h3>Keen to add a word or phrase, {{ username }}?</h3>
-        <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light red"> <i class="fas fa-plus"></i>
-            Add
-            Word/Phrase!</a>
-    </div>
-
-    {% endblock %}
+{% endblock %}

@@ -97,33 +97,39 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
+@app.route("/profile/<username>", methods=["GET", "POST"])  # PROFILE PAGE
 def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    words = list(mongo.db.words.find())
+    # if existing user display profile
+    if session["user"]:
+        return render_template("profile.html",
+                               username=username, words=words)
+
+    return redirect(url_for("login"))
 
 
 @app.route("/logout")
 def logout():
     # remove user from session cookies
-    flash("You have been logged out")
+    flash("You have been logged out. Haere Ra!")
     session.pop("user")
     return redirect(url_for("login"))
 
 
 @app.route("/add_word", methods=["GET", "POST"])
+# Render Add Word Page
 def add_word():
-    if "user" in session:
+    if request.method == "POST":
 
-        if request.method == "POST":
-
-            existing_word = mongo.db.words.find_one(
-                {"word": request.form.get("word")})
+        existing_word = mongo.db.dictionary.find_one(
+            {"word": request.form.get("word")})
 
         if existing_word:
-            flash("Yeah, nah bro- that word is already added")
+            # Display flash message if word already exists
+            flash("Yeah, nah bro. Word is already listed.")
             return redirect(url_for("add_word"))
 
         word = {
@@ -215,7 +221,7 @@ def delete_category(category_id):
 @app.route("/thumbs_up/<word_id>", methods=["GET", "POST"])
 def thumbs_up(word_id):
     word = mongo.db.words.find_one_and_update(
-        # code credit to stackoverflow
+        # code credit to W3 Resources: https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php
         {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_up": 1}})
     return redirect(url_for("get_words", word=word))
 
@@ -223,7 +229,7 @@ def thumbs_up(word_id):
 @app.route("/thumbs_down/<word_id>", methods=["GET", "POST"])
 def thumbs_down(word_id):
     word = mongo.db.words.find_one_and_update(
-        # code credit to stackoverflow
+        # code credit to W3 Resources: https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php
         {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_down": 1}})
     return redirect(url_for("get_words", word=word))
 
