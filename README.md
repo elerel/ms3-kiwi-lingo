@@ -181,6 +181,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 - [Regional Slang Article](https://www.stuff.co.nz/national/99763866/hey-uce-heres-a-meanas-guide-to-kiwi-regional-slang)
 - [Codepen](https://codepen.io/bennettfeely/pen/lgybC/) for use of smokey/cloud effect on home page
+- [W3 Resource](https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php) for assistance with likes and dislikes function
 
 
 ### Media
