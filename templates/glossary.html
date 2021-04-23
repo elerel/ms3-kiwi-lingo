@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="black-text center-align">Glossary</h3>
+<h3 class="white-text center-align">Glossary</h3>
 <div class="container">
     <div class="row card-panel">
         <form action="{{ url_for('search' )}}" method="POST" class="col s12">
@@ -83,10 +83,11 @@
     </ul>
     {% else %}
     <h3 class="red-text bold center-align">No Results Found!</h3>
+    <hr>
     {% endif %}
 </div>
 <!--Add Word/Phrase section-->
-<div class="sign-up container center-align">
+<div class="sign-up container center-align white-text">
     <h3>Keen to add a word or phrase?</h3>
     <p>Log In or Sign Up Now!</p>
     <a href="{{ url_for('login') }}" class="btn waves-effect waves-light green">Log In</a>
