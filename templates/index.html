@@ -1,50 +1,51 @@
 {% extends "base.html" %}
 {% block content %}
 <!--Caption/cta area-->
-<div class="background-img">
-    <h3 class="welcome-title">
-        Aotearoa
-    </h3>
-    <p class="new-zealand white-text">= New Zealand</p>
-    <p class="welcome-text left-align hide-on-small-only">
-        <span>"L</span><span>a</span><span>n</span><span>d </span>&nbsp;<span> O</span><span>f </span>&nbsp;<span>
-            T</span><span>h</span><span>e</span>
-        &nbsp;<span> L</span><span>o</span><span>n</span><span>g </span>&nbsp;<span>
-            W</span><span>h</span><span>i</span><span>t</span><span>e </span>&nbsp;
-        <span> C</span><span>l</span><span>o</span><span>u</span><span>d"</span>
-    </p>
-    <!--Welcome Section-->
-    <div class="join-text white-text">
-        <div class="left-align white-text">
-            <p>Kia Ora & Welcome to Kiwi Lingo!<br>Your Ultimate Online Guide to Kiwi Phrases and Words<br>Join
-                Today to Add Your
-                Word or Phrase!</p>
-            <a href="{{ url_for('get_words') }}" class="btn guide-btn waves-effect waves-light red">Go to Glossary
-            </a>
+<div class="index-pg">
+    <div class="background-img">
+        <h3 class="welcome-title">
+            Aotearoa
+        </h3>
+        <p class="new-zealand white-text">= New Zealand</p>
+        <p class="welcome-text left-align hide-on-small-only">
+            <span>"L</span><span>a</span><span>n</span><span>d </span>&nbsp;<span> O</span><span>f </span>&nbsp;<span>
+                T</span><span>h</span><span>e</span>
+            &nbsp;<span> L</span><span>o</span><span>n</span><span>g </span>&nbsp;<span>
+                W</span><span>h</span><span>i</span><span>t</span><span>e </span>&nbsp;
+            <span> C</span><span>l</span><span>o</span><span>u</span><span>d"</span>
+        </p>
+        <!--Welcome Section-->
+        <div class="join-text white-text">
+            <div class="left-align white-text">
+                <p>Kia Ora & Welcome to Kiwi Lingo!<br>Your Ultimate Online Guide to Kiwi Phrases and Words<br>Join
+                    Today to Add Your
+                    Word or Phrase!</p>
+                <a href="{{ url_for('get_words') }}" class="btn guide-btn waves-effect waves-light red">Go to Glossary
+                </a>
+            </div>
+        </div>
+        <div class="img-description hide-on-small-only">
+            <h5>Aoraki/Mount Cook</h5>
+            <p>Lake Pukaki, South Island</p>
         </div>
     </div>
-    <div class="img-description hide-on-small-only">
-        <h5>Aoraki/Mount Cook</h5>
-        <p>Lake Pukaki, South Island</p>
+    <!--About Kiwi Lingo-->
+    <div class="about-kiwi container center-align">
+        <h2>What's Kiwi Lingo?</h2>
+        <i class="fas fa-kiwi-bird fa-3x"></i><i class="fas fa-kiwi-bird fa-3x icon-flipped"></i>
+        <div class="description">
+            <p>
+                Ever been in an awkward conversation with a Kiwi (New Zealander) and you didn't know what the heck to
+                respond?
+            </p>
+            <p>
+                Maybe you have just returned from Middle Earth and collected some choice words you want to store...
+            </p>
+            <p>
+                Let our handy guide, Kiwi Lingo, be your go-to guide for everything spoken in New Zealand!
+            </p>
+        </div>
+        <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light red">See Guide</a>
     </div>
-</div>
-<!--About Kiwi Lingo-->
-<div class="about-kiwi container center-align">
-    <h2>What's Kiwi Lingo?</h2>
-    <img src="/static/images/nzfern.PNG" alt="nz fern logo">
-    <div class="description">
-        <p>
-            Ever been in an awkward conversation with a Kiwi (New Zealander) and you didn't know what the heck to
-            respond?
-        </p>
-        <p>
-            Maybe you have just returned from Middle Earth and collected some choice words you want to store...
-        </p>
-        <p>
-            Let our handy guide, Kiwi Lingo, be your go-to guide for everything spoken in New Zealand!
-        </p>
-    </div>
-    <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light red">See Guide</a>
-
 </div>
 {% endblock %}
