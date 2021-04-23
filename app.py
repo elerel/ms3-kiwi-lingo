@@ -218,6 +218,12 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+@app.route("/contact")
+# Render Contact Us Page
+def contact():
+    return render_template("contact.html")    
+
+
 @app.route("/thumbs_up/<word_id>", methods=["GET", "POST"])
 def thumbs_up(word_id):
     word = mongo.db.words.find_one_and_update(

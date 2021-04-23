@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="contact-header white-text center-align">Drop Us A Line, Owl!</h3>
+<p class="center-align orange-text">Tell Us How We Are Doing</p>
+<!-- Contact Form -->
+
+<div class="row">
+    <form id="contact_form" class="col s12 m8 offset-m2" onsubmit="return sendMail(this)">
+        <div class="card center-align">
+            <!-- Name -->
+            <div class="input-field">
+                <i class="fas fa-user prefix"></i>
+                <input id="full_name" name="full_name" type="text" class="validate" placeholder="Enter Your Full Name"
+                    required>
+                <label for="full_name">Full Name</label>
+            </div>
+            <!-- Email -->
+            <div class="input-field">
+                <i class="fas fa-envelope prefix"></i>
+                <input id="email" name="email" type="email" class="validate" placeholder="Enter Your Email Address"
+                    required>
+                <label for="email">Email</label>
+            </div>
+            <!-- Message -->
+            <div class="input-field">
+                <i class="fas fa-comment-dots prefix"></i>
+                <textarea id="message" class="materialize-textarea" placeholder="How Can We Help?"></textarea>
+                <label for="message">Message</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="btn waves-effect waves-light green" type="submit">
+                <i class="fas fa-paper-plane"></i>
+                Submit
+            </button>
+
+        </div>
+    </form>
+
+
+    {% endblock %}
