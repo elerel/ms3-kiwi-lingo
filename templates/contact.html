@@ -6,7 +6,7 @@
 <!-- Contact Form -->
 
 <div class="row">
-    <form id="contact_form" class="col s12 m8 offset-m2" onsubmit="return sendMail(this)">
+    <form id="contact_form" class="col s12 m8 offset-m2" onsubmit="return sendMail(this);" method="POST">
         <div class="card center-align">
             <!-- Name -->
             <div class="input-field">
@@ -37,6 +37,19 @@
 
         </div>
     </form>
+
+    {% block scripts %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_vDyi4dV3qOZW8fCJDRVWr");
+
+        })();
+    </script>
+    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+
+    {% endblock %}
 
 
     {% endblock %}

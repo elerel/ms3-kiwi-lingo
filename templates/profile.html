@@ -14,10 +14,9 @@
     <!--Words added by user-->
     <div class="container">
         <h4 class="white-text center-align">Choice Words You've Added:</h4>
-        {% for word in words if session.user|capitalize == word.created_by|capitalize %}
-
+        <!--Logged in user and site owner can edit or delete added words-->
+        {% for word in words if session.user == word.created_by or session.user == "elerel" %}
         <ul class="collapsible popout">
-
             <li>
                 <div class="collapsible-header white-text orange darken-1 text-shadow">
                     <i class="fas fa-caret-down"></i><strong>{{ word.word }}</strong>

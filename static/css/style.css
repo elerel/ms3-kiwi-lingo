@@ -301,6 +301,10 @@ span:nth-child(even) {
     margin-bottom: 30px;
 }
 
+.add-word {
+    color: #2f4f4f;
+}
+
 /* Profile Page */
 .no-words {
     border-radius: 10px;
