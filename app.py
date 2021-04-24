@@ -26,7 +26,7 @@ def home():
 
 @app.route("/get_words")
 def get_words():
-    words = list(mongo.db.words.find())
+    words = list(mongo.db.words.find().sort("word", 1))
     return render_template("glossary.html", words=words)
 
 
