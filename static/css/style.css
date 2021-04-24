@@ -313,6 +313,7 @@ span:nth-child(even) {
 .card-panel,
 .modal {
     border-radius: 20px;
+    background-color: #ffcc80;
 }
 
 /* contact us page */
@@ -323,8 +324,13 @@ span:nth-child(even) {
 }
 
 form .card {
+    background-color: #ffcc80;
     border-radius: 20px;
     padding: 20px;
     margin: 20px 10px 100px;
     justify-content: center;
+}
+
+::placeholder {
+    color: rgb(131, 125, 125);
 }
