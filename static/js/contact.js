@@ -1,4 +1,4 @@
-// code snippet from EmailJS //
+// code snippet from EmailJS and CI Sending Emails Using EmailJS Rosie Walkthrough Project//
 const emailResponse = document.getElementById('email_response');
 
 function sendMail(contactForm) {
