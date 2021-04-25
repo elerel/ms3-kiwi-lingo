@@ -214,7 +214,7 @@ span:nth-child(even) {
 }
 
 .btn-small {
-    margin: 5px 0 0 30px;
+    margin: 5px 0 0 20px;
 }
 
 .collapsible {
@@ -254,7 +254,7 @@ span:nth-child(even) {
     }
 
     .welcome-text>span {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .join-text {
@@ -309,7 +309,6 @@ span:nth-child(even) {
 .no-words {
     border-radius: 10px;
     font-size: 1rem;
-
     justify-content: center;
     padding: 40px;
 }
@@ -341,8 +340,7 @@ form .card {
 
 #email_response {
     color: #fff;
-    font-size: 20px;
-
+    font-size: 2rem;
 }
 
 
