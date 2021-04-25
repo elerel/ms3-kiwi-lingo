@@ -15,7 +15,8 @@
                     <button type="submit" class="light-blue darken-1 btn text-shadow">
                         <i class="fas fa-search left"></i>Search
                     </button>
-                    <a href="{{ url_for('get_words' )}}" class="red btn text-shadow">Reset</a>
+                    <a href="{{ url_for('get_words' )}}" class="red btn text-shadow"><i
+                            class="fas fa-undo left"></i>Reset</a>
                 </div>
             </div>
         </form>
@@ -31,9 +32,8 @@
                 <i class="fas fa-caret-down"></i><strong>{{ word.word }}</strong>
                 {% if session.user == word.created_by %}
                 <a href="{{ url_for('delete_word', word_id=word._id) }}" data-target="{{ word._id }}"
-                    class="btn-small modal-trigger right-align green accent-4">Delete</a>
-                <a href="{{ url_for('edit_word', word_id=word._id) }}"
-                    class="btn-small light-blue right-align lighten-1">Edit</a>
+                    class="btn-small modal-trigger green accent-4">Delete</a>
+                <a href="{{ url_for('edit_word', word_id=word._id) }}" class="btn-small light-blue lighten-1">Edit</a>
                 {% endif %}
 
             </div>
@@ -65,16 +65,16 @@
             </div>
             <!-- Buttons -->
             <div class="row modal-footer">
-                <!-- Cancel Button -->
-                <a href="#!" class="btn delete modal-close waves-effect waves-light red z-depth-0">
-                    <i class="fas fa-times"></i>
-                    Cancel
-                </a>
                 <!-- Delete Button -->
                 <a href="{{ url_for('delete_word', word_id=word._id) }}"
                     class="btn delete waves-effect waves-light green z-depth-0">
                     <i class="fas fa-trash-alt"></i>
                     Delete
+                </a>
+                <!-- Cancel Button -->
+                <a href="#!" class="btn delete modal-close waves-effect waves-light red z-depth-0">
+                    <i class="fas fa-times"></i>
+                    Cancel
                 </a>
             </div>
         </div>
