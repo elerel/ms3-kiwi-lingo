@@ -2,18 +2,18 @@
 {% block content %}
 
 <h3 class="contact-header white-text center-align">Drop Us A Line, Owl!</h3>
-<p class="center-align orange-text">Tell Us How We Are Doing</p>
+<p class="center-align orange-text">Did Our Site Meet Your Expectations?<br> If we can improve, drop us an email and
+    share your thoughts with us.</p>
 <!-- Contact Form -->
-
-<div class="row">
-    <form id="contact_form" class="col s12 m8 offset-m2" onsubmit="return sendMail(this);" method="POST">
+<div class="container">
+    <form id="contact_form" class="col s12 m8 offset-m2" onsubmit="return sendMail(this)">
         <div class="card center-align">
             <!-- Name -->
             <div class="input-field">
                 <i class="fas fa-user prefix"></i>
-                <input id="full_name" name="full_name" type="text" class="validate" placeholder="Enter Your Full Name"
+                <input id="from_name" name="from_name" type="text" class="validate" placeholder="Please Enter Your Name"
                     required>
-                <label for="full_name">Full Name</label>
+                <label for="from_name">Name</label>
             </div>
             <!-- Email -->
             <div class="input-field">
@@ -25,7 +25,7 @@
             <!-- Message -->
             <div class="input-field">
                 <i class="fas fa-comment-dots prefix"></i>
-                <textarea id="message" class="materialize-textarea" placeholder="How Can We Help?"></textarea>
+                <textarea id="message" class="materialize-textarea" placeholder="How Can We Help?" required></textarea>
                 <label for="message">Message</label>
             </div>
 
@@ -37,17 +37,20 @@
 
         </div>
     </form>
+</div>
+<!--Email Response-->
+<div class="row">
+    <div id="email_response" class="center-align flashes">
+    </div>
 
     {% block scripts %}
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-    </script>
+    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("user_vDyi4dV3qOZW8fCJDRVWr");
-
         })();
     </script>
-    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
 
     {% endblock %}
 
