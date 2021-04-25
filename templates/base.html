@@ -47,8 +47,9 @@
                     <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                     {% endif %}
                     <li><a href="{{ url_for('add_word') }}">Add Word</a></li>
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+
                     {% else %}
                     <li><a href="{{ url_for('login') }}" class="btn-large grey">Log In</a></li>
                     <li><a href="{{ url_for('register') }}" class="btn-large red">Register</a></li>
@@ -61,7 +62,7 @@
         <!--Mobile Navbar-->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <h4 class="mobile-brand-logo">Kiwi Lingo</h4>
+                <a href="{{ url_for('home') }}" class="mobile-brand-logo">Kiwi Lingo</a></h4>
             </li>
             {% if session.user %}
             <li><a href="{{ url_for('home') }}">Home</a></li>
