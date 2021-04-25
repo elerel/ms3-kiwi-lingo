@@ -331,10 +331,21 @@ form .card {
     background-color: #ffcc80;
     border-radius: 20px;
     padding: 20px;
-    margin: 20px 10px 100px;
+    margin: 20px 10px 20px;
     justify-content: center;
 }
 
 ::placeholder {
     color: rgb(131, 125, 125);
+}
+
+#email_response {
+    color: #fff;
+    font-size: 20px;
+
+}
+
+
+.modal .modal-footer {
+    background-color: #ffcc80;
 }
