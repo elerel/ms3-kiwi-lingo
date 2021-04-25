@@ -7,15 +7,14 @@ function sendMail(contactForm) {
             "email": contactForm.email.value,
             "message": contactForm.message.value
         })
-        // code credit to fellow student Kirsty Chatterton (https://github.com/KirstChat/how-till-spake-norn-irish/blob/master/static/js/contact.js) and modified: //
         .then(
-            //Change button text to confirm feedback has been sent
-            function (response) {
-                emailResponse.innerHTML = `<p class="email_response">Email sent! We will respond as soon as we can. Chur!</p>`;
+            //Confirm email sent message
+            function (success) {
+                emailResponse.innerHTML = "Email sent! We will respond as soon as we can. Chur!";
             },
-            //If feedback fails to send, change button text to ask user to try again
-            function (error) {
-                emailResponse.innerHTML = `<p class="email_response">Email Not Sent. Please Try Again.</p>`;
+            //If email has not been sent display error message
+            function (failed) {
+                emailResponse.innerHTML = "Email Not Sent. Please Try Again.";
             }
         );
     //Resets contact form after email sent
