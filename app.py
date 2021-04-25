@@ -123,13 +123,13 @@ def logout():
 # Render Add Word Page
 def add_word():
     if request.method == "POST":
-
-        existing_word = mongo.db.dictionary.find_one(
+        # checks db to find word already added
+        existing_word = mongo.db.words.find_one(
             {"word": request.form.get("word")})
 
         if existing_word:
             # Display flash message if word already exists
-            flash("Yeah, nah bro. Word is already listed.")
+            flash("Aw stink owl! That word is already listed.")
             return redirect(url_for("add_word"))
 
         word = {
