@@ -30,6 +30,7 @@
         <li>
             <div class="collapsible-header white-text orange darken-1 text-shadow">
                 <i class="fas fa-caret-down"></i><strong>{{ word.word }}</strong>
+                <!--Site Owner elerel can edit or delete user added words-->
                 {% if session.user == word.created_by or session.user == "elerel" %}
                 <a href="{{ url_for('delete_word', word_id=word._id) }}" data-target="{{ word._id }}"
                     class="btn-small modal-trigger green accent-4">Delete</a>
