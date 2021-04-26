@@ -74,8 +74,8 @@ A favourable outcome behind creating this site would be:
 -  I want to be able to fully understand the reasoning behind the site.
 -  I want to be able to navigate easily throughout the site.
 -  I want to be able to search for words and phrases commonly spoken in New Zealand.
--  I want to be able to set up my own account and add my own additions to the site.
--  I want to be able to view popular sayings and phrases by viewing the most liked/disliked additions.
+-  I want to be able to set up my own account and add my own words or phrases to the site.
+-  I want to be able to view popular sayings and phrases by viewing the most popular/least popular additions.
 
 
 #### Registered User Stories
@@ -83,7 +83,7 @@ A favourable outcome behind creating this site would be:
 
 - I want to be able to easily log in and out of the site.
 - I want to be able to edit or delete my additions to the site.
-- I want to be able to view recent additions by other users.
+- I want to be able to view additions by other users.
 - I want to be able to edit or delete my profile.
 - I want to be able to contact the site owners.
 
@@ -181,7 +181,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 - [Regional Slang Article](https://www.stuff.co.nz/national/99763866/hey-uce-heres-a-meanas-guide-to-kiwi-regional-slang)
 - [Codepen](https://codepen.io/bennettfeely/pen/lgybC/) for use of smokey/cloud effect on home page
-- [W3 Resource](https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php) for assistance with likes and dislikes function
+- [W3 Resource](https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php) for help with likes and dislikes function
 - [Stackoverflow](https://stackoverflow.com/questions/18574699/how-to-make-a-space-between-i-tags-icons-in-table/18574766) on rotating icons
 
 

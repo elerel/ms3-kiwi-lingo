@@ -110,6 +110,20 @@ def profile(username):
 
     return redirect(url_for("login"))
 
+
+# Render delete profile
+@app.route("/delete_profile")
+def delete_profile():
+    if 'user' not in session:
+        return redirect(url_for("login"))
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    mongo.db.users.delete_one({"username": username})
+    flash("Your Profile Has Been Deleted. Haere Ra!")
+    session.pop("user")
+    return render_template("login.html", username=username)
+
+
 # Renders Logout Page
 @app.route("/logout")
 def logout():
@@ -169,6 +183,7 @@ def edit_word(word_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_word.html", word=word, categories=categories)
 
+
 # Delete Word Function
 @app.route("/delete_word/<word_id>")
 def delete_word(word_id):
@@ -176,11 +191,13 @@ def delete_word(word_id):
     flash("Word Successfully Deleted")
     return redirect(url_for("get_words"))
 
+
 # Renders Manage Category Page- for elerel profile
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
+
 
 # Add Category functionality- for elerel
 @app.route("/add_category", methods=["GET", "POST"])
@@ -194,6 +211,7 @@ def add_category():
         return redirect(url_for("get_categories"))
 
     return render_template("add_category.html")
+
 
 # Edit Category Functionality - elerel
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
