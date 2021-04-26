@@ -95,6 +95,7 @@ def login():
             flash("Username does not exist")
     return render_template("login.html")
 
+
 # Renders Profile Page
 @app.route("/profile/<username>", methods=["GET", "POST"])  # PROFILE PAGE
 def profile(username):
@@ -111,17 +112,14 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-# Render delete profile
-@app.route("/delete_profile")
-def delete_profile():
-    if 'user' not in session:
-        return redirect(url_for("login"))
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    mongo.db.users.delete_one({"username": username})
-    flash("Your Profile Has Been Deleted. Haere Ra!")
+# route to allow user to delete their profile completely
+@app.route("/delete_profile/<username>")
+def delete_profile(username):
+    mongo.db.users.remove({"username": username})
+    flash("Your profile has been deleted. Haere Ra!")
     session.pop("user")
-    return render_template("login.html", username=username)
+
+    return redirect(url_for("login"))
 
 
 # Renders Logout Page
