@@ -91,15 +91,14 @@
 <div class="sign-up container white-text center-align">
     <h3>If you wish to leave us, {{ username }}, that's OK but we'll miss you!</h3>
     <p>Simply click below to delete your profile:</p>
-    <a href="{{ url_for('delete_profile') }}" class="btn-small modal-trigger green accent-4"
-        data-target="{{ username._id }}">
+    <a href="#modal1" class="btn-small modal-trigger green accent-4" data-target="{{ username._id }}">
         Delete Profile</a>
 </div>
 
 
 <!-- Delete Confirmation Modal -->
 <!-- Code snippet used and modified from a slack thread in #data-centric-dev (Ed_B) -->
-<div id="{{ username._id }}" class="modal center-align">
+<div id="modal1" class="modal center-align">
     <!-- Modal Content -->
     <div class="modal-content center-align">
         <h4>Are you sure you wish to leave us, {{ username }}?</h4>

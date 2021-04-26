@@ -127,8 +127,6 @@ def delete_profile():
     return render_template("login.html", username=username)
 
 
-
-
 # Renders Logout Page
 @app.route("/logout")
 def logout():
