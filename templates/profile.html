@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <div class="profile-page">
     <div class="row">
         <div class="col s12 m4 offset-m4">
@@ -71,6 +72,7 @@
                 <h3>
                     You haven't added any words, owl!
 
+
                 </h3>
             </div>
             {% endfor %}
@@ -85,16 +87,19 @@
         Word/Phrase!</a>
 </div>
 
+
 <div class="sign-up container white-text center-align">
     <h3>If you wish to leave us, {{ username }}, that's OK but we'll miss you!</h3>
     <p>Simply click below to delete your profile:</p>
-    <a href=#modal1 class="btn modal-trigger green accent-4">
+    <a href="{{ url_for('delete_profile') }}" class="btn-small modal-trigger green accent-4"
+        data-target="{{ username._id }}">
         Delete Profile</a>
 </div>
 
+
 <!-- Delete Confirmation Modal -->
 <!-- Code snippet used and modified from a slack thread in #data-centric-dev (Ed_B) -->
-<div id=#modal1 class="modal center-align">
+<div id="{{ username._id }}" class="modal center-align">
     <!-- Modal Content -->
     <div class="modal-content center-align">
         <h4>Are you sure you wish to leave us, {{ username }}?</h4>
@@ -102,7 +107,7 @@
     <!-- Buttons -->
     <div class="row modal-footer">
         <!-- Delete Button -->
-        <a href="{{ url_for('delete_profile', username=user.username) }}"
+        <a href="{{ url_for('delete_profile', username_id=username._id) }}"
             class="btn delete waves-effect waves-light green z-depth-0">
             <i class="fas fa-trash-alt"></i>
             Delete
