@@ -17,27 +17,26 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+# Renders home page
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template("index.html")
 
-
+# Renders Glossary Page
 @app.route("/get_words")
 def get_words():
     words = list(mongo.db.words.find().sort("word", 1))
     return render_template("glossary.html", words=words)
 
-
+# Render Search Function
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     words = list(mongo.db.words.find({"$text": {"$search": query}}))
     return render_template("glossary.html", words=words)
 
-
-
+# Render Sign Up/Register Page
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == 'POST':
@@ -68,7 +67,7 @@ def register():
 
     return render_template("register.html")
 
-
+# Renders Login Page
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -96,12 +95,13 @@ def login():
             flash("Username does not exist")
     return render_template("login.html")
 
-
+# Renders Profile Page
 @app.route("/profile/<username>", methods=["GET", "POST"])  # PROFILE PAGE
 def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+        # finds words added by user:
     words = list(mongo.db.words.find())
     # if existing user display profile
     if session["user"]:
@@ -110,7 +110,7 @@ def profile(username):
 
     return redirect(url_for("login"))
 
-
+# Renders Logout Page
 @app.route("/logout")
 def logout():
     # remove user from session cookies
@@ -118,15 +118,14 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-
+# Renders Add Word Page
 @app.route("/add_word", methods=["GET", "POST"])
-# Render Add Word Page
 def add_word():
     if request.method == "POST":
         # checks db to find word already added
         existing_word = mongo.db.words.find_one(
             {"word": request.form.get("word")})
-
+      
         if existing_word:
             # Display flash message if word already exists
             flash("Aw stink owl! That word is already listed.")
@@ -149,7 +148,7 @@ def add_word():
     return render_template("add_word.html", categories=categories)
 
 
-# edit word functionality
+# Edit word functionality
 @app.route("/edit_word/<word_id>", methods=["GET", "POST"])
 def edit_word(word_id):
     if request.method == "POST":
@@ -170,20 +169,20 @@ def edit_word(word_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_word.html", word=word, categories=categories)
 
-
+# Delete Word Function
 @app.route("/delete_word/<word_id>")
 def delete_word(word_id):
     mongo.db.words.delete_one({"_id": ObjectId(word_id)})
     flash("Word Successfully Deleted")
     return redirect(url_for("get_words"))
 
-
+# Renders Manage Category Page- for elerel profile
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
-
+# Add Category functionality- for elerel
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -196,7 +195,7 @@ def add_category():
 
     return render_template("add_category.html")
 
-
+# Edit Category Functionality - elerel
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if request.method == "POST":
@@ -210,7 +209,7 @@ def edit_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
 
-
+# Delete Category Functionality - elerel
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
@@ -218,12 +217,12 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
-@app.route("/contact")
 # Render Contact Us Page
+@app.route("/contact")
 def contact():
     return render_template("contact.html")    
 
-
+# Likes and Dislikes functionality:
 @app.route("/thumbs_up/<word_id>", methods=["GET", "POST"])
 def thumbs_up(word_id):
     word = mongo.db.words.find_one_and_update(
@@ -231,7 +230,7 @@ def thumbs_up(word_id):
         {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_up": 1}})
     return redirect(url_for("get_words", word=word))
 
-
+# Dislike:
 @app.route("/thumbs_down/<word_id>", methods=["GET", "POST"])
 def thumbs_down(word_id):
     word = mongo.db.words.find_one_and_update(
@@ -244,3 +243,4 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+            
