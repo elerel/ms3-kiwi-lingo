@@ -89,9 +89,10 @@
 
 
 <div class="sign-up container white-text center-align">
-    <h3>If you wish to leave us, {{ username }}, that's OK but we'll miss you!</h3>
+    <h5>If you wish to leave us, we don't mind... but we'll miss you!</h5>
     <p>Simply click below to delete your profile:</p>
-    <a href="#modal1" class="btn-small modal-trigger green accent-4" data-target="{{ username._id }}">
+    <a href="#modal1" class="btn-large modal-trigger black" data-target="{{ username._id }}"><i
+            class="fas fa-trash-alt"></i>
         Delete Profile</a>
 </div>
 
@@ -102,6 +103,7 @@
     <!-- Modal Content -->
     <div class="modal-content center-align">
         <h4>Are you sure you wish to leave us, {{ username }}?</h4>
+        <p>Your account will be voided but your word (if undeleted) will remain.</p>
     </div>
     <!-- Buttons -->
     <div class="row modal-footer">

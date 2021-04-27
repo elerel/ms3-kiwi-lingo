@@ -1,8 +1,8 @@
 # Kiwi Lingo: Your Guide to New Zealand Words & Phrases!
 
-Kiwi Lingo is an app intended to be used as a reference guide of commonly used words and phrases spoken by New Zealanders. 
+For my third milestone project (data centric) with The Code Institute, I decided to build a glossary database called Kiwi Lingo. It is an app intended to be accessible across all devices and used as a reference guide of commonly used words and phrases spoken by New Zealanders. 
 
-(AmIResponsive Image here)
+![image](https://res.cloudinary.com/elerel/image/upload/v1619524355/amiresponsive_b9hz00.png)
 
 ## Contents
 

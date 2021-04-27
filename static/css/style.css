@@ -302,9 +302,6 @@ span:nth-child(even) {
     margin-bottom: 30px;
 }
 
-.add-word {
-    color: #2f4f4f;
-}
 
 /* Profile Page */
 .no-words {
@@ -347,4 +344,8 @@ form .card {
 
 .modal .modal-footer {
     background-color: #ffcc80;
+}
+
+.modal h4 {
+    font-family: 'Luckiest Guy', sans-serif;
 }
