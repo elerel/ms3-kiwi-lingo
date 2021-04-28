@@ -135,6 +135,7 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
+
 # Renders Add Word Page
 @app.route("/add_word", methods=["GET", "POST"])
 def add_word():
@@ -142,7 +143,7 @@ def add_word():
         # checks db to find word already added
         existing_word = mongo.db.words.find_one(
             {"word": request.form.get("word")})
-      
+
         if existing_word:
             # Display flash message if word already exists
             flash("Aw stink owl! That word is already listed.")
@@ -230,6 +231,7 @@ def edit_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
 
+
 # Delete Category Functionality - elerel
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
@@ -243,6 +245,7 @@ def delete_category(category_id):
 def contact():
     return render_template("contact.html")    
 
+
 # Likes and Dislikes functionality:
 @app.route("/thumbs_up/<word_id>", methods=["GET", "POST"])
 def thumbs_up(word_id):
@@ -250,6 +253,7 @@ def thumbs_up(word_id):
         # code credit to W3 Resources: https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php
         {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_up": 1}})
     return redirect(url_for("get_words", word=word))
+
 
 # Dislike:
 @app.route("/thumbs_down/<word_id>", methods=["GET", "POST"])
@@ -259,6 +263,18 @@ def thumbs_down(word_id):
         {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_down": 1}})
     return redirect(url_for("get_words", word=word))
 
+
+@app.errorhandler(404)
+def not_found(error):
+    # renders any 404 error'''
+    return render_template('errors/404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_error(error):
+    # render any 500 error'''
+    return render_template('errors/500.html'), 500
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

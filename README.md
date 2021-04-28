@@ -7,16 +7,21 @@ For my third milestone project (data centric) with The Code Institute, I decided
 ## Contents
 
 - [**User Experience**](#user-experience)
-  - Project Description
-  - User Stories
-    - First Time User Stories
-    - Registered User Stories
-    - Site Owner User Stories
-  - Design
+  - Strategy
+    - Project Description
+      - User Stories
+      - First Time User Stories
+      - Registered User Stories
+      - Site Owner User Stories
+  - Structure    
+  - Scope: Design
+  - Skeleton
+    - Wireframes
+  - Surface
     - Colour Scheme
     - Typography
     - Imagery
-  - Wireframes
+
   
 - [**Database Schema**](#database-schema)
 
@@ -180,9 +185,9 @@ In addition, if it is not obvious, you should also describe how to run your code
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
 - [Regional Slang Article](https://www.stuff.co.nz/national/99763866/hey-uce-heres-a-meanas-guide-to-kiwi-regional-slang)
-- [Codepen](https://codepen.io/bennettfeely/pen/lgybC/) for use of smokey/cloud effect on home page
 - [W3 Resource](https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php) for help with likes and dislikes function
 - [Stackoverflow](https://stackoverflow.com/questions/18574699/how-to-make-a-space-between-i-tags-icons-in-table/18574766) on rotating icons
+- [Flask Mega Tutorial, Pt VII](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-error-handling)- in reference to use of error functions
 
 
 ### Media

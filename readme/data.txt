@@ -1,0 +1,30 @@
+Kiwi Lingo Collections
+
+Words Collection:
+
+"words":{
+    "_id": "ObjectId()"    
+    "category_name": "<string>",
+    "word": "<string>",
+    "definition": "<string>",
+    "phrase_example": "<string>",
+    "created_by": "<string>",
+    "thumbs_up": "<int32>",
+    "thumbs_down": "<int32>", 
+}
+
+Categories Collection:
+
+"categories": {
+    "_id": "ObjectId()" 
+    "category_name": "<string>",
+}
+
+Users Collection:
+
+"users": {
+    "_id": "ObjectId()"   
+    "first_name": <string>
+    "username": <string>
+    "password": <string>
+}
