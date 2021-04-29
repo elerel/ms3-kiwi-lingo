@@ -169,6 +169,118 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Deployment
 
+### Initial Steps
+
+Kiwi Lingo was created using Gitpod and Git and Github to host the repository. Once an account is opened with Github as prerequisite for this project, and logged in under your unique username, I selected "New" and then selected the [CI Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template). From there, I chose the name **ms3-kiwi-lingo** as the repository name, selected it to be stored as a "public" repository and then selected "Create Repository".
+
+From there, I navigated to my new repository on GitHub and clicked the green Gitpod button which built the Kiwi Lingo workspace. To access the workspace daily, I simply navigated to [Gitpod](https://gitpod.io/workspaces) where I could select its own unique workspace name and if not present, select "filter: all" :
+![image](https://res.cloudinary.com/elerel/image/upload/v1619687098/gitpodworkspace_jzhgss.png) 
+
+ For version control, I used the following commands mainly throughout the project:
+
+git add filename/ git add -A/ git add . - Theses command were used to add files to the staging area before committing.
+
+git commit -m "subject: commit message explaining the updates" - With reference to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), providing an easy set of rules for creating an explicit commit history,  this command was used to to commit changes to the local repository.
+
+git push - This command is used to push all committed changes to the GitHub repository.
+
+---
+### Requirements
+
+ In order to deploy, the following were installed:
+- [PIP](https://pypi.org/project/pip/)
+- [Python 3](https://www.python.org/)
+- [Git](https://git-scm.com/)
+- [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+
+1. To install all the requirements: Go to the workspace of your local copy. In the terminal window of your IDE type:
+ ```bash
+ pip3 install -r requirements.txt.
+ ```
+2. Create the project database with MongoDB:
+    1. Signup Or Login For [MongoDB](https://www.mongodb.com/)
+    2. Create a cluster as well as a database
+    3. Create the following collections in the Database:
+        1. categories
+        2. users
+        3. words
+
+3. Create environment variables (env.py):
+    1. Create a .gitignore file in the root directory of the project (which the CI Template already provides, otherwise type "touch .gitignore" )
+    2. Create a file in the root directory called "env.py". This will contain all of your envornment variables. Your env.py file should look similar to the following:
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY")
+os.environ.setdefault("MONGO_URI", "YOUR_MONGODB_URI")
+os.environ.setdefault("MONGO_DBNAME", "YOUR_DATABASE_NAME")
+```
+
+ Note: It is important that the user updates the secret keys and passwords. These details are private and are not disclosed in this repository for security purposes. Before pushing the project to a public repository, add your env.py file to .gitignore.
+
+  3. You can now run your application locally by typing the following command into your terminal:
+
+```
+python3 app.py
+```
+
+### Deploying To Heroku
+
+To deploy our application on Heroku, first we need to create a requirements.txt file as well as a **Procfile**. These files will allow Heroku understand 
+what dependencies are required to run the application, as well as tell Heroku which file to run, to launch the application.
+
+#### Create a procfile:
+
+Enter the following in the CLI:
+
+```
+python app.py > Procfile
+```
+
+**This new file if opened should look something like "web: python app.py"**
+
+#### Create a requirements file:
+
+```
+pip freeze --local > requirements.txt
+```
+
+**Once created, this new file should simply be a list of all dependencies required**
+
+
+
+ With the code required to run the app all stored in a repository with Github, deploying the app with Heroku can be done following these steps:
+
+1. Sign in/sign up to Heroku.
+
+2. Once signed in, click on the 'Create New App' button. 
+
+3. Choose a name for your app, select your local region and click 'Create App'.
+
+4. In the top menu, select the 'Deploy' tab, and then click 'Connect to GitHub' in the 'Deployment method' section.
+
+5. Connect your GitHub account to your Heroku account by clicking on the 'Connect to GitHub' button (if already connected, move to step 6).
+
+6. Search for the GitHub repository which contains the app you wish to deploy, and then click 'connect'.
+
+7. Once connected, you can choose to automatically deploy any updates made in the GitHub repository or to do so manually by selecting the branch you wish to deploy and clicking on the appropriate button.
+
+8. Following this, click on the 'Settings' tab and then click 'Reveal Config Vars'
+
+9. Within the 'Reveal Config Vars' section, add the variables which would be found in your local 'env.py' file. These variables are saved here as they contain sensitive data such as the password to the MongoDB database and the secret key required to use some of Flask's functionality.
+
+10. With all of the previous steps complete, as well as the prerequisites, the app will now run by clicking the 'Open app' button.
+
+
+---
+
+
+
+
+
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
@@ -178,6 +290,22 @@ In particular, you should provide all details of the differences between the dep
 
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
+### Forking This Project:
+  If you wish to contribute to this website you can Fork it without affecting the main branch by following the procedure outlined below.
+  1. Go to GitHub's website and log in.
+  2. Locate the Kiwi Lingo's [Repository](https://github.com/elerel/ms3-kiwi-lingo) in the search field.
+  3. On the right-hand side of the Repository name, you'll see the 'Fork' button. It's located on the top right hand corner of the page, next to the 'Star' and 'Watch' buttons.
+  4. This will create a copy in your personal repository.
+  5. Once you're finished making changes you can locate the 'New Pull Request' button just above the file listing in the original repository.
+
+### Cloning This Project:
+To create a clone, follow the following steps.
+
+1. Log in to GitHub and go to the repository.
+2. Click on the button with the text “Code”.
+3. Click “Open with GitHub Desktop” and follow the prompts in the GitHub Desktop Application or follow the instructions from [GitHub](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to see how to clone the repository in other ways.
+
+---
 
 ## Credits
 
