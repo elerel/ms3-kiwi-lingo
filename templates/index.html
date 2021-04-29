@@ -5,23 +5,22 @@
     <div class="background-img">
         <div class="welcome-text ">
             <h3>Aotearoa</h3>
-
-            <p class="new-zealand white-text">"Land Of The Long White Cloud"</p>
+            <p class="new-zealand white-text"><strong>New Zealand<br>"Land Of The Long White Cloud"</p></strong>
             <!--Welcome Section-->
             <div class="join-text white-text">
                 <div class="white-text">
                     <p>Kia Ora & Welcome to Kiwi Lingo!<br>Your Ultimate Online Guide to Kiwi Phrases and Words<br>Join
                         Today to Add Your
                         Word or Phrase!</p>
-                    <a href="{{ url_for('get_words') }}" class="btn guide-btn waves-effect waves-light red">Go to
-                        Glossary
+                    <a href="{{ url_for('get_words') }}" class="btn guide-btn waves-effect waves-light red">View Guide
+
                     </a>
                 </div>
             </div>
         </div>
         <div class="img-description hide-on-small-only">
             <h5>Aoraki/Mount Cook</h5>
-            <p>Lake Pukaki, South Island</p>
+            <p>Lake Pukaki, South Island NZ</p>
         </div>
     </div>
     <!--About Kiwi Lingo-->
@@ -40,7 +39,7 @@
                 Let our handy guide, Kiwi Lingo, be your go-to guide for everything spoken in New Zealand!
             </p>
         </div>
-        <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light red">See Guide</a>
+        <a href="{{ url_for('register') }}" class="btn waves-effect waves-light red">Register</a>
     </div>
 </div>
 {% endblock %}
