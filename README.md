@@ -37,9 +37,9 @@ For my third milestone project (data centric) with The Code Institute, I decided
 - [**Testing**](#testing)
 
 - [**Deployment**](#deployment)
-  - GitHub
-  - Heroku
-  - Cloning the Repository
+  - GitHub- Initial Steps
+  - Requirements
+  - Deploying to Heroku
 
 - [**Credits**](#credits)
   - Code
@@ -171,9 +171,10 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Initial Steps
 
-Kiwi Lingo was created using Gitpod and Git and Github to host the repository. Once an account is opened with Github as prerequisite for this project, and logged in under your unique username, I selected "New" and then selected the [CI Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template). From there, I chose the name **ms3-kiwi-lingo** as the repository name, selected it to be stored as a "public" repository and then selected "Create Repository".
+Kiwi Lingo was created using Gitpod and Git and Github to host the repository. Once an account is opened with Github, and logged in under your unique username, I selected "New" and then selected the [CI Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template). From there, I chose the name **ms3-kiwi-lingo** as the repository name, selected it to be stored as a "public" repository and then selected "Create Repository".
 
 From there, I navigated to my new repository on GitHub and clicked the green Gitpod button which built the Kiwi Lingo workspace. To access the workspace daily, I simply navigated to [Gitpod](https://gitpod.io/workspaces) where I could select its own unique workspace name and if not present, select "filter: all" :
+
 ![image](https://res.cloudinary.com/elerel/image/upload/v1619687098/gitpodworkspace_jzhgss.png) 
 
  For version control, I used the following commands mainly throughout the project:
@@ -207,7 +208,7 @@ git push - This command is used to push all committed changes to the GitHub repo
 
 3. Create environment variables (env.py):
     1. Create a .gitignore file in the root directory of the project (which the CI Template already provides, otherwise type "touch .gitignore" )
-    2. Create a file in the root directory called "env.py". This will contain all of your envornment variables. Your env.py file should look similar to the following:
+    2. Create a file in the root directory called "env.py". This will contain all of your environment variables. Your env.py file should look similar to the following:
 
 ```
 import os
@@ -221,7 +222,7 @@ os.environ.setdefault("MONGO_DBNAME", "YOUR_DATABASE_NAME")
 
  Note: It is important that the user updates the secret keys and passwords. These details are private and are not disclosed in this repository for security purposes. Before pushing the project to a public repository, add your env.py file to .gitignore.
 
-  3. You can now run your application locally by typing the following command into your terminal:
+  3. The application can now be run locally by typing the following command into the terminal:
 
 ```
 python3 app.py
@@ -229,50 +230,50 @@ python3 app.py
 
 ### Deploying To Heroku
 
-To deploy our application on Heroku, first we need to create a requirements.txt file as well as a **Procfile**. These files will allow Heroku understand 
-what dependencies are required to run the application, as well as tell Heroku which file to run, to launch the application.
+To deploy the application on Heroku, first we need to create a requirements.txt file as well as a **Procfile**. These files will allow Heroku understand 
+what dependencies are required to run the application, as well as tell Heroku which file to run so that it can launch the application.
+
+Enter the following in the CLI: 
+
+```
+pip3 freeze --local > requirements.txt
+```
 
 #### Create a procfile:
 
 Enter the following in the CLI:
 
 ```
-python app.py > Procfile
+echo web: python app.py > Procfile
 ```
 
-**This new file if opened should look something like "web: python app.py"**
+**Once created, you can see a list of all the dependencies listed in order to run the application:**
 
-#### Create a requirements file:
+![image](https://res.cloudinary.com/elerel/image/upload/v1619729899/dependencies_allj94.png)
 
-```
-pip freeze --local > requirements.txt
-```
+#### Creating a New App - Heroku
 
-**Once created, this new file should simply be a list of all dependencies required**
+With the code required to run the app all stored in a repository with Github, deploying the app with Heroku can be done following these steps:
 
-
-
- With the code required to run the app all stored in a repository with Github, deploying the app with Heroku can be done following these steps:
-
-1. Sign in/sign up to Heroku.
+1. Register/sign in to [Heroku](https://www.heroku.com/)
 
 2. Once signed in, click on the 'Create New App' button. 
 
-3. Choose a name for your app, select your local region and click 'Create App'.
+3. Choose a unique name (all lower case, no spaces) for your app, select your local region and click 'Create app'.
 
 4. In the top menu, select the 'Deploy' tab, and then click 'Connect to GitHub' in the 'Deployment method' section.
 
-5. Connect your GitHub account to your Heroku account by clicking on the 'Connect to GitHub' button (if already connected, move to step 6).
+5. Set up automatic deployment to your GitHub account to your Heroku account by clicking on the middle 'Connect to GitHub' button.
 
-6. Search for the GitHub repository which contains the app you wish to deploy, and then click 'connect'.
+6. Search for the GitHub repository which contains the name of your repo, and then click 'connect'. Before clicking Enable Automatic Deploys button, ensure the following is completed:
 
-7. Once connected, you can choose to automatically deploy any updates made in the GitHub repository or to do so manually by selecting the branch you wish to deploy and clicking on the appropriate button.
+7. Top of the page, click on the 'Settings' tab and then click 'Reveal Config Vars'.
 
-8. Following this, click on the 'Settings' tab and then click 'Reveal Config Vars'
+8. Within the 'Reveal Config Vars' section, add the variables (no quotation marks) which would be found in your local 'env.py' file. These variables are saved here as they contain sensitive data such as the password to the MongoDB database and the secret key required to use some of Flask's functionality.
 
-9. Within the 'Reveal Config Vars' section, add the variables which would be found in your local 'env.py' file. These variables are saved here as they contain sensitive data such as the password to the MongoDB database and the secret key required to use some of Flask's functionality.
+9. Back in the repository, make sure the two new added files (Procfile and requirements.txt) are added to the staging area then to Github.
 
-10. With all of the previous steps complete, as well as the prerequisites, the app will now run by clicking the 'Open app' button.
+9. With all of the previous steps complete, we can now click the "Enable Automatic Deploys" and "Deploy Branch". After a few minutes of loading the required packages, the app will now run by clicking the 'view' or 'Open app' buttons.
 
 
 ---
