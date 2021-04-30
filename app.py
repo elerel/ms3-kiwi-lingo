@@ -17,11 +17,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 # Renders home page
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template("index.html")
+
 
 # Renders Glossary Page
 @app.route("/get_words")
@@ -68,6 +70,7 @@ def register():
         flash("Yeah, nah mate. Passwords do not match.")
 
     return render_template("register.html")
+
 
 # Renders Login Page
 @app.route("/login", methods=["GET", "POST"])
@@ -266,15 +269,15 @@ def thumbs_down(word_id):
 
 @app.errorhandler(404)
 def not_found(error):
-    # renders any 404 error'''
+    # renders any 404 error
     return render_template('errors/404.html'), 404
 
 
 @app.errorhandler(500)
 def internal_error(error):
-    # render any 500 error'''
+    # renders any 500 error
     return render_template('errors/500.html'), 500
-    
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
