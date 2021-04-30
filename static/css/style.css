@@ -156,7 +156,7 @@ nav ul {
 }
 
 .guide-btn {
-    bottom: 8rem;
+    bottom: 2.5rem;
 }
 
 .icon-flipped {
@@ -236,7 +236,7 @@ nav ul {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
 
     .join-text {
         font-size: 1rem;
@@ -245,6 +245,7 @@ nav ul {
     .guide-btn {
         margin-left: auto;
         margin-right: auto;
+        bottom: 40px;
     }
 }
 
@@ -253,8 +254,6 @@ nav ul {
         font-size: 1.2rem;
     }
 }
-
-
 
 
 /* Like and Dislike Buttons*/
@@ -336,6 +335,7 @@ form .card {
     background-position: center;
     background-size: cover;
     position: relative;
+
 }
 
 .carousel-one {
@@ -343,11 +343,12 @@ form .card {
 }
 
 .carousel-two {
-    background-image: url("/static/images/maorisculpts.jpg");
+    background-image: url("/static/images/milfordpic.jpg");
+
 }
 
 .carousel-three {
-    background-image: url("/static/images/milfordpic.jpg");
+    background-image: url("/static/images/maoricarvings.jpg");
 }
 
 .carousel-four {
