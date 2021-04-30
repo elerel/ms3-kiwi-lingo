@@ -212,13 +212,18 @@ nav ul {
         display: inline-block !important;
     }
 
-    .welcome-text {
-        font-size: 2rem;
+    .welcome {
+        font-size: 1.4rem !important;
     }
 
     .join-text {
         margin-top: 20px;
         font-size: 1rem;
+    }
+
+    .img-description h5,
+    .img-description p {
+        font-size: 1rem !important;
     }
 
     .about-kiwi h2 {
@@ -315,8 +320,10 @@ form .card {
     font-family: 'Luckiest Guy', sans-serif;
 }
 
+
+/* Carousel Styling */
 .carousel {
-    height: 70vh !important;
+    height: 80vh !important;
 }
 
 .carousel-item {
@@ -326,7 +333,6 @@ form .card {
     background-position: center;
     background-size: cover;
     position: relative;
-
 }
 
 .carousel-one {
