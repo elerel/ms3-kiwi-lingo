@@ -12,22 +12,19 @@ For my third milestone project (data centric) with The Code Institute, I decided
       - User Stories
       - First Time User Stories
       - Registered User Stories
-      - Site Owner User Stories
-  - Structure    
-  - Scope: Design
+      - Site Owner User Stories  
+  - Scope: Features vs Function
+    - Existing Features
+    - Features left to be implemented
+  - Structure  
   - Skeleton
     - Wireframes
   - Surface
     - Colour Scheme
     - Typography
-    - Imagery
+    - Imagery  
 
-  
 - [**Database Schema**](#database-schema)
-
-- [**Features**](#features)
-  - Existing Features
-  - Features left to be implemented
 
 - [**Technologies Used**](#technologies-used)
   - Languages Used
@@ -51,7 +48,9 @@ For my third milestone project (data centric) with The Code Institute, I decided
 
 ## User Experience
 
-### Project Description
+### Project Description - Strategy:
+
+Kiwi Lingo was created as an online reference/source primarily aimed at tourists planning to go to or visitors already in New Zealand. New Zealand English is plentiful in content, and of course Maori- the indigenous language of New Zealand (that is used by English speakers in New Zealand on a daily basis) and many words and phrases could be uploaded to the site which could give way to eventually being published in book-form.
 
 The aim behind Kiwi Lingo is to form an online dictionary/phrase reference guide to various words and phrases spoken in New Zealand. 
 
@@ -62,13 +61,14 @@ Kiwi Lingo would be typically used for:
 - First time visitors to New Zealand
 - Visitors currently in New Zealand struggling to understand the locals
 - Visitors or locals looking to brush up on their slang or use as a reference guide to teach others
-- New Zealanders that would like to add their own words or phrases to help visitors to NZ
+- New Zealanders that would like to add their own words or phrases to help visitors to NZ and even store their own collection of Maori words/phrases if they are seeking to learn
 - People that have visited NZ that would like to keep a log of phrases/words/slang encountered on their visit and retain for future visits to NZ
 
-Visitors to the site will be able to sign up for an account so they can easily add (CREATE) any words or phrases to the dictionary that might be missing. Upon registering, users will be able to edit (UPDATE) their additions and also be able to remove (DELETE) what they have added themselves. They can also view/search (READ) for words or phrases in the search tool bar.
+Visitors to the site will be able to sign up for an account so they can easily add (CREATE) any words or phrases to the dictionary that might be missing. Upon registering, users will be able to edit (UPDATE) their additions and also be able to edit or remove (DELETE) what they have added themselves. They can also view/search (READ) for words or phrases in the search tool bar.
 
 A favourable outcome behind creating this site would be:
 - With additions by new and existing users, it would allow growth to the site
+- Bring more awareness to the Maori language
 - An opportunity for the site owner to encourage the user to book excursions/holidays highlighted in the links throughout the site
 
 
@@ -105,11 +105,8 @@ A favourable outcome behind creating this site would be:
 ---
 
 
-### Overview
+### Scope
 
-New Zealand English and their own slang can be quite hard to grasp if you're a first time visitor to New Zealand or in conversation with a Kiwi in a loud pub. Sometimes it can seem like Kiwi English is an entirely separate language! Which is why I decided to have a go in creating an online guide to some of the most common New Zealand phrases and lingo. Kiwi slang can be found just about anywhere, even in the likes of fancy restaurants and hotels. It includes some Maori phrases and Maori slang used in everyday life.
-
-This app is designed as a complete guide on New Zealand slang and how to use it like a real Kiwi!  The phrases or words may look complicated but trust me once you get the hang of it, it’s easy as bro.
 
 
 
@@ -316,6 +313,7 @@ To create a clone, follow the following steps.
 - [Regional Slang Article](https://www.stuff.co.nz/national/99763866/hey-uce-heres-a-meanas-guide-to-kiwi-regional-slang)
 - [W3 Resource](https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php) for help with likes and dislikes function
 - [Stackoverflow](https://stackoverflow.com/questions/18574699/how-to-make-a-space-between-i-tags-icons-in-table/18574766) on rotating icons
+- [Stackoverflow](https://stackoverflow.com/questions/36581504/materialize-carousel-slider-autoplay) for use of timer in carousel function
 - [Flask Mega Tutorial, Pt VII](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vii-error-handling)- in reference to use of error functions
 
 

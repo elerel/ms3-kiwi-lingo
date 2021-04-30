@@ -2,25 +2,47 @@
 {% block content %}
 <!--Caption/cta area-->
 <div class="index-pg">
-    <div class="background-img">
-        <div class="welcome-text ">
-            <h3>Aotearoa</h3>
-            <p class="new-zealand white-text"><strong>New Zealand<br>"Land Of The Long White Cloud"</p></strong>
-            <!--Welcome Section-->
-            <div class="join-text white-text">
-                <div class="white-text">
-                    <p>Kia Ora & Welcome to Kiwi Lingo!<br>Your Ultimate Online Guide to Kiwi Phrases and Words<br>Join
-                        Today to Add Your
-                        Word or Phrase!</p>
-                    <a href="{{ url_for('get_words') }}" class="btn guide-btn waves-effect waves-light red">View Guide
 
-                    </a>
+    <!--Carousel-->
+    <div class="carousel carousel-slider center">
+        <div class="carousel-fixed-item center">
+            <a href="{{ url_for('get_words') }}" class="btn guide-btn waves-effect waves-light red">View Guide
+            </a>
+        </div>
+        <div class="carousel-item carousel-one white-text" href="#one!">
+            <div class="welcome-text">
+                <h3>Aotearoa</h3>
+                <p class="new-zealand white-text"><strong>New Zealand<br>"Land Of The Long White Cloud"</p></strong>
+                <p class="welcome white-text">Kia Ora & Welcome to Kiwi Lingo!<br>Your Ultimate Online Guide to Kiwi
+                    Phrases and
+                    Words<br>Join
+                    Today to Add Your
+                    Word or Phrase!</p>
+                <!--Image Description-->
+                <div class="img-description left-align hide-on-small-only">
+                    <h5>Aoraki/Mount Cook</h5>
+                    <p>Lake Pukaki, South Island NZ</p>
                 </div>
             </div>
         </div>
-        <div class="img-description hide-on-small-only">
-            <h5>Aoraki/Mount Cook</h5>
-            <p>Lake Pukaki, South Island NZ</p>
+        <div class="carousel-item carousel-two white-text" href="#two!">
+            <div class="img-description left-align hide-on-small-only">
+                <h5>Maori Wood Carving</h5>
+                <p> Maori carvings can be found on their houses, boats, statues, and jewelry</p>
+            </div>
+        </div>
+        <div class="carousel-item carousel-three white-text" href="#three!">
+            <div class="img-description left-align hide-on-small-only">
+                <h5>Milford Sound, South Island, NZ</h5>
+                <p>Fun fact: Milford Sound tops the rainfall meter of New Zealand.<br> The annual rainfall is pegged at
+                    6,813mm falling about 182 days of the year.</p>
+            </div>
+        </div>
+        <div class="carousel-item carousel-four white-text" href="#four!">
+            <div class="img-description left-align hide-on-small-only">
+                <h5>Bay of Islands, North Island</h5>
+                <p>From snow-capped mountains in the South, to sub-tropical beaches in the North</p>
+            </div>
         </div>
     </div>
     <!--About Kiwi Lingo-->
