@@ -87,18 +87,23 @@
     <hr>
     {% endif %}
 </div>
-<!--Feedback-->
-<div>
-    <a href="{{ url_for('contact') }}"><i class="far fa-comment-dots"></i> Give Us Feedback</a>
-</div>
 
 <!--Add Word/Phrase section-->
 <div class="sign-up container center-align black-text">
     <h3 class="add-word">Keen to add a word or phrase?</h3>
+    <!--If user already logged in, they can simply add word here or new users can sign in/register-->
+    {% if session.user %}
+    <a href="{{ url_for('add_word') }}" class="btn waves-effect waves-light green">Add Word</a>
+    {% else %}
     <p>Log In or Sign Up Now!</p>
     <a href="{{ url_for('login') }}" class="btn waves-effect waves-light green">Log In</a>
     <a href="{{ url_for('register') }}" class="btn waves-effect waves-light red">Sign Up</a>
+    {% endif %}
 </div>
 
+<!--Feedback-->
+<div class="feedback orange center-align">
+    <a href="{{ url_for('contact') }}"><i class="far fa-comment-dots"></i> Give Us Feedback!</a>
+</div>
 
 {% endblock %}

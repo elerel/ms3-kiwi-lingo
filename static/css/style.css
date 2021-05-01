@@ -272,6 +272,10 @@ nav ul {
     margin-bottom: 30px;
 }
 
+.feedback {
+    font-size: 20px;
+    font-weight: bold;
+}
 
 /* Profile Page */
 .no-words {
