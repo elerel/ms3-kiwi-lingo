@@ -2,6 +2,9 @@
 {% block content %}
 
 <h3 class="white-text center-align">Glossary</h3>
+<p>The list of words and phrases below is listed alphabetically for your convenience- can't find the word you're looking
+    for?</p>
+<p>Add your favourite word or search below: </p>
 <div class="container">
     <div class="row card-panel">
         <form action="{{ url_for('search' )}}" method="POST" class="col s12">
@@ -102,8 +105,8 @@
 </div>
 
 <!--Feedback-->
-<div class="feedback orange center-align">
-    <a href="{{ url_for('contact') }}"><i class="far fa-comment-dots"></i> Give Us Feedback!</a>
+<div class="feedback center-align">
+    <a href="{{ url_for('contact') }}"><i class="far fa-comment-dots"></i> Give Us Feedback!</a><br>
 </div>
 
 {% endblock %}
