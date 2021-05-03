@@ -50,11 +50,9 @@ For my third milestone project (data centric) with The Code Institute, I decided
 
 ### Project Description - Strategy:
 
-Kiwi Lingo was created as an online reference/source primarily aimed at tourists planning to go to or visitors already in New Zealand. New Zealand English is plentiful in content, and of course Maori- the indigenous language of New Zealand (that is used by English speakers in New Zealand on a daily basis) and many words and phrases could be uploaded to the site which could give way to eventually being published in book-form.
+Kiwi Lingo was created as an online reference/source primarily used for by people who have a genuine interest in colloquial New Zealand English, the Maori language and visitors planning to go to or visitors already in New Zealand. New Zealand English is plentiful in content, and of course Maori- the indigenous language of New Zealand (that is used by English speakers in New Zealand on a daily basis) and many words and phrases could be uploaded to the site which could give way to eventually being published in book-form.
 
-The aim behind Kiwi Lingo is to form an online dictionary/phrase reference guide to various words and phrases spoken in New Zealand. 
-
-Each word or phrase in the dictionary will have a definition, a phonetic spelling to aid the pronunciation and an example of how the word or phrase is commonly spoken by locals.
+Each word or phrase in the dictionary will have a definition and an example of how the word or phrase is commonly spoken by locals. Users to the site can vote on the popularity of the word should they choose.
 
 Kiwi Lingo would be typically used for:
 
@@ -64,6 +62,7 @@ Kiwi Lingo would be typically used for:
 - New Zealanders that would like to add their own words or phrases to help visitors to NZ and even store their own collection of Maori words/phrases if they are seeking to learn
 - People that have visited NZ that would like to keep a log of phrases/words/slang encountered on their visit and retain for future visits to NZ
 
+The aim behind Kiwi Lingo is to form an online dictionary/phrase reference guide to various words and phrases spoken in New Zealand. 
 Visitors to the site will be able to sign up for an account so they can easily add (CREATE) any words or phrases to the dictionary that might be missing. Upon registering, users will be able to edit (UPDATE) their additions and also be able to edit or remove (DELETE) what they have added themselves. They can also view/search (READ) for words or phrases in the search tool bar.
 
 A favourable outcome behind creating this site would be:
@@ -106,6 +105,44 @@ A favourable outcome behind creating this site would be:
 
 
 ### Scope
+
+For any user to the site:
+
+- To easily understand the purpose of the site is for and to be able to easily register or log in
+- Site to be responsive across all devices 
+- A clear navigation menu on all pages thus allowing users to easily navigate around the site
+- A way for the user to contact the site administrator should they need
+- Glossary to be accessible to non-registered users/first-time users
+
+For registered users:
+
+- CRUD functionality where users can:
+  - Create a profile and word/phrase to the site
+  - Read or view words and phrases added to the site
+  - Update their own additions to the site
+  - Delete their word/phrase and in addition their profile should they choose
+- Log in and log out functionality
+- Clear profile page and list of their own added words on display 
+- Clear messages in response to the user's actions
+
+For site admin:
+
+- CRUD functionality for the "categories" section (accessible only by site admin)
+- To be able to edit and/or delete words added by registered users
+
+### Structure
+
+#### Existing Features:
+
+- Home Page
+  - A carousel image-display featuring New Zealand's most beautiful, iconic landmarks to attract new users into the site
+  - A clear and simple navbar simply directing the user to the site's main pages
+  - A small yet clear section on what the site is and who it is intended for, headed by the brand font for consistency purposes
+  - 
+
+
+
+
 
 
 
