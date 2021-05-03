@@ -5,10 +5,6 @@
 
     <!--Carousel-->
     <div class="carousel carousel-slider center">
-        <div class="carousel-fixed-item center">
-            <a href="{{ url_for('get_words') }}" class="btn guide-btn waves-effect waves-light red">View Guide
-            </a>
-        </div>
         <div class="carousel-item carousel-one white-text" href="#one!">
             <h2>"Aotearoa"</h2>
             <p class="white-text"><strong>New Zealand<br>Land Of The Long White Cloud</p></strong>
@@ -17,6 +13,7 @@
                 Words<br>
                 Join Today to Add Your
                 Word or Phrase!</h3>
+
             <!--Image Description-->
             <div class="img-description left-align ">
                 <h5>Aoraki/Mount Cook</h5>
@@ -72,7 +69,26 @@
                 Let our handy guide, Kiwi Lingo, be your go-to guide for everything spoken in New Zealand!
             </p>
         </div>
-        <a href="{{ url_for('register') }}" class="btn waves-effect waves-light red">Register</a>
+        <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light red">View Glossary</a>
+    </div>
+    <div class="container">
+        <div class="row card-panel justify-content-center search-card">
+            <form action="{{ url_for('search' )}}" method="POST" class="col s12">
+                <div class="row valign-wrapper center-align">
+                    <div class="input-field col s12 m8">
+                        <i class="fas fa-search prefix blue-text text-darken-3"></i>
+                        <input type="text" name="query" id="query" class="validate" required>
+                        <label for="query">Search Your Favourite Word/Phrase</label>
+                    </div>
+                    <div class="col s12 m4">
+                        <button type="submit" class="light-blue darken-1 btn search-btn text-shadow">
+                            Search
+                        </button>
+                        <a href="{{ url_for('get_words' )}}" class="red btn reset-btn text-shadow">Reset</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}

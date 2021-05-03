@@ -60,32 +60,6 @@ nav ul {
     color: #fff !important;
 }
 
-/*Register Page*/
-.register-page,
-.login-page,
-.add-word-pg,
-.edit-word-page,
-.manage-categories-page,
-.glossary-pg {
-    height: 100vh;
-    padding-top: 20px;
-}
-
-.register-title {
-    margin-top: 0;
-    margin-bottom: 40px;
-    border-top-width: 10px;
-    padding-top: 10px;
-}
-
-.page-footer {
-    padding: 10px 10px 0px 10px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: black;
-}
-
 /* Index Page */
 .background-img {
     background-image: url(/static/images/heroimg2.jpg);
@@ -148,6 +122,74 @@ nav ul {
     bottom: 2.5rem;
 }
 
+.search-card {
+    background-color: transparent !important;
+}
+
+.search-btn {
+    font-size: 15px !important;
+    letter-spacing: normal;
+}
+
+/* Carousel Styling */
+.carousel {
+    height: 80vh !important;
+}
+
+.carousel-item {
+    max-width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.carousel-one {
+    background-image: url("/static/images/heroimg2.jpg");
+}
+
+.carousel-two {
+    background-image: url("/static/images/milfordpic.jpg");
+
+}
+
+.carousel-three {
+    background-image: url("/static/images/maoricarvings.jpg");
+}
+
+.carousel-four {
+    background-image: url("/static/images/bayofislands.jpg");
+}
+
+/*Register Page*/
+.register-page,
+.login-page,
+.add-word-pg,
+.edit-word-page,
+.manage-categories-page,
+.glossary-pg {
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.register-title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    border-top-width: 10px;
+    padding-top: 10px;
+}
+
+.page-footer {
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+}
+
+
 .icon-flipped {
     padding-left: 3px;
     padding-right: 3px;
@@ -155,6 +197,17 @@ nav ul {
     -moz-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
+}
+
+
+/*Glossary Page*/
+.sign-up {
+    margin-bottom: 30px;
+}
+
+.feedback {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* Button Styling */
@@ -197,6 +250,16 @@ nav ul {
 .modal-footer {
     text-align: center !important;
 }
+
+.modal .modal-footer {
+    background-color: #ffcc80;
+}
+
+.modal h4 {
+    font-family: 'Luckiest Guy', sans-serif;
+}
+
+
 
 /* Media Queries */
 @media screen and (max-width: 700px) {
@@ -244,22 +307,6 @@ nav ul {
     }
 }
 
-/*
-@media only screen and (min-width: 800px) {
-    .welcome {
-        font-size: 1.8rem !important;
-    }
-} */
-
-@media only screen and (min-width: 768px) {
-    .welcome-text h3 {
-        font-size: 4rem;
-    }
-}
-
-
-
-
 /* Like and Dislike Buttons*/
 #count {
     margin: 0px 15px 0px;
@@ -272,17 +319,6 @@ nav ul {
 .fa-thumbs-down {
     color: red;
 }
-
-/*Glossary Page*/
-.sign-up {
-    margin-bottom: 30px;
-}
-
-.feedback {
-    font-size: 20px;
-    font-weight: bold;
-}
-
 
 
 /* Profile Page */
@@ -321,46 +357,4 @@ form .card {
 #email_response {
     color: #fff;
     font-size: 2rem;
-}
-
-
-.modal .modal-footer {
-    background-color: #ffcc80;
-}
-
-.modal h4 {
-    font-family: 'Luckiest Guy', sans-serif;
-}
-
-
-/* Carousel Styling */
-.carousel {
-    height: 80vh !important;
-}
-
-.carousel-item {
-    max-width: 100%;
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-
-}
-
-.carousel-one {
-    background-image: url("/static/images/heroimg2.jpg");
-}
-
-.carousel-two {
-    background-image: url("/static/images/milfordpic.jpg");
-
-}
-
-.carousel-three {
-    background-image: url("/static/images/maoricarvings.jpg");
-}
-
-.carousel-four {
-    background-image: url("/static/images/bayofislands.jpg");
 }
