@@ -45,6 +45,7 @@
                     {% if session.user == "elerel" %}
                     <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
                     {% endif %}
+                    <li><a href="{{ url_for('get_words') }}">Glossary</a></li>
                     <li><a href="{{ url_for('add_word') }}">Add Word</a></li>
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>

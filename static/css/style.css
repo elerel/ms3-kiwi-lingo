@@ -70,12 +70,8 @@ nav ul {
     background-size: cover;
 }
 
-.welcome-text {
-    margin-left: 5px;
-}
-
 .welcome {
-    font-size: 1.6rem !important;
+    font-size: 2rem !important;
     margin-top: 7rem;
 }
 
@@ -209,6 +205,10 @@ nav ul {
 .feedback {
     font-size: 20px;
     font-weight: bold;
+}
+
+.feedback:hover {
+    text-decoration: underline;
 }
 
 /* Button Styling */
