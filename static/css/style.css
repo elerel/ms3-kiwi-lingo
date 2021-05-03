@@ -75,7 +75,8 @@ nav ul {
 }
 
 .welcome {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
+    margin-top: 7rem;
 }
 
 .new-zealand {
@@ -301,9 +302,14 @@ nav ul {
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 325px) {
     .welcome {
         font-size: 15px !important;
+        margin-top: 3rem;
+    }
+
+    .img-description h5 {
+        display: none;
     }
 }
 
