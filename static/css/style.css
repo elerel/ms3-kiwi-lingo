@@ -232,13 +232,24 @@ nav ul {
         margin-right: auto;
         bottom: 10px;
     }
+
+    .welcome {
+        font-size: 1rem;
+    }
 }
 
+@media screen and (max-width: 300px) {
+    .welcome {
+        font-size: 15px !important;
+    }
+}
+
+/*
 @media only screen and (min-width: 800px) {
     .welcome {
         font-size: 1.8rem !important;
     }
-}
+} */
 
 @media only screen and (min-width: 768px) {
     .welcome-text h3 {
