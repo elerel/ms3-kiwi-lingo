@@ -14,9 +14,9 @@ For my third milestone project (data centric) with The Code Institute, I decided
       - Registered User Stories
       - Site Owner User Stories  
   - Scope: Features vs Function
+  - Structure
     - Existing Features
     - Features left to be implemented
-  - Structure  
   - Skeleton
     - Wireframes
   - Surface

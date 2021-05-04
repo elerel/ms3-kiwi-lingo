@@ -37,6 +37,12 @@ nav.nav-extended .nav-wrapper {
 
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+
+
 nav ul {
     margin-right: 20px;
 }
