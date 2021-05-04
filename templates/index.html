@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<!--Caption/cta area-->
 <div class="index-pg">
-
     <!--Carousel-->
     <div class="carousel carousel-slider center">
         <div class="carousel-item carousel-one white-text" href="#one!">
@@ -11,7 +9,7 @@
             <h3 class="welcome white-text">Kia Ora & Welcome to Kiwi Lingo!<br>Your Ultimate Online Guide to Kiwi
                 Phrases and
                 Words<br>
-                Register Today to Add Your
+                Register Today to Add or Edit Your
                 Word or Phrase!</h3>
 
             <!--Image Description-->
@@ -20,6 +18,7 @@
                 <p class="hide-on-small-only">Lake Pukaki, South Island NZ</p>
             </div>
         </div>
+        <!--Carousel Text Section-->
         <div class="carousel-item carousel-two white-text" href="#two!">
             <h2>"Sweet As"</h2>
             <p class="white-text">Everything's good, no worries, great...</p>
@@ -69,8 +68,11 @@
                 Let our handy guide, Kiwi Lingo, be your go-to guide for everything spoken in New Zealand!
             </p>
         </div>
-        <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light orange accent-2">View Glossary</a>
+        <!--Glossary Button-->
+        <a href="{{ url_for('get_words') }}" class="btn waves-effect waves-light orange accent-2">View
+            Glossary</a>
     </div>
+    <!--Search Bar-->
     <div class="container">
         <div class="row justify-content-center search-card">
             <form action="{{ url_for('search' )}}" method="POST" class="col s12">

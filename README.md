@@ -132,45 +132,124 @@ For site admin:
 
 ### Structure
 
+I decided to have the site divided into separate pages rather than all content on one page. New users will have access to the index/landing page, Log In page, Register page and Glossary- they also have access to contact the site owner, redirecting the user to the Contact Us page from the Glossary page. A registered user's navbar changes to a more classic navbar style as to not overcrowd the navbar with coloured buttons. The navbar and footer remains the same across all pages ensuring consistency to the site.
+
 #### Existing Features:
+
+- Base Page: visible across all pages:
+
+  - Navbar (Desktop) - a simple and easy to use navbar without too many options or buttons to disuade user activity I went with a simple yet fun approach with the design. The navbar then changes when the user is logged in or out, or is the site owner.
+  - Navbar (Mobile) - the mobile navbar features a slide option that is triggered by the hamburger icon in the fixed navbar. This allows for easier navigation across the site for mobile users while enhancing UX. 
+  - Flash messages - using the imported 'flash' feature from Flask, there are flash messages that appear on each page each time the user interacts with the site by logging in, registering, logging out, adding a Tip, editing a Tip, and deleting a Tip.
+  - Footer - Social media icons as well as a contact us link (email also provided) using a mailto link generator that opens the users preferred email provider, and a few links to help the user get inspired in planning their holiday or find out more about New Zealand. The links go to an external link so that the user can still stay on the Kiwi Lingo website.
 
 - Home Page
   - A carousel image-display featuring New Zealand's most beautiful, iconic landmarks to attract new users into the site
-  - A clear and simple navbar simply directing the user to the site's main pages
+  - A welcome message appearing as the user enters the site (on first image) allowing the user to see what the site is about
+  - A clear and simple navbar directing the user to the site's main pages
   - A small yet clear section on what the site is and who it is intended for, headed by the brand font for consistency purposes
-  - 
+  - Below the About section, a search bar is provided giving the user another way to use or access the site
+
+- Log In Page
+  - A clear and responsive log in form where the user enters their username and password is provided
+  - Navbar and footer is the same providing consistency
+  - Large and eye-catching "Log In" button
+  - If the user prefers to create a profile or register, a link to the Register page is provided below the Log In button
+
+- Register Page
+  - Similar to the log in page, a large form provided which includes the following fields to be filled out: first name (added to create a welcoming and informal tone), username, password and confirm password
+  - A link to the "Log In" page below the Register button provided in case the user already has already registered
+
+- Glossary Page
+  - All users have access to the Glossary page, displaying all current user inputted words and phrases in a collapsible accordion format 
+  - A search bar allowing the user to look up a word or phrase
+  - Once a word is selected, the definition/example details of the word is displayed in a pop-out style and displays:
+    - The chosen word's *category*
+    - *Definition*
+    - *Example* of where the word can be used
+    - Who the word was added by
+    - A like or dislike feature or voting system so the user can see the popularity of the word used
+  - If the user is not logged in, a link to log in or register pages provided below the glossary
+  - If the user is logged in, this changes using an if statement to add a word instead of log in/register
+  - A link to the contact page (Give us Feedback) is provided should the user wish to contact the site owner
+
+- Profile Page
+  - Large profile card displaying the user's username
+  - Displays the words or phrases added by the user, including edit and delete buttons
+  - Inviting the user to add another word or phrase
+  - The user can also delete their profile should they wish, ensuring the user is aware their added words will still remain should they delete their profile
+
+- Add Word Page
+  - Accessible only to registered/logged in users
+  - Large form allowing the user to fill out the following fields:
+    - *Category* that best fits the word
+    - *Word*
+    - *Definition*
+    - *Example* of where the word can be used
+  - Cancel and Add Word buttons to click when completed  
+
+- Contact Us Page
+  - Displays an inviting message for the user to contact the site owner and the following fields to be filled in:
+    - *Name*
+    - *Email*
+    - *Message* 
+  - Submit button  
+
+- Manage Categories Page
+  - Accessed only by the site owner
+  - Displays all categories in a card panel format added by site owner
+  - Site owner can add, edit or delete categories
+
+- Log Out Page
+  - The user will be redirected to the log in page upon logging out.
+
+
+#### Features Left to Implement
+
+- A collection or library of all the words the user has "liked". This could be a nice feature to have so that the user can keep a log of their favourite words or phrases should the website expand.
+- Maori in itself is popular and keen interest among New Zealanders to learn. This could be made into its own site but because there are plenty of words and phrases tourists can use that is in Maori, I felt it was a good idea to include it as a category in Kiwi Lingo.
+- The site to become a paid service featuring advertisements from several tourism companies in New Zealand.
+
+### Skeleton
+
+#### Wireframes
+
+The wireframes for Kiwi Lingo were created using [Balsamiq](https://balsamiq.com/)
+They have been slightly modified since their creation as further aspects of design were came upon on development of the project.
+
+Mobile and Tablet View:
+<p><img src="readme/wireframes/tabletmobile-home.PNG">
+  <img src="readme/wireframes/tabletmobile-register.PNG">
+  <img src="readme/wireframes/tabletmobile-glossary.PNG">
+  <img src="readme/wireframes/tabletmobile-profile.PNG">
+  <img src="readme/wireframes/tabletmobile-addword.PNG">
+  <img src="readme/wireframes/tabletmobile-categories.PNG">
+  <img src="readme/wireframes/tabletmobile-contact.PNG"></p>
+
+
+Desktop View:
+
+<p><img src="readme/wireframes/desktop-home.PNG">
+    <img src="readme/wireframes/desktop-profile.PNG">
+    <img src="readme/wireframes/desktop-glossary.PNG">
+    <img src="readme/wireframes/desktop-addword.PNG">
+    <img src="readme/wireframes/desktop-register.PNG">
+    <img src="readme/wireframes/desktop-categories.PNG">
+    <img src="readme/wireframes/desktop-contact.PNG">
+</p>
+
+Full Wireframes can be found [here](https://github.com/elerel/ms3-kiwi-lingo/tree/master/readme/wireframes)
 
 
 
+### Surface
 
+#### Colour Scheme
 
+#### Typography
 
-
-
-
-
- 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
-
-## Features
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
-### Features Left to Implement
-- Another feature idea
+#### Imagery
+--- 
 
 ## Technologies Used
 
