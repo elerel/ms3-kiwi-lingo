@@ -26,7 +26,7 @@ $(document).ready(function () {
     });
 
     validateMaterializeSelect();
-
+    // Code snippet from Code Institute's Task Manager mini project- used to validate selected option:
     function validateMaterializeSelect() {
         let classValid = {
             "border-bottom": "1px solid #4caf50",

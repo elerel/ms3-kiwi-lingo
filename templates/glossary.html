@@ -49,13 +49,13 @@
                 <p><strong><em>by: {{ word.created_by }}</em></strong></p>
                 <!--Likes & Dislikes- code snippet taken from fellow student Karen Yuen and modified-->
                 <div class="col s12 m4 valign-wrapper" id="thumbsup">
-                    <a href="{{ url_for('thumbs_up', word_id=word._id)}}" class="secondary content thumbs_up tooltipped"
+                    <a href="{{ url_for('thumbs_up', word_id=word._id)}}" class="thumbs_up tooltipped"
                         data-position="top" data-tooltip="Yeah, bro!">
                         <i class="fas fa-thumbs-up" id="like-thumb" alt="thumbs up"></i></a>
                     <span id="count">{{ word.thumbs_up }}</span>
                     <!--dislike-->
-                    <a href="{{ url_for('thumbs_down', word_id=word._id)}}"
-                        class="secondary content thumbs_down tooltipped" data-position="top" data-tooltip="Nah, bro!">
+                    <a href="{{ url_for('thumbs_down', word_id=word._id)}}" class="thumbs_down tooltipped"
+                        data-position="top" data-tooltip="Nah, bro!">
                         <i class="fas fa-thumbs-down" id="dislike-thumb" alt="thumbs down"></i></a>
                     <span id="count">{{ word.thumbs_down }}</span>
                 </div>
