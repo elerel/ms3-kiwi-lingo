@@ -24,21 +24,27 @@ mongo = PyMongo(app)
 def home():
     return render_template("index.html")
 
+
 """
 The get_word function finds all the words from the db and
 renders them onto the glossary page.
 """
+
+
 # Renders Glossary Page
 @app.route("/get_words")
 def get_words():
     words = list(mongo.db.words.find().sort("word", 1))
     return render_template("glossary.html", words=words)
 
+
 """
 The search function searches through all the words on the db matching
 the query keyword and renders the word on the glossary page
 
 """
+
+
 # Render Search Function
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -47,10 +53,12 @@ def search():
     return render_template("glossary.html", words=words)
 
 
- """
+"""
 Register Page: new users can create a profile
 by entering a username and password.
 """
+
+
 # Render Sign Up/Register Page
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -63,13 +71,14 @@ def register():
         if existing_user:
             flash("Yeah, nah mate. Username already in use.")
             return redirect(url_for("register"))
-        # check both passwords match
+        # check both passwords match and sends users details to db
         if password == confirm_password:
-        # takes the users details and sends it to mongodb (users)
+
             register = {
                 "first_name": request.form.get("first_name"),
                 "username": request.form.get("username"),
-                "password": generate_password_hash(request.form.get("password"))
+                "password": generate_password_hash(
+                    request.form.get("password"))
             }
             mongo.db.users.insert_one(register)
 
@@ -82,10 +91,13 @@ def register():
 
     return render_template("register.html")
 
+
 """
 Login function checks the db if username is already listed and 
 checks the password
 """
+
+
 # Renders Login Page
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -97,7 +109,8 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                existing_user["password"], request.form.get(
+                    "password")):
                 session["user"] = request.form.get("username")
                 flash("Kia Ora, {}!".format(
                     request.form.get("username")))
@@ -114,10 +127,12 @@ def login():
             flash("Username does not exist")
     return render_template("login.html")
 
+
 """
 The profile function finds the users details from the db
 and finds the added words by same profile
 """
+
 
 # Renders Profile Page
 @app.route("/profile/<username>", methods=["GET", "POST"])  
@@ -125,7 +140,7 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-        # finds words added by user:
+    # finds words added by user:
     words = list(mongo.db.words.find())
     # if existing user display profile
     if session["user"]:
@@ -134,10 +149,12 @@ def profile(username):
 
     return redirect(url_for("login"))
 
+
 """
 The delete_profile function finds users details on db and
 removes it from the db rendering the login page
 """
+
 
 # Render delete profile
 @app.route("/delete_profile")
@@ -151,10 +168,13 @@ def delete_profile():
     session.pop("user")
     return render_template("login.html", username=username)
 
+
 """
 The logout function removes the user from the session cookie
 and redirects them to the login page
 """
+
+
 # Renders Logout Page
 @app.route("/logout")
 def logout():
@@ -163,10 +183,13 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
+
 """
 This function adds all the users inputs from add_word form
 and sends it to the db using the insert_one function
 """
+
+
 # Renders Add Word Page
 @app.route("/add_word", methods=["GET", "POST"])
 def add_word():
@@ -196,10 +219,13 @@ def add_word():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_word.html", categories=categories)
 
+
 """
 The edit_word function finds the word that has already been added 
 then uses the update function by associating the correct word_id.
 """
+
+
 # Edit word functionality
 @app.route("/edit_word/<word_id>", methods=["GET", "POST"])
 def edit_word(word_id):
@@ -221,10 +247,13 @@ def edit_word(word_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_word.html", word=word, categories=categories)
 
+
 """
 The delete word function removes the word associated with the 
 correct word_id using the delete_one function
 """
+
+
 # Delete Word Function
 @app.route("/delete_word/<word_id>")
 def delete_word(word_id):
@@ -232,10 +261,14 @@ def delete_word(word_id):
     flash("Word Successfully Deleted")
     return redirect(url_for("get_words"))
 
+
 """
-The get_categories function finds all categories added by site admin elerel
-so that they can create, read, edit and delete site categories
+The get_categories function finds all categories added by site
+admin elerel so that they can create, read, 
+edit and delete site categories
 """
+
+
 # Renders Manage Category Page- for elerel/site admin profile
 @app.route("/get_categories")
 def get_categories():
@@ -291,7 +324,7 @@ def contact():
 @app.route("/thumbs_up/<word_id>", methods=["GET", "POST"])
 def thumbs_up(word_id):
     word = mongo.db.words.find_one_and_update(
-        # code credit to W3 Resources: https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php
+        # code reference to W3 Resources- noted in readme file
         {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_up": 1}})
     return redirect(url_for("get_words", word=word))
 
@@ -300,7 +333,7 @@ def thumbs_up(word_id):
 @app.route("/thumbs_down/<word_id>", methods=["GET", "POST"])
 def thumbs_down(word_id):
     word = mongo.db.words.find_one_and_update(
-        # code credit to W3 Resources: https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php
+        # code reference to W3 Resources- noted in readme file
         {"_id": ObjectId(word_id)}, {"$inc": {"thumbs_down": 1}})
     return redirect(url_for("get_words", word=word))
 
@@ -311,10 +344,11 @@ def not_found(error):
     return render_template('errors/404.html'), 404
 
 
- # renders any 500 error
+# renders any 500 error
 @app.errorhandler(500)
 def internal_error(error):
     return render_template('errors/500.html'), 500
+
 
 # REMEMBER TO CHANGE TO debug=FALSE
 if __name__ == "__main__":
