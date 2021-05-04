@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -93,7 +93,7 @@ def register():
 
 
 """
-Login function checks the db if username is already listed and 
+Login function checks the db if username is already listed and
 checks the password
 """
 
@@ -115,7 +115,7 @@ def login():
                 flash("Kia Ora, {}!".format(
                     request.form.get("username")))
                 return redirect(url_for(
-                        "profile", username=session["user"]))    
+                        "profile", username=session["user"]))
 
             else:
                 # invalid password
@@ -135,7 +135,7 @@ and finds the added words by same profile
 
 
 # Renders Profile Page
-@app.route("/profile/<username>", methods=["GET", "POST"])  
+@app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
@@ -221,7 +221,7 @@ def add_word():
 
 
 """
-The edit_word function finds the word that has already been added 
+The edit_word function finds the word that has already been added
 then uses the update function by associating the correct word_id.
 """
 
@@ -249,7 +249,7 @@ def edit_word(word_id):
 
 
 """
-The delete word function removes the word associated with the 
+The delete word function removes the word associated with the
 correct word_id using the delete_one function
 """
 
@@ -264,7 +264,7 @@ def delete_word(word_id):
 
 """
 The get_categories function finds all categories added by site
-admin elerel so that they can create, read, 
+admin elerel so that they can create, read,
 edit and delete site categories
 """
 
@@ -316,7 +316,7 @@ def delete_category(category_id):
 # Renders Contact Us Page
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")    
+    return render_template("contact.html")
 
 
 # Likes and Dislikes functionality: finds
