@@ -263,7 +263,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [CSS]()
 - [JavaScript]()
 - [Python]() 
-- Python Modules: ( as seen in this project's requirements.txt file);
+- Python Modules: ( as featured in this project's requirements.txt file);
     - click==7.1.2
     - dnspython==2.1.0
     - Flask==1.1.2
@@ -272,12 +272,40 @@ In this section, you should mention all of the languages, frameworks, libraries,
     - pymongo==3.11.3
     - Werkzeug==1.0.1
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-- [MaterializeCSS](https://materializecss.com/)
-    - I found using MaterializeCSS throughout the Mini Project easy to use and so adapted this into this project for the CRUD mechanisms and database access functionality
+## Frameworks, Libraries & Programs Used
 
-## Testing
+1. [Balsamic](https://balsamiq.com/)
+    - Balsamiq is a UI wireframing tool used to create mockups of the site during the design process. 
+2. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+    - The Flask framework was used to import the Flask, flash, render_template, redirect, request, session, and url_for 
+    functions that are used throughout the site.
+3. [BSon](http://bsonspec.org/)
+    - This was imported in order to access the data used across the site.
+4. [JQuery](https://jquery.com/)
+    - I have used JQuery predominantly to initialise the components used in the Materialize framework. In addition, I used 
+    code taken from the Data Centric Development Module with the Code Institute in order to ensure that the category names are 
+    a required attribute.
+5. [Font Awesome](https://fontawesome.com/)
+    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes. 
+6. [Git](https://git-scm.com/)
+    - Git was used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
+7. [GitHub](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+8. [Google Fonts](https://fonts.google.com/)
+    - Google fonts were used to import the 'Sarala' font which is used on all pages throughout the project.
+9. [Heroku](https://dashboard.heroku.com/apps)
+    - Heroku is used for deployment of the site.
+10. [Materialize 1.0.0](https://materializecss.com/)
+    - Materialize was used to assist with the responsiveness and styling of the website, such as the navbars for desktop and 
+    mobile, buttons, forms, cards and colours.    
+11. [MongoDB](https://www.mongodb.com/1)
+    - MongoDB was used to host the data used on the site and was chosen due to the non-relational nature of the data.   
+12. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+    - This was imported in order for the password control to enhance security on the site.     
+   
+---
+
+## Testing- to complete on a separate file
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
