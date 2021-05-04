@@ -1,8 +1,10 @@
 # Kiwi Lingo: Your Guide to New Zealand Words & Phrases!
 
+**View the live project [here](https://kiwi-lingo.herokuapp.com/)**
+
 For my third milestone project (data centric) with The Code Institute, I decided to build a glossary database called Kiwi Lingo. It is an app intended to be accessible across all devices and used as a reference guide of commonly used words and phrases spoken by New Zealanders. 
 
-![image](https://res.cloudinary.com/elerel/image/upload/v1619524355/amiresponsive_b9hz00.png)
+![image](https://res.cloudinary.com/elerel/image/upload/v1620150032/amiresponsive_vht29r.png)
 
 ## Contents
 
@@ -215,6 +217,7 @@ I decided to have the site divided into separate pages rather than all content o
 #### Wireframes
 
 The wireframes for Kiwi Lingo were created using [Balsamiq](https://balsamiq.com/)
+
 They have been slightly modified since their creation as further aspects of design were came upon on development of the project.
 
 Mobile and Tablet View:
