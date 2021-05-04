@@ -255,6 +255,20 @@ Full Wireframes can be found [here](https://github.com/elerel/ms3-kiwi-lingo/tre
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
+### **Languages**
+- [HTML]()
+- [CSS]()
+- [JavaScript]()
+- [Python]() 
+- Python Modules: ( as seen in this project's requirements.txt file);
+    - click==7.1.2
+    - dnspython==2.1.0
+    - Flask==1.1.2
+    - Flask-PyMongo==2.3.0
+    - itsdangerous==1.1.0
+    - pymongo==3.11.3
+    - Werkzeug==1.0.1
+
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 - [MaterializeCSS](https://materializecss.com/)
@@ -368,41 +382,26 @@ echo web: python app.py > Procfile
 
 With the code required to run the app all stored in a repository with Github, deploying the app with Heroku can be done following these steps:
 
-1. Register/sign in to [Heroku](https://www.heroku.com/)
+- Register/sign in to [Heroku](https://www.heroku.com/)
 
-2. Once signed in, click on the 'Create New App' button. 
+- Once signed in, click on the 'Create New App' button. 
 
-3. Choose a unique name (all lower case, no spaces) for your app, select your local region and click 'Create app'.
+- Choose a unique name (all lower case, no spaces) for your app, select your local region and click 'Create app'.
 
-4. In the top menu, select the 'Deploy' tab, and then click 'Connect to GitHub' in the 'Deployment method' section.
+- In the top menu, select the 'Deploy' tab, and then click 'Connect to GitHub' in the 'Deployment method' section.
 
-5. Set up automatic deployment to your GitHub account to your Heroku account by clicking on the middle 'Connect to GitHub' button.
+- Set up automatic deployment to your GitHub account to your Heroku account by clicking on the middle 'Connect to GitHub' button.
 
-6. Search for the GitHub repository which contains the name of your repo, and then click 'connect'. Before clicking Enable Automatic Deploys button, ensure the following is completed:
+- Search for the GitHub repository which contains the name of your repo, and then click 'connect'. Before clicking Enable Automatic Deploys button, ensure the following is completed:
 
-7. Top of the page, click on the 'Settings' tab and then click 'Reveal Config Vars'.
+- Top of the page, click on the 'Settings' tab and then click 'Reveal Config Vars'.
 
-8. Within the 'Reveal Config Vars' section, add the variables (no quotation marks) which would be found in your local 'env.py' file. These variables are saved here as they contain sensitive data such as the password to the MongoDB database and the secret key required to use some of Flask's functionality.
+- Within the 'Reveal Config Vars' section, add the variables (no quotation marks) which would be found in your local 'env.py' file. These variables are saved here as they contain sensitive data such as the password to the MongoDB database and the secret key required to use some of Flask's functionality.
 
-9. Back in the repository, make sure the two new added files (Procfile and requirements.txt) are added to the staging area then to Github.
+- Back in the repository, make sure the two new additional files (Procfile and requirements.txt) are added to the staging area then to Github.
 
-9. With all of the previous steps complete, we can now click the "Enable Automatic Deploys" and "Deploy Branch". After a few minutes of loading the required packages, the app will now run by clicking the 'view' or 'Open app' buttons.
+- With all of the previous steps complete, we can now click the "Enable Automatic Deploys" and "Deploy Branch". After a few minutes of loading the required packages, the app will now run by clicking the 'view' or 'Open app' buttons.
 
-
----
-
-
-
-
-
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
 
 ### Forking This Project:
   If you wish to contribute to this website you can Fork it without affecting the main branch by following the procedure outlined below.
@@ -437,9 +436,12 @@ To create a clone, follow the following steps.
 - The photos used in this site were obtained from ...
 
 - [PXFuel](https://www.pxfuel.com/en/free-photo-ofpyp)
-- [SeekLogo](https://seeklogo.com/vector-logo/195319/new-zealand-rugby-union-fern)- for use of Fern logo
+- [Pexels](https://www.pexels.com/)
+- [Pixabay](https://pixabay.com/images/search/new%20zealand/)
 
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- Special thanks and appreciation to my mentor, **Nishant Kumar** for all his guidance, amazing tips and his time throughout this project
+- To the Code Institute Slack Support Channels and Student Support- thank you especially Cormac and Tim for your help, greatly appreciated.
+- To my family for helping me check for bugs and compatibility issues on their devices- and to my husband and two girls for letting me sneak away to my desk all those times!
