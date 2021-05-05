@@ -326,7 +326,7 @@ nav ul {
     }
 
     .welcome {
-        font-size: .9rem;
+        font-size: 1.4rem !important;
     }
 
     .btn {

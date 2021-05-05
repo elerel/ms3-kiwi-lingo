@@ -1,24 +1,22 @@
-# <p align="center">**MS3: Kiwi Lingo Testing**</p>
+# <p align="center">**Testing Section**</p>
 
 ## Contents
 - [**Testing**](#testing)
     - [Validation](#validation)
     - [Performance](#performance)
-    - [Links Testing](#links-testing)
-    - [Navigation Testing](#navigation-testing)
-    - [Accessibility](#accessibility)
     - [Device Testing](#device-testing)
     - [Browser Testing](#browser-testing)
     - [Bugs](#bugs)
+    - [Testing CRUD Functionality](#testing-crud-functionality)
     - [Contact Form](#contact-form)
-    - [CRUD](#crud)
+    - [Links and Navigation Testing](#links-and-navigation-testing)
     - [Testing User Stories](#testing-user-stories)
 
     ---
 
-    ## **Validation**
+## **Validation**
 
-    To ensure the site had correct code syntax, it was validated using [W3 MarkUp Validation Service](https://validator.w3.org/)
+To ensure the site had correct code syntax, it was validated using [W3 MarkUp Validation Service](https://validator.w3.org/)
 
 HTML Validation:
     ![image](https://res.cloudinary.com/elerel/image/upload/v1620229064/htmlvalidation_eobnvb.png)
@@ -53,6 +51,33 @@ Which I later resolved:
 
 ## Performance
 
+Using Google Chrome's DevTools, these Lighthouse scores are based on the opening page of the site, being viewed on desktop and mobile devices. The lowest score (performance) was mainly due to the loading time of the first carousel image which could be addressed or better formatted at a later stage:
+
+Desktop Score:
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620249174/lighthousedtop_ko6uv6.png)
+
+
+Mobile Score:
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620249180/lighthousemobile_hzkxit.png)
+
+
+---
+
+### Device Testing
+
+### Browser Testing
+
+### Bugs
+
+### Testing CRUD Functionality
+
+### Contact Form
+
+### Links and Navigation Testing
+
+### Testing User Stories
 
 
 

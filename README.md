@@ -460,7 +460,6 @@ With the code required to run the app all stored in a repository with Github, de
 - With all of the previous steps complete, we can now click the "Enable Automatic Deploys" and "Deploy Branch". After a few minutes of loading the required packages, the app will now run by clicking the 'view' or 'Open app' buttons.
 
 
-
 ### Forking This Project:
   If you wish to contribute to this website you can Fork it without affecting the main branch by following the procedure outlined below.
   1. Go to GitHub's website and log in.
@@ -492,9 +491,9 @@ Back to [contents](#contents)
 
 
 ### Media
-- The photos used in this site were obtained from ...
 
-- [PXFuel](https://www.pxfuel.com/en/free-photo-ofpyp)
+ All imagery used in this site were obtained from:
+
 - [Pexels](https://www.pexels.com/)
 - [Pixabay](https://pixabay.com/images/search/new%20zealand/)
 
