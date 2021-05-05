@@ -6,22 +6,22 @@ For my third milestone project (data centric) with The Code Institute, I decided
 
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620150032/amiresponsive_vht29r.png)
 
-## Contents
+## [**Contents**](#contents)
 
-- [**User Experience**](#user-experience)
+- [**UX**](#ux)
   - Strategy
     - Project Description
       - User Stories
       - First Time User Stories
       - Registered User Stories
       - Site Owner User Stories  
-  - Scope: Features vs Function
+  - [Scope](#scope)
   - Structure
     - Existing Features
     - Features left to be implemented
-  - Skeleton
+  - [Skeleton](#skeleton)
     - Wireframes
-  - Surface
+  - [Surface](#surface)
     - Colour Scheme
     - Typography
     - Imagery  
@@ -48,7 +48,7 @@ For my third milestone project (data centric) with The Code Institute, I decided
 
 ---
 
-## User Experience
+## UX
 
 ### Project Description - Strategy:
 
@@ -77,7 +77,7 @@ A favourable outcome behind creating this site would be:
 
 #### First Time User Stories
 ##### As a first time user:
--  I want to be able to fully understand the reasoning behind the site.
+-  I want to be able to fully understand what the site is about.
 -  I want to be able to navigate easily throughout the site.
 -  I want to be able to search for words and phrases commonly spoken in New Zealand.
 -  I want to be able to set up my own account and add my own words or phrases to the site.
@@ -218,7 +218,7 @@ I decided to have the site divided into separate pages rather than all content o
 
 The wireframes for Kiwi Lingo were created using [Balsamiq](https://balsamiq.com/)
 
-They have been slightly modified since their creation as further aspects of design were came upon on development of the project.
+They have been slightly modified since their creation as further design elements were came upon on development of the project.
 
 Mobile and Tablet View:
 <p><img src="readme/wireframes/tabletmobile-home.PNG">
@@ -243,16 +243,25 @@ Desktop View:
 
 Full Wireframes can be found [here](https://github.com/elerel/ms3-kiwi-lingo/tree/master/readme/wireframes)
 
-
+---
 
 ### Surface
 
 #### Colour Scheme
 
+The colour scheme in Kiwi Lingo is intended to be eye-catching and fun. I also wanted to incorporate some of the classic New Zealand colours, such as Black, silver and white, adding in some eye-catching colour that are used mostly in the site's buttons and search bars. Throughout the site pages, I used a black to white linear gradient background image effect which seemed to work nicely with the theme of the site. Using [Color-] The main colours of the site used are:
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620243920/colorscheme_nadi8v.png)
+
+
 #### Typography
 
+Having taken inspiration from [100% Pure New Zealand](https://www.newzealand.com/ie/) I initially was looking to use the Pakati font, but I was unable to source it in any of the font libraries so instead went for something as close to it as possible, using["Luckiest Guy"](https://fonts.google.com/specimen/Luckiest+Guy) as a good contender. I paired it with the font ["Raleway"](https://fonts.google.com/specimen/Raleway) and these are the two fonts mainly used throughout the site, using Sans Serif as the fallback font just in case there is any reason the chosen fonts are not being imported.
+
+
 #### Imagery
---- 
+
+New Zealand is without a doubt, captivatingly stunning in scenery. It was not at all difficult in choosing the imagery for this site and wanted to use the most eye-catching imagery possible, sourced from [Pexels](https://www.pexels.com/search/new%20zealand/) and [Pixabay](https://pixabay.com/images/search/new%20zealand/); the latter more so used. The images were then compressed using [TinyPNG](https://tinypng.com/) to make the loading time faster.
 
 ## Technologies Used
 
@@ -274,11 +283,16 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ## Frameworks, Libraries & Programs Used
 
+1. [Autoprefixer CSS Online](https://autoprefixer.github.io/)- used to parse project CSS and add vendor prefixes.
+
 1. [Balsamic](https://balsamiq.com/)
     - Balsamiq is a UI wireframing tool used to create mockups of the site during the design process. 
 2. [BSon](http://bsonspec.org/)
     - This was imported in order to access the data used across the site.
-3. - [EmailJS](https://www.emailjs.com/) - used to set up the email template for submission of contact form found on the Contact Page   
+3. [ColorHex](https://www.color-hex.com/)
+    - was used to create a color palette and color scheme for the site.
+3.  [EmailJS](https://www.emailjs.com/) 
+    - used to set up the email template for submission of contact form found on the Contact Page   
 4. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
     - The Flask framework was used to import the Flask, flash, render_template, redirect, request, session, and url_for 
     functions that are used throughout the site.
@@ -301,12 +315,18 @@ In this section, you should mention all of the languages, frameworks, libraries,
     - MongoDB was used to host the data used on the site and was chosen due to the non-relational nature of the data.   
 13. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
     - This was imported in order for the password control to enhance security on the site.   
-14. - [TingPNG](https://tinypng.com/)
-    - This was used to resize the images.      
-   
+14.  [TingPNG](https://tinypng.com/)
+      - This was used to resize the images.      
+
+
+Back to [contents](#contents)   
+
 ---
 
-## Testing- to complete on a separate file
+
+## [Testing](#testing)
+
+A full testing report can be found here in a separate TESTING.md file.
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -325,6 +345,11 @@ In addition, you should mention in this section how your project looks and works
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
+
+Back to [contents](#contents)
+
+---
 
 ## Deployment
 
@@ -435,6 +460,7 @@ With the code required to run the app all stored in a repository with Github, de
 - With all of the previous steps complete, we can now click the "Enable Automatic Deploys" and "Deploy Branch". After a few minutes of loading the required packages, the app will now run by clicking the 'view' or 'Open app' buttons.
 
 
+
 ### Forking This Project:
   If you wish to contribute to this website you can Fork it without affecting the main branch by following the procedure outlined below.
   1. Go to GitHub's website and log in.
@@ -450,6 +476,7 @@ To create a clone, follow the following steps.
 2. Click on the button with the text “Code”.
 3. Click “Open with GitHub Desktop” and follow the prompts in the GitHub Desktop Application or follow the instructions from [GitHub](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to see how to clone the repository in other ways.
 
+Back to [contents](#contents)
 ---
 
 ## Credits

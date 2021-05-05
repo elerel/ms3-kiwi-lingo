@@ -3,6 +3,7 @@
 ## Contents
 - [**Testing**](#testing)
     - [Validation](#validation)
+    - [Performance](#performance)
     - [Links Testing](#links-testing)
     - [Navigation Testing](#navigation-testing)
     - [Accessibility](#accessibility)
@@ -49,3 +50,10 @@ Which I later resolved:
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620229651/pep8good_vilveb.png)
 
 ---
+
+## Performance
+
+
+
+
+### [Back to README file](https://github.com/elerel/ms3-kiwi-lingo)

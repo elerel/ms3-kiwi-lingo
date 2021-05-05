@@ -326,7 +326,7 @@ nav ul {
     }
 
     .welcome {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 
     .btn {
@@ -338,7 +338,7 @@ nav ul {
 
 @media screen and (max-width: 325px) {
     .welcome {
-        font-size: 15px !important;
+        font-size: 14px !important;
         margin-top: 3rem;
     }
 
