@@ -50,7 +50,8 @@
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                    <li><a href="{{ url_for('get_words') }}" class="btn-large orange accent-2">Glossary</a></li>
+                    <li><a href="{{ url_for('get_words') }}" class="btn-large green darken-2">Glossary</a>
+                    </li>
                     <li><a href="{{ url_for('login') }}" class="btn-large grey">Log In</a></li>
                     <li><a href="{{ url_for('register') }}" class="btn-large red">Register</a></li>
                     {% endif %}
