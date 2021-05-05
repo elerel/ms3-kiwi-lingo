@@ -84,6 +84,11 @@ nav ul {
     margin: 0 0 15px 5px;
 }
 
+.img-title {
+    font-size: 1.4rem !important;
+    font-weight: bold;
+}
+
 .img-description {
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -125,9 +130,14 @@ nav ul {
     background-color: transparent !important;
 }
 
-.search-btn {
+.search-btn,
+.reset-btn {
     font-size: 15px !important;
     letter-spacing: normal;
+}
+
+.search-btn:hover {
+    text-decoration: underline;
 }
 
 /* Carousel Styling */
@@ -146,7 +156,7 @@ nav ul {
 }
 
 .carousel-one {
-    background-image: url("/static/images/heroimg2.jpg");
+    background-image: url("/static/images/lakepukaki.jpg");
 }
 
 .carousel-two {
@@ -302,6 +312,12 @@ nav ul {
     .welcome {
         font-size: 1rem;
     }
+
+    .btn {
+        font-size: 12px !important;
+    }
+
+
 }
 
 @media screen and (max-width: 325px) {

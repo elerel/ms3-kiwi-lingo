@@ -6,15 +6,15 @@
         <div class="carousel-item carousel-one white-text">
             <h2>"Aotearoa"</h2>
             <p class="white-text"><strong>New Zealand<br>Land Of The Long White Cloud</strong></p>
-            <h2 class="welcome white-text">Kia Ora & Welcome to Kiwi Lingo!<br>Your Ultimate Online Guide to Kiwi
+            <h2 class="welcome white-text">Kia Ora & Welcome to Kiwi Lingo<br>Your Ultimate Online Guide to Kiwi
                 Phrases and
                 Words<br>
-                Register Today to Add or Edit Your
+                Register Today to Add Your
                 Word or Phrase!
             </h2>
             <!--Image Description-->
             <div class="img-description left-align ">
-                <h5>Aoraki/Mount Cook</h5>
+                <p class="img-title">Aoraki/Mount Cook</p>
                 <p class="hide-on-small-only">Lake Pukaki, South Island NZ</p>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <p class="white-text">Everything's good, no worries, great...</p>
             <p>The meaning of "sweet as" sums up the truly laid-back attitude of New Zealanders.</p>
             <div class="img-description left-align">
-                <h5>Milford Sound, South Island</h5>
+                <p class="img-title">Milford Sound, South Island</p>
                 <p class="hide-on-small-only">Milford Sound tops the rainfall meter of New Zealand<br>bringing in
                     6,813mm and 182 days of rain per year.
                 </p>
@@ -35,7 +35,7 @@
             <p class="white-text"><em>Maori: </em> used to encourage strength or courage</p>
             <p>"kia kaha, and remember: it is better to fall on principle than to stand on lies"</p>
             <div class="img-description left-align">
-                <h5>Maori Carvings at Mine Bay, Lake Taupō, North Island </h5>
+                <p class="img-title">Maori Carvings at Mine Bay, Lake Taupō, North Island </p>
                 <p class="hide-on-small-only">Take a kayak or boat tour around the scenic Western Bays of Lake Taupō to
                     see the huge Māori rock carving at Mine Bay.</p>
             </div>
@@ -45,7 +45,7 @@
             <p class="white-text">Flip-flops</p>
             <p>"Grab your togs and jandals 'cause its time to hit the beach.”</p>
             <div class="img-description left-align">
-                <h5>Bay of Islands, North Island</h5>
+                <p class="img-title">Bay of Islands, North Island</p>
                 <p class="hide-on-small-only">From snow-capped mountains in the South, to sub-tropical beaches in the
                     North</p>
             </div>
@@ -82,12 +82,12 @@
                         <input type="text" name="query" id="query" class="validate" required>
                         <label for="query">Search Word</label>
                     </div>
-                    <div class="col s12 m4">
-                        <button type="submit" class="green darken-1 btn search-btn text-shadow">
-                            Search
-                        </button>
-                        <a href="{{ url_for('get_words' )}}" class="red btn reset-btn text-shadow">Reset</a>
-                    </div>
+
+                    <button type="submit" class="green darken-1 btn search-btn text-shadow">
+                        Search
+                    </button>
+                    <a href="{{ url_for('get_words' )}}" class="red btn reset-btn text-shadow">Reset</a>
+
                 </div>
             </form>
         </div>
