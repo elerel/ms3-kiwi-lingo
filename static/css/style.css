@@ -15,7 +15,6 @@ body {
     background-image: linear-gradient(rgb(0, 0, 0), rgb(255, 255, 255));
 }
 
-
 main {
     flex: 1 0 auto;
 }
@@ -39,8 +38,6 @@ nav.nav-extended .nav-wrapper {
 a:hover {
     text-decoration: underline;
 }
-
-
 
 nav ul {
     margin-right: 20px;
