@@ -62,7 +62,7 @@
         <!--Mobile Navbar-->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <a href="{{ url_for('home') }}" class="mobile-brand-logo">Kiwi Lingo</a></h4>
+                <a href="{{ url_for('home') }}" class="mobile-brand-logo">Kiwi Lingo</a>
             </li>
             {% if session.user %}
             <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -80,7 +80,6 @@
             {% endif %}
         </ul>
     </header>
-
     <section>
         <!--flash messages-->
         {% with messages = get_flashed_messages() %}
@@ -93,18 +92,15 @@
         {% endif %}
         {% endwith %}
     </section>
-
     <!-- Main Content -->
     <main>
         {% block content %}
         {% endblock %}
     </main>
-
     <!-- Footer -->
     <footer class="page-footer">
         <div class="container center-align">
             <div class="row">
-
                 <!-- Social Links -->
                 <div class="col s12 m6">
                     <h5>Follow Us:</h5>
@@ -115,12 +111,11 @@
                     <a href="https://www.instagram.com" target="_blank" class="footer-link"><i
                             class="fab fa-instagram"></i></a>
                     <h5>Contact Us:</h5>
-                    <a href="mailto:kiwilingo2021@gmail.com?subject=Kiwi Lingo-How Did We Do?" class="footer-link">
+                    <a href="mailto:kiwilingo2021@gmail.com?subject=Kiwi_Lingo:How_Did_We_Do?" class="footer-link">
                         <i class="fas fa-envelope"></i>
                         kiwilingo2021@gmail.com
                     </a>
                 </div>
-
                 <h5>Plan Your Visit to New Zealand:</h5>
                 <ul>
                     <li>
@@ -148,7 +143,6 @@
                 </ul>
             </div>
         </div>
-        </div>
         <!--Footer Copyright-->
         <div class="footer-copyright center-align">
             <div class="container">
@@ -156,7 +150,7 @@
             </div>
         </div>
     </footer>
-
+    <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
