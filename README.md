@@ -340,7 +340,7 @@ Back to [contents](#contents)
 
 ## [Testing](#testing)
 
-A full testing report can be found here in a separate TESTING.md file.
+A full testing report can be found in a separate [TESTING.md](TESTING.md) file.
 
 
 
