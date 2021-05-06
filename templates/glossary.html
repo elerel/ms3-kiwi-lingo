@@ -47,7 +47,7 @@
                 <p><strong><em>Definition: </em></strong>{{ word.definition }}</p>
                 <p><strong><em>Example: </em></strong>{{ word.phrase_example }}</p>
                 <p><strong><em>by: {{ word.created_by }}</em></strong></p>
-                <!--Likes & Dislikes- code snippet taken from fellow student Karen Yuen and modified-->
+                <!--Likes & Dislikes Section- code snippet from fellow student Karen Yuen and modified- refer to Readme-->
                 <div class="col s12 m4 valign-wrapper" id="thumbsup">
                     <a href="{{ url_for('thumbs_up', word_id=word._id)}}" class="thumbs_up tooltipped"
                         data-position="top" data-tooltip="Yeah, bro!">

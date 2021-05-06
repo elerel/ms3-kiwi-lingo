@@ -4,19 +4,19 @@
 
 For my third milestone project (data centric) with The Code Institute, I decided to build a glossary database called Kiwi Lingo. It is an app intended to be accessible across all devices and used as a reference guide of commonly used words and phrases spoken by New Zealanders. 
 
-![image](https://res.cloudinary.com/elerel/image/upload/v1620150032/amiresponsive_vht29r.png)
+![image](https://res.cloudinary.com/elerel/image/upload/v1620290649/amiresponsive2_jlusqe.png)
 
 ## [**Contents**](#contents)
 
 - [**UX**](#ux)
-  - Strategy
+  - [Strategy](#strategy)
     - Project Description
       - User Stories
       - First Time User Stories
       - Registered User Stories
       - Site Owner User Stories  
   - [Scope](#scope)
-  - Structure
+  - [Structure](#structure)
     - Existing Features
     - Features left to be implemented
   - [Skeleton](#skeleton)
@@ -50,7 +50,9 @@ For my third milestone project (data centric) with The Code Institute, I decided
 
 ## UX
 
-### Project Description - Strategy:
+### Strategy
+
+#### Project Description
 
 Kiwi Lingo was created as an online reference/source primarily used for by people who have a genuine interest in colloquial New Zealand English, the Maori language and visitors planning to go to or visitors already in New Zealand. New Zealand English is plentiful in content, and of course Maori- the indigenous language of New Zealand (that is used by English speakers in New Zealand on a daily basis) and many words and phrases could be uploaded to the site which could give way to eventually being published in book-form.
 
@@ -218,7 +220,7 @@ I decided to have the site divided into separate pages rather than all content o
 
 The wireframes for Kiwi Lingo were created using [Balsamiq](https://balsamiq.com/)
 
-They have been slightly modified since their creation as further design elements were came upon on development of the project.
+They have been slightly modified since their creation as further design elements were came upon during development of the project.
 
 Mobile and Tablet View:
 <p><img src="readme/wireframes/tabletmobile-home.PNG">
@@ -249,14 +251,14 @@ Full Wireframes can be found [here](https://github.com/elerel/ms3-kiwi-lingo/tre
 
 #### Colour Scheme
 
-The colour scheme in Kiwi Lingo is intended to be eye-catching and fun. I also wanted to incorporate some of the classic New Zealand colours, such as Black, silver and white, adding in some eye-catching colour that are used mostly in the site's buttons and search bars. Throughout the site pages, I used a black to white linear gradient background image effect which seemed to work nicely with the theme of the site. Using [Color-] The main colours of the site used are:
+The colour scheme in Kiwi Lingo is intended to be eye-catching and fun. I also wanted to incorporate some of the classic New Zealand colours, such as black, silver and white, adding in some eye-catching and attention-grabbing colours that are used mostly in the site's buttons and search bars. Throughout the site pages, I used a black to white linear gradient background image effect which seemed to work nicely with the theme of the site. I used [Color-Hex](https://www.color-hex.com/) to create the below colour chart. The main colours of the site used are:
 
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620243920/colorscheme_nadi8v.png)
 
 
 #### Typography
 
-Having taken inspiration from [100% Pure New Zealand](https://www.newzealand.com/ie/) I initially was looking to use the Pakati font, but I was unable to source it in any of the font libraries so instead went for something as close to it as possible, using["Luckiest Guy"](https://fonts.google.com/specimen/Luckiest+Guy) as a good contender. I paired it with the font ["Raleway"](https://fonts.google.com/specimen/Raleway) and these are the two fonts mainly used throughout the site, using Sans Serif as the fallback font just in case there is any reason the chosen fonts are not being imported.
+Having taken inspiration from [100% Pure New Zealand](https://www.newzealand.com/ie/) I initially was looking to use the ["Pakati"](https://designersinstitute.nz/case-study/pure-pakati/) font, but I was unable to source it in any of the font libraries so instead went for something as close to it as possible, whilst keeping it a fun, informal theme, using ["Luckiest Guy"](https://fonts.google.com/specimen/Luckiest+Guy) which proved a good contender. I paired it with the font ["Raleway"](https://fonts.google.com/specimen/Raleway) and these are the two fonts mainly used throughout the site, using Sans Serif as the fallback font just in case there is any reason the chosen fonts are not being imported.
 
 
 #### Imagery
@@ -358,7 +360,7 @@ From there, I navigated to my new repository on GitHub and clicked the green Git
 
  For version control, I used the following commands mainly throughout the project:
 
-- git add filename/ git add -A/ git add . - Theses command were used to add files to the staging area before committing.
+- git add filename/ git add -A/ git add . - These commands were used to add files to the staging area before committing.
 
 - git commit -m "subject: commit message explaining the updates" - With reference to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), providing an easy set of rules for creating an explicit commit history,  this command was used to to commit changes to the local repository.
 
@@ -443,10 +445,12 @@ With the code required to run the app all stored in a repository with Github, de
 - In the top menu, select the 'Deploy' tab, and then click 'Connect to GitHub' in the 'Deployment method' section.
 
 - Set up automatic deployment to your GitHub account to your Heroku account by clicking on the middle 'Connect to GitHub' button.
+![image](https://res.cloudinary.com/elerel/image/upload/v1620291441/heroku2_mb9vmn.png)
 
 - Search for the GitHub repository which contains the name of your repo, and then click 'connect'. Before clicking Enable Automatic Deploys button, ensure the following is completed:
 
 - Top of the page, click on the 'Settings' tab and then click 'Reveal Config Vars'.
+![image](https://res.cloudinary.com/elerel/image/upload/v1620291363/heroku1_bh4a6s.png)
 
 - Within the 'Reveal Config Vars' section, add the variables (no quotation marks) which would be found in your local 'env.py' file. These variables are saved here as they contain sensitive data such as the password to the MongoDB database and the secret key required to use some of Flask's functionality.
 
@@ -475,10 +479,24 @@ Back to [contents](#contents)
 
 ## Credits
 
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+### Code Snippets
 
-- [Regional Slang Article](https://www.stuff.co.nz/national/99763866/hey-uce-heres-a-meanas-guide-to-kiwi-regional-slang)
+- Thumbs Up/Thumbs Down Feature: having done some research using W3 Resource as mentioned below, I also studied fellow student, Karen Yuen's Likes and Dislikes function in her MS3 project, Laugh Out Loud. 
+
+- EmailJS- Contact Us Page:
+  - The Code Institute's EmailJS module was used as a resource for setting up the contact page and ensuring emails were sent/received successfully.
+
+- Delete Confirmation Modals:
+  - Thanks to Ed_B and other fellow students through the support channel, received help in setting up the delete confirmation modals ("to make sure that each delete button has a unique url / data-target pointing to the corresponding unique modal id. This can be done using either the item's _id or via {{ loop.index }}")thus adapted and used mainly in the Glossary Page and Profile Page of the project.
+
+- The Task Manager Mini Project proved to be the main source were code snippets were taken from and modified- it was the primary source for setting up Kiwi Lingo.
+
+
+
+### Content
+
+- [Regional Slang Article](https://www.stuff.co.nz/national/99763866/hey-uce-heres-a-meanas-guide-to-kiwi-regional-slang)- referenced for regional slang.
+- [Kiwi Slang 101](https://www.kaitiaki.co.nz/2018/02/16/kiwi-slang-1-0-1/)- referenced for some Kiwi Slang.
 - [W3 Resource](https://www.w3resource.com/mongodb/mongodb-field-update-operator-$inc.php) for help with likes and dislikes function
 - [Stackoverflow](https://stackoverflow.com/questions/18574699/how-to-make-a-space-between-i-tags-icons-in-table/18574766) on rotating icons
 - [Stackoverflow](https://stackoverflow.com/questions/36581504/materialize-carousel-slider-autoplay) for use of timer in carousel function
@@ -496,5 +514,5 @@ Back to [contents](#contents)
 ### Acknowledgements
 
 - Special thanks and appreciation to my mentor, **Nishant Kumar** for all his guidance, amazing tips and his time throughout this project
-- To the Code Institute Slack Support Channels and Student Support- thank you especially Cormac and Tim for your help, greatly appreciated.
+- To the Code Institute Slack Support Channels and Student and Tutor Support: thank you especially Ed_B_lead, Istvan, Cormac and Tim for your help, greatly appreciated.
 - To my family for helping me check for bugs and compatibility issues on their devices- and to my husband and two girls for letting me sneak away to my desk all those times!
