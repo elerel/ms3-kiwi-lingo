@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-{% if session.user == "elerel "%}
+{% if session.user == "elerel" %}
 <div class="manage-categories-page">
     <h3 class="white-text center-align">Manage Categories</h3>
 
@@ -51,12 +51,11 @@
         </div>
         {% endfor %}
         {% else %}
-        <div class="center-align">
+        <div class="white-text center-align">
             <h3>Access denied!</h3>
             <h4>
-                This page is for site admin only. To return to the home page, simply click below:
-                <a href="{{ url_for('home') }}" class="btn waves-effect waves-light z-depth-0">Return To Home Page</a>
-            </h4>
+                This page is for site admin only. To return to the home page, simply click below:</h4>
+            <a href="{{ url_for('home') }}" class="btn waves-effect waves-light z-depth-0">Return To Home Page</a>
         </div>
         {% endif %}
     </div>

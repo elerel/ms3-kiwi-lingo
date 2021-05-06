@@ -224,6 +224,13 @@ Should the user accidentally type the wrong address or land on a page not featur
 
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620336775/404_fpsae3.png)
 
+For the "Manage Categories" page, the site admin is the only user with access to it. With the use of jinja templating, if the user is not logged in as site admin, the user will be redirected to an "Acess Denied" message:
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620337940/accessdenied_kzx3rv.png)
+
+
+Should a user try and force their way in to the site 
+
 
 
 ### Links and Navigation Testing
