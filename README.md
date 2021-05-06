@@ -263,9 +263,21 @@ Having taken inspiration from [100% Pure New Zealand](https://www.newzealand.com
 
 New Zealand is without a doubt, captivatingly stunning in scenery. It was not at all difficult in choosing the imagery for this site and wanted to use the most eye-catching imagery possible, sourced from [Pexels](https://www.pexels.com/search/new%20zealand/) and [Pixabay](https://pixabay.com/images/search/new%20zealand/); the latter more so used. The images were then compressed using [TinyPNG](https://tinypng.com/) to make the loading time faster.
 
+---
+
+## Database Schema
+
+[MongoDB Atlas](https://www.mongodb.com/) was the non-relational database used to create and store the collections for Kiwi Lingo.
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620290091/database_schema_zh7iwv.png)
+
+
+A text version of the schema can be found [here](readme/data.txt)
+
+
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+
 
 ### **Languages**
 - [HTML]()
@@ -328,23 +340,6 @@ Back to [contents](#contents)
 
 A full testing report can be found here in a separate TESTING.md file.
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 
 Back to [contents](#contents)
@@ -363,11 +358,11 @@ From there, I navigated to my new repository on GitHub and clicked the green Git
 
  For version control, I used the following commands mainly throughout the project:
 
-git add filename/ git add -A/ git add . - Theses command were used to add files to the staging area before committing.
+- git add filename/ git add -A/ git add . - Theses command were used to add files to the staging area before committing.
 
-git commit -m "subject: commit message explaining the updates" - With reference to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), providing an easy set of rules for creating an explicit commit history,  this command was used to to commit changes to the local repository.
+- git commit -m "subject: commit message explaining the updates" - With reference to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), providing an easy set of rules for creating an explicit commit history,  this command was used to to commit changes to the local repository.
 
-git push - This command is used to push all committed changes to the GitHub repository.
+- git push - This command is used to push all committed changes to the GitHub repository.
 
 ---
 ### Requirements
