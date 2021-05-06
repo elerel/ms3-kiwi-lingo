@@ -212,7 +212,7 @@ I decided to have the site divided into separate pages rather than all content o
 
 - A collection or library of all the words the user has "liked". This could be a nice feature to have so that the user can keep a log of their favourite words or phrases should the website expand.
 - Maori in itself is popular and keen interest among New Zealanders to learn. This could be made into its own site but because there are plenty of words and phrases tourists can use that is in Maori, I felt it was a good idea to include it as a category in Kiwi Lingo.
-- The site to become a paid service featuring advertisements from several tourism companies in New Zealand.
+- The site to become a service platform featuring advertisements from several tourism companies in New Zealand, where the site owners benefit securing business from certain vendors and adding further exposure to thte site.
 
 ### Skeleton
 
@@ -297,8 +297,8 @@ A text version of the schema can be found [here](readme/data.txt)
 
 ## Frameworks, Libraries & Programs Used
 
-1. [Autoprefixer CSS Online](https://autoprefixer.github.io/)- used to parse project CSS and add vendor prefixes.
-
+1. [Autoprefixer CSS Online](https://autoprefixer.github.io/)
+    -  used to parse project CSS and add vendor prefixes.
 1. [Balsamic](https://balsamiq.com/)
     - Balsamiq is a UI wireframing tool used to create mockups of the site during the design process. 
 2. [BSon](http://bsonspec.org/)
@@ -308,12 +308,11 @@ A text version of the schema can be found [here](readme/data.txt)
 3.  [EmailJS](https://www.emailjs.com/) 
     - used to set up the email template for submission of contact form found on the Contact Page   
 4. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-    - The Flask framework was used to import the Flask, flash, render_template, redirect, request, session, and url_for 
-    functions that are used throughout the site.
+    - The Flask framework was used to import the Flask, flash, render_template, redirect, request, session, and url_for functions that are used throughout the site.
 5. [JQuery](https://jquery.com/)
-    - I chose to use JQuery to initialise the components used in the Materialize framework. To add, I also used Code Institute's JQuery 
+    - I chose to use JQuery to initialise the components used in the Materialize framework. To add, I also used Code Institute's JQuery code from the Task Manager project so that the category names were correctly referenced.
 6. [Font Awesome](https://fontawesome.com/)
-    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes. 
+    - Font Awesome was used throughout the website to add icons for aesthetic purposes and to enhance UX. 
 7. [Git](https://git-scm.com/)
     - Git was used for version control by utilising the Gitpod terminal to commit to Git and push code to GitHub.
 8. [GitHub](https://github.com/)
@@ -323,8 +322,7 @@ A text version of the schema can be found [here](readme/data.txt)
 10. [Heroku](https://dashboard.heroku.com/apps)
     - Heroku is used for deployment of the site.
 11. [Materialize 1.0.0](https://materializecss.com/)
-    - Materialize was used to assist with the responsiveness and styling of the website, such as the navbars for desktop and 
-    mobile, buttons, forms, cards and colours.    
+    - Materialize was used to assist with the responsiveness and styling of the website, such as the navbars and footer for desktop and mobile, collapsible accordions (glossary page) and form elements used throughout the site.    
 12. [MongoDB](https://www.mongodb.com/1)
     - MongoDB was used to host the data used on the site and was chosen due to the non-relational nature of the data.   
 13. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
@@ -505,7 +503,7 @@ Back to [contents](#contents)
 
 ### Media
 
- All imagery used in this site were obtained from:
+The imagery used in this site was obtained from:
 
 - [Pexels](https://www.pexels.com/)
 - [Pixabay](https://pixabay.com/images/search/new%20zealand/)
