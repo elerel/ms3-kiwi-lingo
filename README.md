@@ -481,13 +481,16 @@ Back to [contents](#contents)
 
 ### Code Snippets
 
-- Thumbs Up/Thumbs Down Feature: having done some research using W3 Resource as mentioned below, I also studied fellow student, Karen Yuen's Likes and Dislikes function in her MS3 project, Laugh Out Loud. 
+- Thumbs Up/Thumbs Down Feature: having done some research using W3 Resource as mentioned below, I also studied fellow student, [Karen Yuen's Likes and Dislikes function](https://github.com/karzuin/jokes_library_MS3/blob/master/templates/jokes.html) in her MS3 project, Laugh Out Loud. 
 
 - EmailJS- Contact Us Page:
   - The Code Institute's EmailJS module was used as a resource for setting up the contact page and ensuring emails were sent/received successfully.
 
 - Delete Confirmation Modals:
   - Thanks to Ed_B and other fellow students through the support channel, received help in setting up the delete confirmation modals ("to make sure that each delete button has a unique url / data-target pointing to the corresponding unique modal id. This can be done using either the item's _id or via {{ loop.index }}")thus adapted and used mainly in the Glossary Page and Profile Page of the project.
+
+- Error Handling:
+  - Thanks to Ed_B_lead and Eventyret_mentor through Slack for this one on error handling; for assistance and code snippets used the 404.html and 500.html pages. The code snippet is taken from #data-centric-dev Slack Channel.
 
 - The Task Manager Mini Project proved to be the main source were code snippets were taken from and modified- it was the primary source for setting up Kiwi Lingo.
 
@@ -514,5 +517,5 @@ The imagery used in this site was obtained from:
 ### Acknowledgements
 
 - Special thanks and appreciation to my mentor, **Nishant Kumar** for all his guidance, amazing tips and his time throughout this project
-- To the Code Institute Slack Support Channels and Student and Tutor Support: thank you especially Ed_B_lead, Istvan, Cormac and Tim for your help, greatly appreciated.
+- To the Code Institute Slack Support Channels and Student and Tutor Support: thank you especially Ed_B_lead, Eventyret_mentor, Istvan, Karen Yuen, Cormac and Tim for your help, greatly appreciated- you were always so quick to help in times of need.
 - To my family for helping me check for bugs and compatibility issues on their devices- and to my husband and two girls for letting me sneak away to my desk all those times!

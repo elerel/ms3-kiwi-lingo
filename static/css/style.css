@@ -374,7 +374,7 @@ nav ul {
 .card-panel,
 .modal {
     border-radius: 20px;
-    background-color: #ffcc80;
+    background-color: #ffcc80 !important;
 }
 
 /* contact us page */
@@ -417,4 +417,9 @@ form .card {
 #email_response {
     color: #fff;
     font-size: 2rem;
+}
+
+.btn.search,
+.btn.reset {
+    width: 100%;
 }
