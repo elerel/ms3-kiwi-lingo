@@ -30,7 +30,7 @@ For my third milestone project (data centric) with The Code Institute, I decided
 
 - [**Technologies Used**](#technologies-used)
   - Languages Used
-  - Frameworks, Libraries and Programs Used
+  - Frameworks, Libraries and Resources Used
   - Dependencies
 
 - [**Testing**](#testing)
@@ -295,7 +295,7 @@ A text version of the schema can be found [here](readme/data.txt)
     - pymongo==3.11.3
     - Werkzeug==1.0.1
 
-## Frameworks, Libraries & Programs Used
+## Frameworks, Libraries & Resources Used
 
 1. [Autoprefixer CSS Online](https://autoprefixer.github.io/)
     -  used to parse project CSS and add vendor prefixes.
@@ -321,6 +321,8 @@ A text version of the schema can be found [here](readme/data.txt)
     - Google fonts were used to import the chosen fonts ('Luckiest Guy') which is used frequently with 'Raleway' font across the project.
 10. [Heroku](https://dashboard.heroku.com/apps)
     - Heroku is used for deployment of the site.
+10. [LucidChart](https://lucid.app)
+    - A visual collaboration suite used to design the database schema diagram    
 11. [Materialize 1.0.0](https://materializecss.com/)
     - Materialize was used to assist with the responsiveness and styling of the website, such as the navbars and footer for desktop and mobile, collapsible accordions (glossary page) and form elements used throughout the site.    
 12. [MongoDB](https://www.mongodb.com/1)
