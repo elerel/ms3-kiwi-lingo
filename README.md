@@ -56,7 +56,7 @@ For my third milestone project (data centric) with The Code Institute, I decided
 
 Kiwi Lingo was created as an online reference/source primarily used for by people who have a genuine interest in colloquial New Zealand English, the Maori language and visitors planning to go to or visitors already in New Zealand. New Zealand English is plentiful in content, and of course Maori- the indigenous language of New Zealand (that is used by English speakers in New Zealand on a daily basis) and many words and phrases could be uploaded to the site which could give way to eventually being published in book-form.
 
-Each word or phrase in the dictionary will have a definition and an example of how the word or phrase is commonly spoken by locals. Users to the site can vote on the popularity of the word should they choose.
+Each word or phrase in the glossary will have a definition and an example of how the word or phrase is commonly spoken by locals. Users to the site can vote on the popularity of the word should they choose.
 
 Kiwi Lingo would be typically used for:
 
@@ -66,8 +66,8 @@ Kiwi Lingo would be typically used for:
 - New Zealanders that would like to add their own words or phrases to help visitors to NZ and even store their own collection of Maori words/phrases if they are seeking to learn
 - People that have visited NZ that would like to keep a log of phrases/words/slang encountered on their visit and retain for future visits to NZ
 
-The aim behind Kiwi Lingo is to form an online dictionary/phrase reference guide to various words and phrases spoken in New Zealand. 
-Visitors to the site will be able to sign up for an account so they can easily add (CREATE) any words or phrases to the dictionary that might be missing. Upon registering, users will be able to edit (UPDATE) their additions and also be able to edit or remove (DELETE) what they have added themselves. They can also view/search (READ) for words or phrases in the search tool bar.
+The aim behind Kiwi Lingo is to form an online glossary/phrase reference guide to various words and phrases spoken in New Zealand. 
+Visitors to the site will be able to sign up for an account so they can easily add (CREATE) any words or phrases to the glossary  that might be missing. Upon registering, users will be able to edit (UPDATE) their additions and also be able to edit or remove (DELETE) what they have added themselves. They can also view/search (READ) for words or phrases in the search tool bar.
 
 A favourable outcome behind creating this site would be:
 - With additions by new and existing users, it would allow growth to the site
@@ -144,7 +144,7 @@ I decided to have the site divided into separate pages rather than all content o
 
   - Navbar (Desktop) - a simple and easy to use navbar without too many options or buttons to disuade user activity I went with a simple yet fun approach with the design. The navbar then changes when the user is logged in or out, or is the site owner.
   - Navbar (Mobile) - the mobile navbar features a slide option that is triggered by the hamburger icon in the fixed navbar. This allows for easier navigation across the site for mobile users while enhancing UX. 
-  - Flash messages - using the imported 'flash' feature from Flask, there are flash messages that appear on each page each time the user interacts with the site by logging in, registering, logging out, adding a Tip, editing a Tip, and deleting a Tip.
+  - Flash messages - using the imported 'flash' feature from Flask, there are flash messages that appear on each page each time the user interacts with the site by logging in, registering, logging out, adding, editing and deleting a word.
   - Footer - Social media icons as well as a contact us link (email also provided) using a mailto link generator that opens the users preferred email provider, and a few links to help the user get inspired in planning their holiday or find out more about New Zealand. The links go to an external link so that the user can still stay on the Kiwi Lingo website.
 
 - Home Page
@@ -193,7 +193,7 @@ I decided to have the site divided into separate pages rather than all content o
   - Cancel and Add Word buttons to click when completed  
 
 - Contact Us Page
-  - Displays an inviting message for the user to contact the site owner and the following fields to be filled in:
+  - Displays an inviting message for the user to contact the site owner, to express their satisfaction/comment on improvement of the site. Contains a form with the following fields to be filled in:
     - *Name*
     - *Email*
     - *Message* 
@@ -204,7 +204,7 @@ I decided to have the site divided into separate pages rather than all content o
   - Displays all categories in a card panel format added by site owner
   - Site owner can add, edit or delete categories
 
-- Log Out Page
+- Log Out
   - The user will be redirected to the log in page upon logging out.
 
 
@@ -212,7 +212,7 @@ I decided to have the site divided into separate pages rather than all content o
 
 - A collection or library of all the words the user has "liked". This could be a nice feature to have so that the user can keep a log of their favourite words or phrases should the website expand.
 - Maori in itself is popular and keen interest among New Zealanders to learn. This could be made into its own site but because there are plenty of words and phrases tourists can use that is in Maori, I felt it was a good idea to include it as a category in Kiwi Lingo.
-- The site to become a service platform featuring advertisements from several tourism companies in New Zealand, where the site owners benefit securing business from certain vendors and adding further exposure to thte site.
+- The site to become a service platform featuring advertisements from several tourism companies in New Zealand, where the site owners benefit securing business from certain vendors whilst adding further exposure to the site.
 
 ### Skeleton
 
@@ -263,7 +263,7 @@ Having taken inspiration from [100% Pure New Zealand](https://www.newzealand.com
 
 #### Imagery
 
-New Zealand is without a doubt, captivatingly stunning in scenery. It was not at all difficult in choosing the imagery for this site and wanted to use the most eye-catching imagery possible, sourced from [Pexels](https://www.pexels.com/search/new%20zealand/) and [Pixabay](https://pixabay.com/images/search/new%20zealand/); the latter more so used. The images were then compressed using [TinyPNG](https://tinypng.com/) to make the loading time faster.
+New Zealand is without a doubt, captivatingly, jaw-droppingly, stunning in scenery. It was not at all difficult in choosing the imagery for this site and wanted to use the most eye-catching imagery possible, sourced from [Pexels](https://www.pexels.com/search/new%20zealand/) and [Pixabay](https://pixabay.com/images/search/new%20zealand/); the latter more so used. The images were then compressed using [TinyPNG](https://tinypng.com/) to make the loading time faster.
 
 ---
 
@@ -325,10 +325,11 @@ A text version of the schema can be found [here.](readme/data.txt)
     - Materialize was used to assist with the responsiveness and styling of the website, such as the navbars and footer for desktop and mobile, collapsible accordions (glossary page) and form elements used throughout the site.    
 12. [MongoDB](https://www.mongodb.com/1)
     - MongoDB was used to host the data used on the site and was chosen due to the non-relational nature of the data.   
-13. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
-    - This was imported in order for the password control to enhance security on the site.   
-14.  [TingPNG](https://tinypng.com/)
+13.  [TingPNG](https://tinypng.com/)
       - This was used to resize the images.      
+14. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+    - This was imported in order for the password control to enhance security on the site.   
+    
 
 
 Back to [contents](#contents)   
@@ -350,7 +351,7 @@ Back to [contents](#contents)
 
 ### Initial Steps
 
-Kiwi Lingo was created using Gitpod and Git and Github to host the repository. Once an account is opened with Github, and logged in under your unique username, I selected "New" and then selected the [CI Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template). From there, I chose the name **ms3-kiwi-lingo** as the repository name, selected it to be stored as a "public" repository and then selected "Create Repository".
+Kiwi Lingo was created using Gitpod with Git and Github to host the repository. Once an account is opened with Github, and logged in under your unique username, I selected "New" and then selected the [CI Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template). From there, I chose the name **ms3-kiwi-lingo** as the repository name, selected it to be stored as a "public" repository and then selected "Create Repository".
 
 From there, I navigated to my new repository on GitHub and clicked the green Gitpod button which built the Kiwi Lingo workspace. To access the workspace daily, I simply navigated to [Gitpod](https://gitpod.io/workspaces) where I could select its own unique workspace name and if not present, select "filter: all" :
 
@@ -458,7 +459,7 @@ With the code required to run the app all stored in a repository with Github, de
 
 
 ### Forking This Project:
-  If you wish to contribute to this website you can Fork it without affecting the main branch by following the procedure outlined below.
+  If one would like to contribute to this website, they can Fork it without affecting the main branch by following the steps as outlined below:
   1. Go to GitHub's website and log in.
   2. Locate the Kiwi Lingo's [Repository](https://github.com/elerel/ms3-kiwi-lingo) in the search field.
   3. On the right-hand side of the Repository name, you'll see the 'Fork' button. It's located on the top right hand corner of the page, next to the 'Star' and 'Watch' buttons.
@@ -492,6 +493,8 @@ Back to [contents](#contents)
 
 - The Task Manager Mini Project proved to be the main source were code snippets were taken from and modified- it was the primary source for setting up Kiwi Lingo.
 
+- MaterializeCSS
+  - Similar to the previous mini project, Task Manager, there is some code copied from MaterializeCSS such as card items, collapsible accordion, JQuery initialization and navbar and footer styling.
 
 
 ### Content
@@ -514,6 +517,6 @@ The imagery used in this site was obtained from:
 
 ### Acknowledgements
 
-- Special thanks and appreciation to my mentor, **Nishant Kumar** for all his guidance, amazing tips and his time throughout this project
+- Special thanks and appreciation to my mentor, **Nishant Kumar** for all his guidance, amazing tips and time throughout this project.
 - To the Code Institute Slack Support Channels and Student and Tutor Support: thank you especially Ed_B_lead, Eventyret_mentor, Istvan, Karen Yuen, Cormac and Tim for your help, greatly appreciated- you were always so quick to help in times of need.
-- To my family for helping me check for bugs and compatibility issues on their devices- and to my husband and two girls for letting me sneak away to my desk all those times!
+- To my family for helping me check for bugs and compatibility issues on their devices- and to my husband and two girls for letting me sneak away to my laptop all those times!

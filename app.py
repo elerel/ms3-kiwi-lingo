@@ -270,11 +270,18 @@ edit and delete site categories
 
 
 # Renders Manage Category Page- for elerel/site admin profile
+# pulls category data from the db
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
+
+"""
+The add category is also only used by admin or elerel.
+The new category name is extracted from the
+form then sent to the db categories collection
+"""
 
 # Add Category functionality- for elerel
 @app.route("/add_category", methods=["GET", "POST"])
@@ -289,6 +296,12 @@ def add_category():
 
     return render_template("add_category.html")
 
+
+"""
+The edit category function only used by elerel or site admin.
+Once submitted the new category name is updated
+from its previous name searching its id
+"""
 
 # Edit Category Functionality - for use by site admin elerel
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
@@ -305,7 +318,13 @@ def edit_category(category_id):
     return render_template("edit_category.html", category=category)
 
 
-# Delete Category Functionality - elerel
+"""
+ Delete Category Functionality - by site admin
+elerel only. The category id is located
+ and then removed from the db
+"""
+
+
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
@@ -313,7 +332,13 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
-# Renders Contact Us Page
+""" 
+Renders Contact Us Page and displays
+Contact Form
+
+"""
+
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
