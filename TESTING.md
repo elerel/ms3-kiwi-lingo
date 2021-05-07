@@ -30,9 +30,15 @@ CSS Validation- no errors found:
 
 JSHINT:
 
+JSHint picks up Jquery "$"symbol as an undefined variable which can be safely ignored:
+
+
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620229796/jshint_znig9a.png)
 
 EmailJS:
+
+JSHint picks up one unused variable (sendMail) and one undefined variable (emailjs) which I found can be safely ignored as they are functioning as they should:
+
 
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620229849/Picture8_aacxrf.png)
 
@@ -224,13 +230,9 @@ Should the user accidentally type the wrong address or land on a page not featur
 
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620336775/404_fpsae3.png)
 
-For the "Manage Categories" page, the site admin is the only user with access to it. With the use of jinja templating, if the user is not logged in as site admin, the user will be redirected to an "Acess Denied" message:
+For the "Manage Categories" page, the site admin is the only user with access to it. With the use of jinja templating, if the user is not logged in as site admin, the user will be redirected to an "Access Denied" message:
 
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620337940/accessdenied_kzx3rv.png)
-
-
-Should a user try and force their way in to the site 
-
 
 
 ### Links and Navigation Testing
@@ -242,7 +244,107 @@ To make sure all links within the site functioned, I manually tested each one so
 
 In addition to the links functioning correctly, I also manually tested the navigation links in full screen and mobile view modes. This was to ensure that each link was displaying as it should and that the list of items were correctly displayed.
 
+---
+
 ### Testing User Stories
+
+#### First Time User Stories
+##### As a first time user:
+-  I want to be able to fully understand what the site is about.
+    - *Upon landing on Kiwi Lingo's main index page, the user will be presented with an eye-catching image of one of the many iconic images of New Zealand (Aoraki or Mount Cook) with a welcome and description about Kiwi Lingo, including an invitation to register. Using a 70vh for the carousel images, the user can also make out the about section which details what the user can get out of using Kiwi Lingo.*
+
+    ![image](https://res.cloudinary.com/elerel/image/upload/v1620378915/landingpg_ypznlz.png)
+
+    What's Kiwi Lingo Section- just below the hero image/carousel:
+
+    ![image](https://res.cloudinary.com/elerel/image/upload/v1620378991/whatskiwi_seqsye.png)
+
+-  I want to be able to navigate easily throughout the site.
+    - *So that the user can easily navigate throughout the site, I have included a navbar on all pages that redirects the user to the different pages across the site. The user has a few options on where they can be redirected to the main page (Glossary). The site will also include a footer across all pages where the user can contact the site admin as well as links to social networks and travel information sites about New Zealand. Should the user wish to be brought back to the home page, they can click on the Kiwi Lingo logo on the navbar and side navbar (mobile) to redirect them back t0 the home-page.*
+
+    Navbar ( as above, incl changed Navbar once user has logged in which is displayed on every page):
+
+    ![image](https://res.cloudinary.com/elerel/image/upload/v1620379218/usernavbar_edsxxc.png)
+
+    Footer: 
+
+    ![image](https://res.cloudinary.com/elerel/image/upload/v1620379225/footer_cojlso.png)
+
+
+-  I want to be able to search for words and phrases commonly spoken in New Zealand.
+    - *The user will be able to find common words and phrases in the Glossary page (available to all users)where they can be redirected from the navbar as well as the glossary button further down the index page. I wanted to make this as accessible as possible for the user so I decided to include a search bar (where the user enters in their word of choice and they can be brought to the Glossary also) on the home/index page, as well as being featured on the glossary page.*
+
+    Glossary Page:
+
+    ![image](https://res.cloudinary.com/elerel/image/upload/v1620379358/glossarypg_yvbcf2.png)
+
+    Search bar on home page:
+
+    ![image](https://res.cloudinary.com/elerel/image/upload/v1620379427/searchbar_tk7wbx.png)
+
+-  I want to be able to set up my own account and add my own words or phrases to the site.
+    - *The user will need to click on the "Register" button which appears on both navbars, once there they can create a profile and add a word once profile set up is complete. The user will be redirected to their profile page where the user can add a word by clicking on the "Add Word" button, featured just below their profile card:*
+
+    Register Page:
+    ![image](https://res.cloudinary.com/elerel/image/upload/v1620379926/register_qs4xwz.png)
+
+    Profile page where they can add a word or phrase:
+    ![image](https://res.cloudinary.com/elerel/image/upload/v1620380063/addword_dzzvo4.png)
+
+
+-  I want to be able to view popular sayings and phrases by viewing the most popular/least popular additions.
+    - *I implemented an approval or voting system into each of the word so that users can click on various words which they like or dislike ("Yeah, bro!" and "Nah, bro"). It is intended to be like a popular use voting system but a good feature left to be implemented would be to introduce a rating system where say for example, on a separate table on the glossary page, the most popular word would appear first.*
+
+Thumbs Up/Thumb Down feature:
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620380484/likes_uu465o.png)
+
+
+#### Registered User Stories
+##### As a regular user:
+
+- I want to be able to easily log in and out of the site.
+    - *Each registered user can easily log in by clicking on "Log In" from the navbar which is a separate page where the user enters their details. Once logged in, they simply click "Log Out" once again appearing on the navbar. Should they click on the Register page they can also be redirected to the Log In page:*
+
+Log In Page:
+![image](https://res.cloudinary.com/elerel/image/upload/v1620380859/login_wu7epg.png)
+
+Log Out on Navbar:
+![image](https://res.cloudinary.com/elerel/image/upload/v1620380867/logout_zkdaqz.png)
+
+Already Registered?
+![image](https://res.cloudinary.com/elerel/image/upload/v1620381048/alreadyreg_utsca8.png)
+
+- I want to be able to edit or delete my additions to the site.
+    - *Once the user is signed in, they can either edit or delete their added words/phrases from their profile page or the glossary page. Each of the words they have added will contain a "Edit" or "Delete" button in the collapsible accordion:*
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620381158/editdelete_zfwbi6.png)    
+
+- I want to be able to view additions by other users.
+    - *Each registered user can simply visit the glossary page where all additions to the site will appear. In each of the words added, there will be a "by" field that will display the username who added such word.*
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620381415/byfield_fvnuke.png)
+
+- I want to be able to edit or delete my profile.
+    - *The user can simply delete their profile from clicking on "Delete Profile" (Profile page). They will be notified that their words added will remain unless they delete them off the site. They can re-register should they wish to choose a different username (could add an "Edit Profile" page but something that can be implemented in the future).* 
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620381757/delete_mar7jy.png)
+
+- I want to be able to contact the site owners.
+    - *Both registered and non-registered users can contact the site owners by clicking on "Give Us Feedback" featured on the Glossary page. They can also click the contact link on the footer, should they wish to use their preferred email account. Testing for this has been noted in the [Contact Form](#contact-form) section.
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620381953/feedback_dhbkpk.png)
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620381960/contact_np32c7.png)
+
+
+#### Site Owner User Stories
+
+- To provide information on the site and who it is intended for.
+- To allow the site to be accessible (viewing only) without creating an account.
+- To be easily contacted should the user lose their log-in details.
+- To allow users to only edit or delete their own additions.
+- To be able to delete any inappopriate content added by a registered user.
 
 
 

@@ -274,12 +274,10 @@ New Zealand is without a doubt, captivatingly stunning in scenery. It was not at
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620290091/database_schema_zh7iwv.png)
 
 
-A text version of the schema can be found [here](readme/data.txt)
+A text version of the schema can be found [here.](readme/data.txt)
 
 
 ## Technologies Used
-
-
 
 ### **Languages**
 - [HTML]()
