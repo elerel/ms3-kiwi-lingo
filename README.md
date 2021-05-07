@@ -173,7 +173,7 @@ I decided to have the site divided into separate pages rather than all content o
     - *Example* of where the word can be used
     - Who the word was added by
     - A like or dislike feature or voting system so the user can see the popularity of the word used
-  - If the user is not logged in, a link to log in or register pages provided below the glossary
+  - If the user is not logged in, a link to log in or register page is provided below the glossary
   - If the user is logged in, this changes using an if statement to add a word instead of log in/register
   - A link to the contact page (Give us Feedback) is provided should the user wish to contact the site owner
 

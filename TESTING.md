@@ -160,7 +160,7 @@ Another bug that did come up but did not end up being resolved is the category s
 I could not find this error on any other device and tried looking for it to pop up through Browserstack or DevTools. As I was unable to source it on another device and could not physically see the error (sister's phone who lives abroad) I left it be.
 
 
-Finally, the Contact Us page bug- once an email has been submitted the following appears:
+Finally, the Contact Us page bug- once an email has been submitted, the labels move down on top of the placeholder text:
 
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620382839/contactbug_ln3iph.png)
 
@@ -248,7 +248,7 @@ In order to check the contact form was functioning correctly, I manually tested 
 
 Contact Page: 
 
-![image](https://res.cloudinary.com/elerel/image/upload/v1620382617/contactpg_t4mktr.png)
+![image](https://res.cloudinary.com/elerel/image/upload/v1620384881/contactpg_bqxy34.png)
 
 Email Sent Confirmation: 
 
@@ -347,13 +347,17 @@ Thumbs Up/Thumb Down feature:
     - *Each registered user can easily log in by clicking on "Log In" from the navbar which is a separate page where the user enters their details. Once logged in, they simply click "Log Out" once again appearing on the navbar. Should they click on the Register page they can also be redirected to the Log In page:*
 
 Log In Page:
+
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620380859/login_wu7epg.png)
 
 Log Out on Navbar:
+
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620380867/logout_zkdaqz.png)
 
 Already Registered?
+
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620381048/alreadyreg_utsca8.png)
+
 
 - I want to be able to edit or delete my additions to the site.
     - *Once the user is signed in, they can either edit or delete their added words/phrases from their profile page or the glossary page. Each of the words they have added will contain a "Edit" or "Delete" button in the collapsible accordion:*
