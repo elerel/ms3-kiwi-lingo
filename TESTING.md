@@ -11,6 +11,7 @@
     - [Contact Form](#contact-form)
     - [Links and Navigation Testing](#links-and-navigation-testing)
     - [Testing User Stories](#testing-user-stories)
+    - [Testing Recap](#testing-recap)
 
     ---
 
@@ -120,6 +121,8 @@ To ensure the site was responsive and functioning as it should, I tested the sit
 
 No issues or bugs to report, thankfully layout and site functions operating as they should.
 
+Back to [Contents](#contents)
+
 ---
 
 ### Bugs
@@ -155,6 +158,17 @@ Another bug that did come up but did not end up being resolved is the category s
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620333520/Screenshot_20210506-213632_WhatsApp_bveaz9.jpg)
 
 I could not find this error on any other device and tried looking for it to pop up through Browserstack or DevTools. As I was unable to source it on another device and could not physically see the error (sister's phone who lives abroad) I left it be.
+
+
+Finally, the Contact Us page bug- once an email has been submitted the following appears:
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620382839/contactbug_ln3iph.png)
+
+
+It is a minor bug but may give off a negative user experience once the email is sent. I was out of time to try and fix this bug unfortunately, but the good thing is that the labels go back to their original state once re-selected.
+
+
+Back to [Contents](#contents)
 
 ---
 
@@ -220,9 +234,33 @@ The site owner is also able to perform the above with the Categories collection.
 - To remove or *delete* the Home Use category, I click delete, where a confirmation modal appears then once delete is selected, the category is removed from the collection.
 
 
+Back to [Contents](#contents)
+
+---
 
 ### Contact Form
 
+In order to check the contact form was functioning correctly, I manually tested this using the following steps:
+
+1. Click on Give Us Feedback on the Glossary Page (if user already logged in, they can click "Contact" from the navbar)
+2. Enter in the following details: name, email and message
+3. Once "Submit" is clicked, a confirmation message appears stating that the email has been sent and they will be contacted accordingly.
+
+Contact Page: 
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620382617/contactpg_t4mktr.png)
+
+Email Sent Confirmation: 
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620382810/emailsent_p9cgto.png)
+
+
+The email is then received by Kiwi Lingo, with all the relevant details shown in the below screenshot:
+
+![image](https://res.cloudinary.com/elerel/image/upload/v1620383045/emailjs_kajmir.png)
+
+
+---
 
 ### Error Pages
 
@@ -243,6 +281,8 @@ To make sure all links within the site functioned, I manually tested each one so
 -   each link has a underline text-decoration when hovered over so that the user knows they will be redirected.
 
 In addition to the links functioning correctly, I also manually tested the navigation links in full screen and mobile view modes. This was to ensure that each link was displaying as it should and that the list of items were correctly displayed.
+
+Back to [Contents](#contents)
 
 ---
 
@@ -341,11 +381,44 @@ Already Registered?
 #### Site Owner User Stories
 
 - To provide information on the site and who it is intended for.
+    - *I have ensured that the information about the site is displayed on the home/index page of the site, so that the user does not need to search about what the site is or who it is intended for.*
 - To allow the site to be accessible (viewing only) without creating an account.
+    - *I thought it would create a better user experience for all users to be able to view the glossary, rather than registering first- it encourages the user to interact with the site and could then possibly lead to the user signing up/registering a profile.*
 - To be easily contacted should the user lose their log-in details.
+    - *The user can find contact details on the footer of the site as well as being directed from the Contact link (navbar) as well as the feedback button on the Glossary page.*
 - To allow users to only edit or delete their own additions.
+    - *Using a jinja template, the user once in "session" can edit or delete their added words.*
 - To be able to delete any inappopriate content added by a registered user.
+    - *Just like above, using a jinja template, only the site owner "elerel" can edit or delete added words from registered users from the Glossary Page.*
 
 
+---
+
+
+### Testing Recap
+
+To sum up, each page of the site has been manually tested to ensure that:
+
+1. Kiwi Lingo is responsive and functioning on across all devices
+1. All images load properly 
+1. Navigation buttons and links redirect to the correct pages in the site and to external links
+1. External links located in the footer open in a new tab/window and link to the correct site
+1. Registered users have access to a profile page to see which words they have added to the glossary
+1. Registered users are able to edit and delete any words they've added to the glossary
+1. Once logged in, users can easily log out from their profile
+1. Site owner is able to edit and delete any of the words from the glossary
+1. Validation appears on all forms
+1. Flash messages appear on the correct pages when a user has:
+   * Registered their profile
+   * If the user chooses a name already in use
+   * Welcomes user to their profile
+   * If the user entered an incorrect username/password
+   * Goodbye message upon logging out
+   * Successfully added a word to the glossary
+   * Entered a word already in the glossary
+   * Successfully edited their word
+   * Successfully deleted their word
+
+### Back to [Contents](#contents)
 
 ### [Back to README file](https://github.com/elerel/ms3-kiwi-lingo)
