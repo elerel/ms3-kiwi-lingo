@@ -300,7 +300,7 @@ Back to [Contents](#contents)
     ![image](https://res.cloudinary.com/elerel/image/upload/v1620378991/whatskiwi_seqsye.png)
 
 -  I want to be able to navigate easily throughout the site.
-    - *So that the user can easily navigate throughout the site, I have included a navbar on all pages that redirects the user to the different pages across the site. The user has a few options on where they can be redirected to the main page (Glossary). The site will also include a footer across all pages where the user can contact the site admin as well as links to social networks and travel information sites about New Zealand. Should the user wish to be brought back to the home page, they can click on the Kiwi Lingo logo on the navbar and side navbar (mobile) to redirect them back t0 the home-page.*
+    - *So that the user can easily navigate throughout the site, I have included a navbar on all pages that redirects the user to the different pages across the site. The user has a few options on where they can be redirected to the main page (Glossary). The site will also include a footer across all pages where the user can contact the site admin as well as links to social networks and travel information sites about New Zealand. Should the user wish to be brought back to the home page, they can click on the Kiwi Lingo logo on the navbar and side navbar (mobile) to redirect them back to the home-page.*
 
     Navbar ( as above, incl changed Navbar once user has logged in which is displayed on every page):
 

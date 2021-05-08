@@ -1,8 +1,8 @@
 # Kiwi Lingo: Your Guide to New Zealand Words & Phrases!
 
-**View the live project [here](https://kiwi-lingo.herokuapp.com/)**
+**View the live project [here.](https://kiwi-lingo.herokuapp.com/)**
 
-For my third milestone project (data centric) with The Code Institute, I decided to build a glossary database called Kiwi Lingo. It is an app intended to be accessible across all devices and used as a reference guide of commonly used words and phrases spoken by New Zealanders. 
+For my third milestone project (data-centric development) with The Code Institute, I decided to build a glossary database called Kiwi Lingo. It is an app intended to be accessible across all devices and used as a reference guide of commonly used words and phrases spoken by New Zealanders. 
 
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620290649/amiresponsive2_jlusqe.png)
 
@@ -31,7 +31,6 @@ For my third milestone project (data centric) with The Code Institute, I decided
 - [**Technologies Used**](#technologies-used)
   - Languages Used
   - Frameworks, Libraries and Resources Used
-  - Dependencies
 
 - [**Testing**](#testing)
 
@@ -54,7 +53,7 @@ For my third milestone project (data centric) with The Code Institute, I decided
 
 #### Project Description
 
-Kiwi Lingo was created as an online reference/source primarily used for by people who have a genuine interest in colloquial New Zealand English, the Maori language and visitors planning to go to or visitors already in New Zealand. New Zealand English is plentiful in content, and of course Maori- the indigenous language of New Zealand (that is used by English speakers in New Zealand on a daily basis) and many words and phrases could be uploaded to the site which could give way to eventually being published in book-form.
+Kiwi Lingo is a fictional online reference/source primarily geared towards people who have a genuine interest in colloquial New Zealand English, the Maori language and visitors planning to go to or visitors already in New Zealand. New Zealand English is plentiful in content, and of course Maori- the indigenous language of New Zealand (that is used by English speakers in New Zealand on a daily basis) and many words and phrases could be uploaded to the site which could give way to eventually being published in book-form.
 
 Each word or phrase in the glossary will have a definition and an example of how the word or phrase is commonly spoken by locals. Users to the site can vote on the popularity of the word should they choose.
 
@@ -67,7 +66,7 @@ Kiwi Lingo would be typically used for:
 - People that have visited NZ that would like to keep a log of phrases/words/slang encountered on their visit and retain for future visits to NZ
 
 The aim behind Kiwi Lingo is to form an online glossary/phrase reference guide to various words and phrases spoken in New Zealand. 
-Visitors to the site will be able to sign up for an account so they can easily add (CREATE) any words or phrases to the glossary  that might be missing. Upon registering, users will be able to edit (UPDATE) their additions and also be able to edit or remove (DELETE) what they have added themselves. They can also view/search (READ) for words or phrases in the search tool bar.
+Visitors to the site will be able to sign up for an account, so they can easily add (CREATE) any words or phrases to the glossary  that might be missing. Upon registering, users will be able to edit (UPDATE) their additions and also be able to edit or remove (DELETE) what they have added themselves. They can also view/search (READ) for words or phrases in the search tool bar.
 
 A favourable outcome behind creating this site would be:
 - With additions by new and existing users, it would allow growth to the site
@@ -102,7 +101,7 @@ A favourable outcome behind creating this site would be:
 - To allow the site to be accessible (viewing only) without creating an account.
 - To be easily contacted should the user lose their log-in details.
 - To allow users to only edit or delete their own additions.
-- To be able to delete any inappopriate content added by a registered user.
+- To be able to delete any inappropriate content added by a registered user.
 
 
 ---
@@ -142,7 +141,7 @@ I decided to have the site divided into separate pages rather than all content o
 
 - Base Page: visible across all pages:
 
-  - Navbar (Desktop) - a simple and easy to use navbar without too many options or buttons to disuade user activity I went with a simple yet fun approach with the design. The navbar then changes when the user is logged in or out, or is the site owner.
+  - Navbar (Desktop) - a simple and easy to use navbar without too many options or buttons to dissuade user activity I went with a simple yet fun approach with the design. The navbar then changes when the user is logged in or out, or is the site owner.
   - Navbar (Mobile) - the mobile navbar features a slide option that is triggered by the hamburger icon in the fixed navbar. This allows for easier navigation across the site for mobile users while enhancing UX. 
   - Flash messages - using the imported 'flash' feature from Flask, there are flash messages that appear on each page each time the user interacts with the site by logging in, registering, logging out, adding, editing and deleting a word.
   - Footer - Social media icons as well as a contact us link (email also provided) using a mailto link generator that opens the users preferred email provider, and a few links to help the user get inspired in planning their holiday or find out more about New Zealand. The links go to an external link so that the user can still stay on the Kiwi Lingo website.
@@ -162,7 +161,7 @@ I decided to have the site divided into separate pages rather than all content o
 
 - Register Page
   - Similar to the log in page, a large form provided which includes the following fields to be filled out: first name (added to create a welcoming and informal tone), username, password and confirm password
-  - A link to the "Log In" page below the Register button provided in case the user already has already registered
+  - A link to the "Log In" page below the Register button provided in case the user has already registered
 
 - Glossary Page
   - All users have access to the Glossary page, displaying all current user inputted words and phrases in a collapsible accordion format 
@@ -303,6 +302,8 @@ A text version of the schema can be found [here.](readme/data.txt)
     - This was imported in order to access the data used across the site.
 3. [ColorHex](https://www.color-hex.com/)
     - was used to create a color palette and color scheme for the site.
+3. [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+    - a handy tool and reference guide on how to commit in a conventional manner.
 3.  [EmailJS](https://www.emailjs.com/) 
     - used to set up the email template for submission of contact form found on the Contact Page   
 4. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
@@ -325,6 +326,8 @@ A text version of the schema can be found [here.](readme/data.txt)
     - Materialize was used to assist with the responsiveness and styling of the website, such as the navbars and footer for desktop and mobile, collapsible accordions (glossary page) and form elements used throughout the site.    
 12. [MongoDB](https://www.mongodb.com/1)
     - MongoDB was used to host the data used on the site and was chosen due to the non-relational nature of the data.   
+12. [Online SpellCheck](https://www.online-spellcheck.com/)
+    - used for final spell checks across readme and testing docs.
 13.  [TingPNG](https://tinypng.com/)
       - This was used to resize the images.      
 14. [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
@@ -455,7 +458,7 @@ With the code required to run the app all stored in a repository with Github, de
 
 - Back in the repository, make sure the two new additional files (Procfile and requirements.txt) are added to the staging area then to Github.
 
-- With all of the previous steps complete, we can now click the "Enable Automatic Deploys" and "Deploy Branch". After a few minutes of loading the required packages, the app will now run by clicking the 'view' or 'Open app' buttons.
+- With all the previous steps complete, now click the "Enable Automatic Deploys" and "Deploy Branch". After a few minutes of loading the required packages, the app will now run by selecting the 'view' or 'Open app' buttons.
 
 
 ### Forking This Project:
