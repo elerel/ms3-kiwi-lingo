@@ -105,7 +105,7 @@ Tablets:
 
 Samsung Galaxy Tab S7 on Firefox
 
-I used Browserstack, Crossbrowserstack, Google Chrome's Developer Tools (Responsive mode) and a number of different devies available through DevTools. 
+I used Browserstack, Crossbrowserstack, Google Chrome's Developer Tools (Responsive mode) and a number of different devices available through DevTools. 
 
 
 ### Browser Testing
@@ -127,7 +127,7 @@ Back to [Contents](#contents)
 
 ### Bugs
 
-The one bug encountered during development was the missing search text in the search button (Glossary page) and the "reset" field is displayed below the button as shown below:
+The one bug encountered during development was the missing "search" text in the search button (Glossary page) and the "reset" field is displayed below the button as shown below:
 
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620300791/searchresponsive2_gr0jyh.png)
 
