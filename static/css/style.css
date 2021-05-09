@@ -344,6 +344,10 @@ nav ul {
     .img-description h5 {
         display: none;
     }
+
+    .btn-small {
+        margin-left: 5px;
+    }
 }
 
 /* Contact Us Page Styling */
