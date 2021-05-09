@@ -252,6 +252,10 @@ nav ul {
     margin: 5px 0 0 20px;
 }
 
+.btn:hover {
+    text-decoration: underline;
+}
+
 .btn-large:hover {
     text-decoration: underline;
 }

@@ -411,6 +411,7 @@ To sum up, each page of the site has been manually tested to ensure that:
 1. Registered users are able to edit and delete any words they've added to the glossary
 1. Once logged in, users can easily log out from their profile
 1. Site owner is able to edit and delete any of the words from the glossary
+1. Site owner is able to add, edit and delete any of the categories from the site
 1. Validation appears on all forms
 1. If no search results appear from user search query, the user is notified of the results below the search bar
 1. Flash messages appear on the correct pages when a user has:
