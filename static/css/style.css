@@ -35,6 +35,8 @@ main {
     flex: 1 0 auto;
 }
 
+/*Index Page Styling */
+
 img {
     height: 40px;
     width: 60px;
@@ -78,26 +80,9 @@ nav ul {
     color: #fff !important;
 }
 
-/* Index Page */
-.background-img {
-    background-image: url(/static/images/heroimg2.jpg);
-    height: 70vh;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .welcome {
     font-size: 2rem !important;
     margin-top: 7rem;
-}
-
-.new-zealand {
-    font-family: 'Raleway', sans-serif;
-    padding-bottom: 10px;
-    letter-spacing: 2px;
-    margin: 0 0 15px 5px;
 }
 
 .img-title {
@@ -132,14 +117,15 @@ nav ul {
     font-size: 1.4rem;
 }
 
-.join-text {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.8rem;
-    margin: 0 auto;
-}
+/* Icon flip styling sourced from Stackoverflow- referenced in credits section in README */
 
-.guide-btn {
-    bottom: 2.5rem;
+.icon-flipped {
+    padding-left: 3px;
+    padding-right: 3px;
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
 }
 
 .search-card {
@@ -156,6 +142,7 @@ nav ul {
     text-decoration: underline;
 }
 
+
 /* Carousel Styling */
 .carousel {
     height: 80vh !important;
@@ -168,7 +155,6 @@ nav ul {
     background-position: center;
     background-size: cover;
     position: relative;
-
 }
 
 .carousel-one {
@@ -177,7 +163,6 @@ nav ul {
 
 .carousel-two {
     background-image: url("/static/images/milfordpic.jpg");
-
 }
 
 .carousel-three {
@@ -188,24 +173,8 @@ nav ul {
     background-image: url("/static/images/bayofislands.jpg");
 }
 
-/*Register Page*/
-.register-page,
-.login-page,
-.add-word-pg,
-.edit-word-page,
-.manage-categories-page,
-.glossary-pg {
-    height: 100vh;
-    padding-top: 20px;
-}
 
-.register-title {
-    margin-top: 0;
-    margin-bottom: 40px;
-    border-top-width: 10px;
-    padding-top: 10px;
-}
-
+/*Footer Styling */
 .page-footer {
     padding: 10px 10px 0px 10px;
     bottom: 0;
@@ -214,18 +183,24 @@ nav ul {
     background: black;
 }
 
-
-.icon-flipped {
-    padding-left: 3px;
-    padding-right: 3px;
-    transform: scaleX(-1);
-    -moz-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
+/* Profile Page */
+.no-words {
+    border-radius: 10px;
+    font-size: 1rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 40px;
 }
 
+.card-panel,
+.modal {
+    border-radius: 20px;
+    background-color: #ffcc80 !important;
+}
 
-/*Glossary Page*/
+/*Glossary Page Styling*/
+
 .sign-up {
     margin-bottom: 30px;
 }
@@ -233,11 +208,27 @@ nav ul {
 .feedback {
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .feedback:hover {
     text-decoration: underline;
 }
+
+
+/* Like and Dislike Buttons*/
+#count {
+    margin: 0px 15px 0px;
+}
+
+.fa-thumbs-up {
+    color: green;
+}
+
+.fa-thumbs-down {
+    color: red;
+}
+
 
 /* Button Styling */
 .btn,
@@ -252,10 +243,21 @@ nav ul {
     margin-left: 10px;
 }
 
+.btn.search,
+.btn.reset {
+    width: 100%;
+}
+
 .btn-small {
     margin: 5px 0 0 20px;
 }
 
+.btn-large:hover {
+    text-decoration: underline;
+}
+
+
+/* Collapsible Styling- Glossary Page */
 .collapsible {
     margin: 0px;
 }
@@ -265,14 +267,10 @@ nav ul {
     line-height: 42px;
 }
 
-
 .collapsible-header {
     line-height: 2rem;
 }
 
-.glossary-btn {
-    text-align: right;
-}
 
 /* Modal styling  */
 .modal-close,
@@ -287,7 +285,6 @@ nav ul {
 .modal h4 {
     font-family: 'Luckiest Guy', sans-serif;
 }
-
 
 
 /* Media Queries */
@@ -332,8 +329,6 @@ nav ul {
     .btn {
         font-size: 12px !important;
     }
-
-
 }
 
 @media screen and (max-width: 325px) {
@@ -347,37 +342,7 @@ nav ul {
     }
 }
 
-/* Like and Dislike Buttons*/
-#count {
-    margin: 0px 15px 0px;
-}
-
-.fa-thumbs-up {
-    color: green;
-}
-
-.fa-thumbs-down {
-    color: red;
-}
-
-
-/* Profile Page */
-.no-words {
-    border-radius: 10px;
-    font-size: 1rem;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding: 40px;
-}
-
-.card-panel,
-.modal {
-    border-radius: 20px;
-    background-color: #ffcc80 !important;
-}
-
-/* contact us page */
+/* Contact Us Page Styling */
 .form-container {
     position: relative;
     width: 100%;
@@ -392,6 +357,11 @@ form .card {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+#email_response {
+    color: #fff;
+    font-size: 2rem;
 }
 
 ::-webkit-input-placeholder {
@@ -412,14 +382,4 @@ form .card {
 
 ::placeholder {
     color: rgb(131, 125, 125);
-}
-
-#email_response {
-    color: #fff;
-    font-size: 2rem;
-}
-
-.btn.search,
-.btn.reset {
-    width: 100%;
 }
