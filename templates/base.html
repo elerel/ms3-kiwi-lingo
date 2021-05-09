@@ -31,7 +31,7 @@
 <body>
     <header>
         <!--Top Navbar-->
-        <!--<div class="navbar-fixed">-->
+
         <nav class="nav-extended text-shadow black">
             <div class="nav-wrapper">
                 <a href="{{ url_for('home') }}" class="brand-logo">Kiwi Lingo
@@ -51,8 +51,7 @@
                     <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                    <li><a href="{{ url_for('get_words') }}" class="btn-large green darken-2">Glossary</a>
-                    </li>
+                    <li><a href="{{ url_for('get_words') }}" class="btn-large green darken-2">Glossary</a></li>
                     <li><a href="{{ url_for('login') }}" class="btn-large grey">Log In</a></li>
                     <li><a href="{{ url_for('register') }}" class="btn-large red">Register</a></li>
                     {% endif %}
@@ -72,10 +71,10 @@
             {% if session.user == "elerel" %}
             <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
             {% endif %}
+            <li><a href="{{ url_for('get_words') }}">Glossary</a></li>
             <li><a href="{{ url_for('add_word') }}">Add Word</a></li>
             <li><a href="{{ url_for('contact') }}">Contact</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-
             {% else %}
             <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
