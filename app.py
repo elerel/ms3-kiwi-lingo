@@ -344,8 +344,11 @@ def contact():
     return render_template("contact.html")
 
 
-# Likes and Dislikes functionality: finds
-# and updates the count by one with each click
+""" Likes and Dislikes functionality: finds
+ and updates the count by one with each click
+"""
+
+
 @app.route("/thumbs_up/<word_id>", methods=["GET", "POST"])
 def thumbs_up(word_id):
     word = mongo.db.words.find_one_and_update(
@@ -374,8 +377,8 @@ def not_found(error):
 def internal_error(error):
     return render_template('500.html', error=error), 500
 
-
+# set to debig=False before deployment
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

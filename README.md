@@ -170,8 +170,8 @@ I decided to have the site divided into separate pages rather than all content o
     - The chosen word's *category*
     - *Definition*
     - *Example* of where the word can be used
-    - Who the word was added by
-    - A like or dislike feature or voting system so the user can see the popularity of the word used
+    - Who the word was added or *created by*
+    - A like or dislike (thumbs up or thumbs down) feature or voting system so the user can see the popularity of the word used
   - If the user is not logged in, a link to log in or register page is provided below the glossary
   - If the user is logged in, this changes using an if statement to add a word instead of log in/register
   - A link to the contact page (Give us Feedback) is provided should the user wish to contact the site owner
@@ -242,7 +242,7 @@ Desktop View:
     <img src="readme/wireframes/desktop-contact.PNG">
 </p>
 
-Full Wireframes can be found [here](https://github.com/elerel/ms3-kiwi-lingo/tree/master/readme/wireframes)
+Full Wireframes can be found [here.](https://github.com/elerel/ms3-kiwi-lingo/tree/master/readme/wireframes)
 
 ---
 
@@ -250,7 +250,7 @@ Full Wireframes can be found [here](https://github.com/elerel/ms3-kiwi-lingo/tre
 
 #### Colour Scheme
 
-The colour scheme in Kiwi Lingo is intended to be eye-catching and fun. I also wanted to incorporate some of the classic New Zealand colours, such as black, silver and white, adding in some eye-catching and attention-grabbing colours that are used mostly in the site's buttons and search bars. Throughout the site pages, I used a black to white linear gradient background image effect which seemed to work nicely with the theme of the site. I used [Color-Hex](https://www.color-hex.com/) to create the below colour chart. The main colours of the site used are:
+The colour scheme in Kiwi Lingo is intended to be eye-catching, fun and of an informal nature. I also wanted to incorporate some of the classic New Zealand colours, such as black, silver and white, adding in some eye-catching and attention-grabbing colours that are used mostly in the site's buttons and search bars. Throughout the site pages, I used a black to white linear gradient background image effect which seemed to work nicely with the theme of the site. I used [Color-Hex](https://www.color-hex.com/) to create the below colour chart. The main colours of the site used are:
 
 ![image](https://res.cloudinary.com/elerel/image/upload/v1620243920/colorscheme_nadi8v.png)
 
